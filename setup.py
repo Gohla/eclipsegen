@@ -9,7 +9,7 @@ setup(
   author_email='gabrielkonat@gmail.com',
   license='Apache 2.0',
   packages=['eclipsegen'],
-  requires=['requests'],
+  install_requires=['requests'],
   test_suite='nose.collector',
   tests_require=['nose']
 )
