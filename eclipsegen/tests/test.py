@@ -17,6 +17,7 @@ class Test(TestCase):
 
   def test_eclipse_multi_gen(self):
     generator = EclipseMultiGenerator(_DATA_DIR, 'eclipse',
+      # oss=[Os.windows.value], archs=[Arch.x64.value], addJres=[True],
       repositories=['http://eclipse.mirror.triple-it.nl/releases/neon/',
                     'http://eclipse.mirror.triple-it.nl/eclipse/updates/4.6'],
       installUnits=['epp.package.java', 'org.eclipse.platform.feature.group', 'org.eclipse.jdt.feature.group',

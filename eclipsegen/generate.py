@@ -4,30 +4,17 @@ import urllib.parse
 import urllib.request
 from enum import Enum, unique
 from itertools import takewhile
-from os import path, makedirs, listdir, rmdir, mkdir, remove
+from os import path, makedirs, listdir, rmdir, mkdir, remove, walk, chmod
 from platform import architecture, system
 from re import sub, findall, MULTILINE
 from shutil import move, copytree, rmtree, make_archive
+from stat import S_IWRITE
 from subprocess import Popen
 from sys import maxsize
 
 import requests
 
 from eclipsegen.config import X86Arch, X64Arch, WindowsOs, MacOs, LinuxOs
-
-
-@unique
-class Arch(Enum):
-  x64 = X64Arch()
-  x86 = X86Arch()
-
-  @staticmethod
-  def get_current():
-    if architecture()[0] == '64bit':
-      return Arch.x64.value
-    if maxsize > 2 ** 32:
-      return Arch.x64.value
-    return Arch.x86.value
 
 
 @unique
@@ -49,6 +36,33 @@ class Os(Enum):
       raise Exception('Unsupported OS {}'.format(sys))
 
 
+@unique
+class Arch(Enum):
+  x64 = X64Arch()
+  x86 = X86Arch()
+
+  @staticmethod
+  def get_current():
+    if architecture()[0] == '64bit':
+      return Arch.x64.value
+    if maxsize > 2 ** 32:
+      return Arch.x64.value
+    return Arch.x86.value
+
+
+__invalidCombinations = [
+  (Os.macOs.value, Arch.x86.value, True),
+  # (Os.macOs.value, Arch.x86.value, False)
+]
+
+
+def _is_invalid_combination(os, arch, addJre):
+  for incorrectOs, incorrectArch, incorrectAddJre in __invalidCombinations:
+    if os == incorrectOs and arch == incorrectArch and incorrectAddJre == addJre:
+      return True
+  return False
+
+
 class EclipseMultiGenerator(object):
   def __init__(self, workingDir, destination, oss=None, archs=None, addJres=None, repositories=None, installUnits=None):
     self.workingDir = workingDir
@@ -63,13 +77,15 @@ class EclipseMultiGenerator(object):
     combinations = [(o, a, j) for o in self.oss for a in self.archs for j in self.addJres]
     print('Generating an Eclipse instance for following feature combinations:')
     for os, arch, addJre in combinations:
-      print('  {}, {}, {}'.format(os.name, arch.name, 'include JRE' if addJre else 'no JRE'))
+      if not _is_invalid_combination(os, arch, addJre):
+        print('  {}, {}, {}'.format(os.name, arch.name, 'include JRE' if addJre else 'no JRE'))
     for os, arch, addJre in combinations:
-      print('Generating Eclipse for combination {}, {}, {}'.format(os.name, arch.name,
-        'include JRE' if addJre else 'no JRE'))
-      generator = EclipseGenerator(self.workingDir, self.destination, os=os, arch=arch, repositories=self.repositories,
-        installUnits=self.installUnits, fixIni=True, addJre=addJre, archive=True)
-      generator.generate()
+      if not _is_invalid_combination(os, arch, addJre):
+        print('Generating Eclipse for combination {}, {}, {}'.format(os.name, arch.name,
+          'include JRE' if addJre else 'no JRE'))
+        generator = EclipseGenerator(self.workingDir, self.destination, os=os, arch=arch,
+          repositories=self.repositories, installUnits=self.installUnits, fixIni=True, addJre=addJre, archive=True)
+        generator.generate()
 
 
 class EclipseGenerator(object):
@@ -90,7 +106,7 @@ class EclipseGenerator(object):
       self.tempdir = tempfile.TemporaryDirectory()
       self.destination = self.tempdir.name
     else:
-      self.destination = _make_abs(destination, self.workingDir)
+      self.destination = self.requestedDestination
 
     self.finalDestination = self.os.finalDestination(self.destination, 'Eclipse.app')
 
@@ -105,9 +121,13 @@ class EclipseGenerator(object):
 
   def __exit__(self, **_):
     if self.archive:
+      print('Deleting temporary directory {}'.format(self.tempdir))
       self.tempdir.cleanup()
 
   def generate(self):
+    if _is_invalid_combination(self.os, self.arch, self.addJre):
+      raise RuntimeError(
+        'Combination {}, {}, {} is invalid, cannot generate Eclipse instance'.format(self.os, self.arch, self.addJre))
     directorBin = 'director.bat' if self.os == Os.windows.value else 'director'
     director = path.join(path.dirname(path.realpath(__file__)), 'director', directorBin)
     args = [director]
@@ -141,6 +161,8 @@ class EclipseGenerator(object):
       self.fix_ini()
     if self.addJre:
       self.add_jre()
+    # Make everything writeable such that it can be deleted from temp dirs.
+    _make_writeable(self.finalDestination)
     if self.archive:
       self.create_archive(prefix=self.archivePrefix, postfix=self.archivePostfix)
 
@@ -214,6 +236,7 @@ class EclipseGenerator(object):
     print('Archiving Eclipse instance {}'.format(name))
     filename = path.join(self.requestedDestination, name)
     with tempfile.TemporaryDirectory() as tempdir:
+      # Copy into another temp dir to have a directory with name as the root in archive, instead of the Eclipse directory.
       copytree(self.destination, path.join(tempdir, name), symlinks=True)
       return make_archive(filename, format=self.os.archiveFormat, root_dir=tempdir, base_dir=name)
 
@@ -291,3 +314,10 @@ def _make_abs(directory, relativeTo):
   if not path.isabs(directory):
     return path.normpath(path.join(directory, relativeTo))
   return directory
+
+
+def _make_writeable(directory):
+  for root, _, files in walk(directory):
+    for name in files:
+      full_path = path.join(root, name)
+      chmod(full_path, S_IWRITE)
