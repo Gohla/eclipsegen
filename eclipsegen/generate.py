@@ -50,21 +50,25 @@ class Arch(Enum):
     return Arch.x86.value
 
 
-__invalidCombinations = [
-  (Os.macOs.value, Arch.x86.value, True),
-  # (Os.macOs.value, Arch.x86.value, False)
+_invalidCombinations = [
+  (Os.macOs.value, Arch.x86.value, True)
 ]
 
 
 def _is_invalid_combination(os, arch, addJre):
-  for incorrectOs, incorrectArch, incorrectAddJre in __invalidCombinations:
+  for incorrectOs, incorrectArch, incorrectAddJre in _invalidCombinations:
     if os == incorrectOs and arch == incorrectArch and incorrectAddJre == addJre:
       return True
   return False
 
 
 class EclipseMultiGenerator(object):
-  def __init__(self, workingDir, destination, oss=None, archs=None, addJres=None, repositories=None, installUnits=None):
+  """
+  Facade for generating Eclipse instances for multiple operating systems, architectures, and JREs.
+  """
+
+  def __init__(self, workingDir, destination, oss=None, archs=None, addJres=None, repositories=None, installUnits=None,
+      name='Eclipse', fixIni=True, archivePrefix='eclipse', archivePostfix=''):
     self.workingDir = workingDir
     self.destination = destination
     self.oss = oss if oss else [o.value for o in Os]
@@ -72,8 +76,16 @@ class EclipseMultiGenerator(object):
     self.addJres = addJres if addJres else [True, False]
     self.repositories = repositories
     self.installUnits = installUnits
+    self.name = name
+    self.fixIni = fixIni
+    self.archivePrefix = archivePrefix
+    self.archivePostfix = archivePostfix
 
   def generate_all(self):
+    """
+    Generate all Eclipse instances.
+    :return: None
+    """
     combinations = [(o, a, j) for o in self.oss for a in self.archs for j in self.addJres]
     print('Generating an Eclipse instance for following feature combinations:')
     for os, arch, addJre in combinations:
@@ -84,17 +96,23 @@ class EclipseMultiGenerator(object):
         print('Generating Eclipse for combination {}, {}, {}'.format(os.name, arch.name,
           'include JRE' if addJre else 'no JRE'))
         generator = EclipseGenerator(self.workingDir, self.destination, os=os, arch=arch,
-          repositories=self.repositories, installUnits=self.installUnits, fixIni=True, addJre=addJre, archive=True)
+          repositories=self.repositories, installUnits=self.installUnits, name=self.name, fixIni=self.fixIni,
+          addJre=addJre, archive=True, archivePrefix=self.archivePrefix, archivePostfix=self.archivePostfix)
         generator.generate()
 
 
 class EclipseGenerator(object):
-  def __init__(self, workingDir, destination, os=None, arch=None, repositories=None, installUnits=None,
+  """
+  Eclipse instance generator.
+  """
+
+  def __init__(self, workingDir, destination, os=None, arch=None, repositories=None, installUnits=None, name='Eclipse',
       fixIni=True, addJre=False, archive=False, archivePrefix='eclipse', archivePostfix=''):
     self.os = os if os else Os.get_current()
     self.arch = arch if arch else Arch.get_current()
     self.repositories = repositories if repositories else []
     self.installUnits = installUnits if installUnits else []
+    self.name = name
 
     self.workingDir = workingDir
     if not path.isabs(self.workingDir):
@@ -108,7 +126,7 @@ class EclipseGenerator(object):
     else:
       self.destination = self.requestedDestination
 
-    self.finalDestination = self.os.finalDestination(self.destination, 'Eclipse.app')
+    self.finalDestination = self.os.finalDestination(self.destination, self.name)
 
     self.fixIni = fixIni
     self.addJre = addJre
@@ -235,10 +253,15 @@ class EclipseGenerator(object):
     name = '{}-{}-{}{}{}'.format(prefix, self.os.name, self.arch.name, '-jre' if self.addJre else '', postfix)
     print('Archiving Eclipse instance {}'.format(name))
     filename = path.join(self.requestedDestination, name)
-    with tempfile.TemporaryDirectory() as tempdir:
-      # Copy into another temp dir to have a directory with name as the root in archive, instead of the Eclipse directory.
-      copytree(self.destination, path.join(tempdir, name), symlinks=True)
-      return make_archive(filename, format=self.os.archiveFormat, root_dir=tempdir, base_dir=name)
+    if self.os == Os.macOs.value:
+      appFile = '{}.app'.format(self.name)
+      return make_archive(filename, format=self.os.archiveFormat, root_dir=self.destination, base_dir=appFile)
+    else:
+      with tempfile.TemporaryDirectory() as tempdir:
+        # Copy into another temp dir to have a directory with target as the root in archive, instead of the Eclipse directory.
+        target = path.join(tempdir, self.name)
+        copytree(self.destination, target, symlinks=True)
+        return make_archive(filename, format=self.os.archiveFormat, root_dir=tempdir, base_dir=self.name)
 
   def __to_uri(self, location):
     if location.startswith('http'):
