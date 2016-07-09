@@ -8,7 +8,6 @@ from os import path, makedirs, listdir, rmdir, mkdir, remove, walk, chmod
 from platform import architecture, system
 from re import sub, findall, MULTILINE
 from shutil import move, copytree, rmtree, make_archive, which
-from stat import S_IWRITE
 from subprocess import Popen
 from sys import maxsize
 
@@ -367,4 +366,4 @@ def _make_writeable(directory):
   for root, _, files in walk(directory):
     for name in files:
       full_path = path.join(root, name)
-      chmod(full_path, S_IWRITE)
+      chmod(full_path, 0o744)
