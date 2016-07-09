@@ -7,7 +7,7 @@ from itertools import takewhile
 from os import path, makedirs, listdir, rmdir, mkdir, remove, walk, chmod
 from platform import architecture, system
 from re import sub, findall, MULTILINE
-from shutil import move, copytree, rmtree, make_archive
+from shutil import move, copytree, rmtree, make_archive, which
 from stat import S_IWRITE
 from subprocess import Popen
 from sys import maxsize
@@ -179,9 +179,9 @@ class EclipseGenerator(object):
     if _is_invalid_combination(self.os, self.arch):
       raise RuntimeError(
         'Combination {}, {} is invalid, cannot generate Eclipse instance'.format(self.os, self.arch))
-    directorBin = 'director.bat' if self.os == Os.windows.value else 'director'
-    director = path.join(path.dirname(path.realpath(__file__)), 'director', directorBin)
-    args = [director]
+    searchPath = path.join(path.dirname(__file__), 'director')
+    directorPath = which('director', path=searchPath)
+    args = [directorPath]
 
     if len(self.repositories) != 0:
       mappedRepositories = map(self.__to_uri, self.repositories)
