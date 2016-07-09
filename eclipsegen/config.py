@@ -9,6 +9,9 @@ class X64Arch(object):
   def __eq__(self, other):
     return self.name == other.name
 
+  def __repr__(self):
+    return self.name
+
 
 class X86Arch(object):
   name = 'x86'
@@ -17,6 +20,9 @@ class X86Arch(object):
 
   def __eq__(self, other):
     return self.name == other.name
+
+  def __repr__(self):
+    return self.name
 
 
 class WindowsOs(object):
@@ -28,6 +34,9 @@ class WindowsOs(object):
 
   def __eq__(self, other):
     return self.name == other.name
+
+  def __repr__(self):
+    return self.name
 
   @staticmethod
   def finalDestination(destination, _):
@@ -55,6 +64,9 @@ class MacOs(object):
   def __eq__(self, other):
     return self.name == other.name
 
+  def __repr__(self):
+    return self.name
+
   @staticmethod
   def finalDestination(destination, name):
     return os.path.join(destination, '{}.app'.format(name))
@@ -77,6 +89,9 @@ class LinuxOs(object):
 
   def __eq__(self, other):
     return self.name == other.name
+
+  def __repr__(self):
+    return self.name
 
   @staticmethod
   def finalDestination(destination, _):

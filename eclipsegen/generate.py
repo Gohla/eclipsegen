@@ -16,11 +16,14 @@ import requests
 
 from eclipsegen.config import X86Arch, X64Arch, WindowsOs, MacOs, LinuxOs
 
+DEFAULT_NAME = 'Eclipse'
+DEFAULT_ARCHIVE_PREFIX = 'eclipse'
+
 
 @unique
 class Os(Enum):
   windows = WindowsOs()
-  macOs = MacOs()
+  macosx = MacOs()
   linux = LinuxOs()
 
   @staticmethod
@@ -29,11 +32,19 @@ class Os(Enum):
     if sys == 'Windows':
       return Os.windows.value
     elif sys == 'Darwin':
-      return Os.macOs.value
+      return Os.macosx.value
     elif sys == 'Linux':
       return Os.linux.value
     else:
       raise Exception('Unsupported OS {}'.format(sys))
+
+  @staticmethod
+  def keys():
+    return Os.__members__.keys()
+
+  @staticmethod
+  def exists(sys):
+    return sys in Os.__members__.keys()
 
 
 @unique
@@ -49,15 +60,23 @@ class Arch(Enum):
       return Arch.x64.value
     return Arch.x86.value
 
+  @staticmethod
+  def keys():
+    return Arch.__members__.keys()
+
+  @staticmethod
+  def exists(arch):
+    return arch in Arch.__members__.keys()
+
 
 _invalidCombinations = [
-  (Os.macOs.value, Arch.x86.value, True)
+  (Os.macosx.value, Arch.x86.value),
 ]
 
 
-def _is_invalid_combination(os, arch, addJre):
-  for incorrectOs, incorrectArch, incorrectAddJre in _invalidCombinations:
-    if os == incorrectOs and arch == incorrectArch and incorrectAddJre == addJre:
+def _is_invalid_combination(os, arch):
+  for incorrectOs, incorrectArch in _invalidCombinations:
+    if os == incorrectOs and arch == incorrectArch:
       return True
   return False
 
@@ -67,37 +86,34 @@ class EclipseMultiGenerator(object):
   Facade for generating Eclipse instances for multiple operating systems, architectures, and JREs.
   """
 
-  def __init__(self, workingDir, destination, oss=None, archs=None, addJres=None, repositories=None, installUnits=None,
-      name='Eclipse', fixIni=True, archivePrefix='eclipse', archivePostfix=''):
+  def __init__(self, workingDir, destination, oss=None, archs=None, repositories=None, installUnits=None,
+      name=None, fixIni=True, addJre=False, archiveJreSeparately=False, archivePrefix=None, archiveSuffix=None):
     self.workingDir = workingDir
     self.destination = destination
     self.oss = oss if oss else [o.value for o in Os]
     self.archs = archs if archs else [a.value for a in Arch]
-    self.addJres = addJres if addJres else [True, False]
     self.repositories = repositories
     self.installUnits = installUnits
     self.name = name
     self.fixIni = fixIni
+    self.addJre = addJre
+    self.archiveJreSeparately = archiveJreSeparately
     self.archivePrefix = archivePrefix
-    self.archivePostfix = archivePostfix
+    self.archiveSuffix = archiveSuffix
 
-  def generate_all(self):
+  def generate(self):
     """
     Generate all Eclipse instances.
     :return: None
     """
-    combinations = [(o, a, j) for o in self.oss for a in self.archs for j in self.addJres]
-    print('Generating an Eclipse instance for following feature combinations:')
-    for os, arch, addJre in combinations:
-      if not _is_invalid_combination(os, arch, addJre):
-        print('  {}, {}, {}'.format(os.name, arch.name, 'include JRE' if addJre else 'no JRE'))
-    for os, arch, addJre in combinations:
-      if not _is_invalid_combination(os, arch, addJre):
-        print('Generating Eclipse for combination {}, {}, {}'.format(os.name, arch.name,
-          'include JRE' if addJre else 'no JRE'))
+    combinations = [(o, a) for o in self.oss for a in self.archs]
+    for os, arch in combinations:
+      if not _is_invalid_combination(os, arch):
+        print('Generating Eclipse for combination {}, {}'.format(os.name, arch.name))
         generator = EclipseGenerator(self.workingDir, self.destination, os=os, arch=arch,
           repositories=self.repositories, installUnits=self.installUnits, name=self.name, fixIni=self.fixIni,
-          addJre=addJre, archive=True, archivePrefix=self.archivePrefix, archivePostfix=self.archivePostfix)
+          addJre=self.addJre, archive=True, archiveJreSeparately=self.archiveJreSeparately,
+          archivePrefix=self.archivePrefix, archiveSuffix=self.archiveSuffix)
         generator.generate()
 
 
@@ -106,13 +122,20 @@ class EclipseGenerator(object):
   Eclipse instance generator.
   """
 
-  def __init__(self, workingDir, destination, os=None, arch=None, repositories=None, installUnits=None, name='Eclipse',
-      fixIni=True, addJre=False, archive=False, archivePrefix='eclipse', archivePostfix=''):
+  def __init__(self, workingDir, destination, os=None, arch=None, repositories=None, installUnits=None,
+      name=None, fixIni=True, addJre=False, archive=False, archiveJreSeparately=False, archivePrefix=None,
+      archiveSuffix=None):
     self.os = os if os else Os.get_current()
     self.arch = arch if arch else Arch.get_current()
     self.repositories = repositories if repositories else []
     self.installUnits = installUnits if installUnits else []
-    self.name = name
+    self.name = name if name else DEFAULT_NAME
+    self.fixIni = fixIni
+    self.addJre = addJre
+    self.archive = archive
+    self.archiveJreSeparately = archiveJreSeparately
+    self.archivePrefix = archivePrefix if archivePrefix else DEFAULT_ARCHIVE_PREFIX
+    self.archiveSuffix = archiveSuffix if archiveSuffix else ''
 
     self.workingDir = workingDir
     if not path.isabs(self.workingDir):
@@ -128,12 +151,6 @@ class EclipseGenerator(object):
 
     self.finalDestination = self.os.finalDestination(self.destination, self.name)
 
-    self.fixIni = fixIni
-    self.addJre = addJre
-    self.archive = archive
-    self.archivePrefix = archivePrefix
-    self.archivePostfix = archivePostfix
-
   def __enter__(self):
     return self
 
@@ -143,9 +160,25 @@ class EclipseGenerator(object):
       self.tempdir.cleanup()
 
   def generate(self):
-    if _is_invalid_combination(self.os, self.arch, self.addJre):
+    self.create_eclipse()
+    if self.fixIni:
+      self.fix_ini()
+    if self.archive and self.archiveJreSeparately and self.addJre:
+      self.create_archive(prefix=self.archivePrefix, suffix=self.archiveSuffix)
+    if self.addJre:
+      self.add_jre()
+    # Make everything writeable such that all files can be modified and deleted.
+    _make_writeable(self.finalDestination)
+    if self.archive:
+      if self.archiveJreSeparately and self.addJre:
+        self.create_archive(prefix=self.archivePrefix, suffix='-jre' + self.archiveSuffix)
+      else:
+        self.create_archive(prefix=self.archivePrefix, suffix=self.archiveSuffix)
+
+  def create_eclipse(self):
+    if _is_invalid_combination(self.os, self.arch):
       raise RuntimeError(
-        'Combination {}, {}, {} is invalid, cannot generate Eclipse instance'.format(self.os, self.arch, self.addJre))
+        'Combination {}, {} is invalid, cannot generate Eclipse instance'.format(self.os, self.arch))
     directorBin = 'director.bat' if self.os == Os.windows.value else 'director'
     director = path.join(path.dirname(path.realpath(__file__)), 'director', directorBin)
     args = [director]
@@ -175,15 +208,6 @@ class EclipseGenerator(object):
     except KeyboardInterrupt:
       raise RuntimeError("Eclipse generation interrupted")
 
-    if self.fixIni:
-      self.fix_ini()
-    if self.addJre:
-      self.add_jre()
-    # Make everything writeable such that it can be deleted from temp dirs.
-    _make_writeable(self.finalDestination)
-    if self.archive:
-      self.create_archive(prefix=self.archivePrefix, postfix=self.archivePostfix)
-
   def fix_ini(self, stackSize='16M', heapSize='1G', maxHeapSize='1G', maxPermGen='256M',
       requiredJavaVersion='1.8', server=True):
     iniLocation = self.os.iniLocation(self.finalDestination)
@@ -210,7 +234,7 @@ class EclipseGenerator(object):
 
     iniText = '\n'.join([line for line in iniText.split('\n') if line.strip()]) + '\n'
 
-    if self.os == Os.macOs.value:
+    if self.os == Os.macosx.value:
       iniText += '-XstartOnFirstThread\n'
 
     if stackSize:
@@ -249,11 +273,11 @@ class EclipseGenerator(object):
       iniText = sub(r'-vm\n.+\n', '', iniText, flags=MULTILINE)
       iniFile.write('-vm\n{}\n'.format(relJreLocation) + iniText)
 
-  def create_archive(self, prefix='eclipse', postfix=''):
-    name = '{}-{}-{}{}{}'.format(prefix, self.os.name, self.arch.name, '-jre' if self.addJre else '', postfix)
+  def create_archive(self, prefix=DEFAULT_ARCHIVE_PREFIX, suffix=''):
+    name = '{}-{}-{}{}'.format(prefix, self.os.name, self.arch.name, suffix)
     print('Archiving Eclipse instance {}'.format(name))
     filename = path.join(self.requestedDestination, name)
-    if self.os == Os.macOs.value:
+    if self.os == Os.macosx.value:
       appFile = '{}.app'.format(self.name)
       return make_archive(filename, format=self.os.archiveFormat, root_dir=self.destination, base_dir=appFile)
     else:
@@ -335,7 +359,7 @@ def _common_prefix(paths, sep='/'):
 
 def _make_abs(directory, relativeTo):
   if not path.isabs(directory):
-    return path.normpath(path.join(directory, relativeTo))
+    return path.normpath(path.join(relativeTo, directory))
   return directory
 
 
