@@ -56,9 +56,9 @@ setup(
   author_email='gabrielkonat@gmail.com',
   license='Apache 2.0',
   packages=['eclipsegen'],
-  install_requires=['requests'],
+  install_requires=['requests>=2.10.0'],
   test_suite='nose.collector',
-  tests_require=['nose'],
+  tests_require=['nose>=1.3.7, requests>=2.10.0'],
   include_package_data=True,
   zip_safe=False,
   cmdclass={
