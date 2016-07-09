@@ -58,7 +58,7 @@ setup(
   packages=['eclipsegen'],
   install_requires=['requests>=2.10.0'],
   test_suite='nose.collector',
-  tests_require=['nose>=1.3.7, requests>=2.10.0'],
+  tests_require=['nose>=1.3.7', 'requests>=2.10.0'],
   include_package_data=True,
   zip_safe=False,
   cmdclass={
