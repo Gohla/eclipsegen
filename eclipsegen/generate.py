@@ -2,131 +2,205 @@ import tarfile
 import tempfile
 import urllib.parse
 import urllib.request
+from enum import Enum, unique
 from itertools import takewhile
-from os import path, makedirs, listdir, chmod, rmdir, mkdir, remove
-from platform import system
+from os import path, makedirs, listdir, rmdir, mkdir, remove, walk, chmod
+from platform import architecture, system
 from re import sub, findall, MULTILINE
-from shutil import move, copytree, copyfileobj, rmtree, make_archive
+from shutil import move, copytree, rmtree, make_archive, which
 from subprocess import Popen
 from sys import maxsize
-from zipfile import ZipFile
 
 import requests
 
+from eclipsegen.config import X86Arch, X64Arch, WindowsOs, MacOs, LinuxOs
 
-class EclipseConfiguration(object):
-  def __init__(self, os=None, ws=None, arch=None):
-    if not os:
-      os = self.__os()
-    if not ws:
-      ws = self.__ws(os)
-    if not arch:
-      arch = self.__arch()
+DEFAULT_NAME = 'Eclipse'
+DEFAULT_ARCHIVE_PREFIX = 'eclipse'
 
-    self.os = os
-    self.ws = ws
-    self.arch = arch
+
+@unique
+class Os(Enum):
+  windows = WindowsOs()
+  macosx = MacOs()
+  linux = LinuxOs()
 
   @staticmethod
-  def __os():
+  def get_current():
     sys = system()
-    if sys == 'Darwin':
-      return 'macosx'
+    if sys == 'Windows':
+      return Os.windows.value
+    elif sys == 'Darwin':
+      return Os.macosx.value
     elif sys == 'Linux':
-      return 'linux'
-    elif sys == 'Windows':
-      return 'win32'
+      return Os.linux.value
     else:
-      raise Exception('Unsupported OS {}'.format(system))
+      raise Exception('Unsupported OS {}'.format(sys))
 
   @staticmethod
-  def __ws(os):
-    if os == 'macosx':
-      return 'cocoa'
-    elif os == 'linux':
-      return 'gtk'
-    elif os == 'win32':
-      return 'win32'
-    else:
-      raise Exception('Unsupported Eclipse OS {}'.format(os))
+  def keys():
+    return Os.__members__.keys()
 
   @staticmethod
-  def __arch():
-    is64Bits = maxsize > 2 ** 32
-    if is64Bits:
-      return 'x86_64'
-    else:
-      return 'x86'
+  def exists(sys):
+    return sys in Os.__members__.keys()
+
+
+@unique
+class Arch(Enum):
+  x64 = X64Arch()
+  x86 = X86Arch()
+
+  @staticmethod
+  def get_current():
+    if architecture()[0] == '64bit':
+      return Arch.x64.value
+    if maxsize > 2 ** 32:
+      return Arch.x64.value
+    return Arch.x86.value
+
+  @staticmethod
+  def keys():
+    return Arch.__members__.keys()
+
+  @staticmethod
+  def exists(arch):
+    return arch in Arch.__members__.keys()
+
+
+_invalidCombinations = [
+  (Os.macosx.value, Arch.x86.value),
+]
+
+
+def _is_invalid_combination(os, arch):
+  for incorrectOs, incorrectArch in _invalidCombinations:
+    if os == incorrectOs and arch == incorrectArch:
+      return True
+  return False
+
+
+class EclipseMultiGenerator(object):
+  """
+  Facade for generating Eclipse instances for multiple operating systems, architectures, and JREs.
+  """
+
+  def __init__(self, workingDir, destination, oss=None, archs=None, repositories=None, installUnits=None,
+      name=None, fixIni=True, addJre=False, archiveJreSeparately=False, archivePrefix=None, archiveSuffix=None):
+    self.workingDir = workingDir
+    self.destination = destination
+    self.oss = oss if oss else [o.value for o in Os]
+    self.archs = archs if archs else [a.value for a in Arch]
+    self.repositories = repositories
+    self.installUnits = installUnits
+    self.name = name
+    self.fixIni = fixIni
+    self.addJre = addJre
+    self.archiveJreSeparately = archiveJreSeparately
+    self.archivePrefix = archivePrefix
+    self.archiveSuffix = archiveSuffix
+
+  def generate(self):
+    """
+    Generate all Eclipse instances.
+    :return: None
+    """
+    combinations = [(o, a) for o in self.oss for a in self.archs]
+    for os, arch in combinations:
+      if not _is_invalid_combination(os, arch):
+        print('Generating Eclipse for combination {}, {}'.format(os.name, arch.name))
+        generator = EclipseGenerator(self.workingDir, self.destination, os=os, arch=arch,
+          repositories=self.repositories, installUnits=self.installUnits, name=self.name, fixIni=self.fixIni,
+          addJre=self.addJre, archive=True, archiveJreSeparately=self.archiveJreSeparately,
+          archivePrefix=self.archivePrefix, archiveSuffix=self.archiveSuffix)
+        generator.generate()
 
 
 class EclipseGenerator(object):
-  def __init__(self, workingDir, destination, config=EclipseConfiguration(), repositories=None, installUnits=None,
-      archive=False):
-    if not installUnits:
-      installUnits = []
-    if not repositories:
-      repositories = []
+  """
+  Eclipse instance generator.
+  """
+
+  def __init__(self, workingDir, destination, os=None, arch=None, repositories=None, installUnits=None,
+      name=None, fixIni=True, addJre=False, archive=False, archiveJreSeparately=False, archivePrefix=None,
+      archiveSuffix=None):
+    self.os = os if os else Os.get_current()
+    self.arch = arch if arch else Arch.get_current()
+    self.repositories = repositories if repositories else []
+    self.installUnits = installUnits if installUnits else []
+    self.name = name if name else DEFAULT_NAME
+    self.fixIni = fixIni
+    self.addJre = addJre
+    self.archive = archive
+    self.archiveJreSeparately = archiveJreSeparately
+    self.archivePrefix = archivePrefix if archivePrefix else DEFAULT_ARCHIVE_PREFIX
+    self.archiveSuffix = archiveSuffix if archiveSuffix else ''
 
     self.workingDir = workingDir
-    self.requestedDestination = destination
+    if not path.isabs(self.workingDir):
+      self.workingDir = path.abspath(self.workingDir)
+
+    self.requestedDestination = _make_abs(destination, self.workingDir)
+
     if archive:
       self.tempdir = tempfile.TemporaryDirectory()
       self.destination = self.tempdir.name
     else:
-      self.destination = destination
-    if config.os == 'macosx':
-      self.finalDestination = path.join(self.destination, 'Eclipse.app')
-    else:
-      self.finalDestination = self.destination
-    self.config = config
-    self.repositories = repositories
-    self.installUnits = installUnits
-    self.doArchive = archive
+      self.destination = self.requestedDestination
+
+    self.finalDestination = self.os.finalDestination(self.destination, self.name)
 
   def __enter__(self):
     return self
 
   def __exit__(self, **_):
-    if self.doArchive:
+    if self.archive:
+      print('Deleting temporary directory {}'.format(self.tempdir))
       self.tempdir.cleanup()
 
-  def generate(self, fixIni=True, addJre=False, archiveJreSeparately=False, archivePrefix='eclipse'):
-    self.generate_eclipse()
-    if fixIni:
+  def generate(self):
+    self.create_eclipse()
+    if self.fixIni:
       self.fix_ini()
-    if self.doArchive and archiveJreSeparately and addJre:
-      self.archive(archivePrefix, '')
-    if addJre:
+    if self.archive and self.archiveJreSeparately and self.addJre:
+      self.create_archive(prefix=self.archivePrefix, suffix=self.archiveSuffix)
+    if self.addJre:
       self.add_jre()
-    if self.doArchive:
-      if archiveJreSeparately and addJre:
-        self.archive(archivePrefix, '-jre')
+    # Make everything writeable such that all files can be modified and deleted.
+    _make_writeable(self.finalDestination)
+    if self.archive:
+      if self.archiveJreSeparately and self.addJre:
+        self.create_archive(prefix=self.archivePrefix, suffix='-jre' + self.archiveSuffix)
       else:
-        self.archive(archivePrefix, '')
+        self.create_archive(prefix=self.archivePrefix, suffix=self.archiveSuffix)
 
-  def generate_eclipse(self):
-    director = self.__get_p2_director()
-    args = [director]
+  def create_eclipse(self):
+    if _is_invalid_combination(self.os, self.arch):
+      raise RuntimeError(
+        'Combination {}, {} is invalid, cannot generate Eclipse instance'.format(self.os, self.arch))
+    searchPath = path.join(path.dirname(__file__), 'director')
+    directorPath = which('director', path=searchPath)
+    args = [directorPath]
 
     if len(self.repositories) != 0:
       mappedRepositories = map(self.__to_uri, self.repositories)
-      args.extend(['-r {}'.format(repo) for repo in mappedRepositories]);
+      args.extend(['-r {}'.format(repo) for repo in mappedRepositories])
 
-    args.extend(['-i {}'.format(iu) for iu in self.installUnits]);
+    args.extend(['-i {}'.format(iu) for iu in self.installUnits])
 
     args.append('-tag InitialState')
     args.append('-destination {}'.format(self.finalDestination))
     args.append('-profile SDKProfile')
     args.append('-profileProperties "org.eclipse.update.install.features=true"')
-    args.append('-p2.os {}'.format(self.config.os))
-    args.append('-p2.ws {}'.format(self.config.ws))
-    args.append('-p2.arch {}'.format(self.config.arch))
+    args.append('-p2.os {}'.format(self.os.eclipseOs))
+    args.append('-p2.ws {}'.format(self.os.eclipseWs))
+    args.append('-p2.arch {}'.format(self.arch.eclipseArch))
     args.append('-roaming')
 
     cmd = ' '.join(args)
     print(cmd)
     try:
-      process = Popen(cmd, shell=True)
+      process = Popen(cmd, cwd=self.workingDir, shell=True)
       process.communicate()
       if process.returncode != 0:
         raise RuntimeError("Eclipse generation failed")
@@ -135,7 +209,7 @@ class EclipseGenerator(object):
 
   def fix_ini(self, stackSize='16M', heapSize='1G', maxHeapSize='1G', maxPermGen='256M',
       requiredJavaVersion='1.8', server=True):
-    iniLocation = self.__ini_location()
+    iniLocation = self.os.iniLocation(self.finalDestination)
 
     # Python converts all line endings to '\n' when reading a file in text mode like this.
     with open(iniLocation, "r") as iniFile:
@@ -159,7 +233,7 @@ class EclipseGenerator(object):
 
     iniText = '\n'.join([line for line in iniText.split('\n') if line.strip()]) + '\n'
 
-    if self.config.os == 'macosx':
+    if self.os == Os.macosx.value:
       iniText += '-XstartOnFirstThread\n'
 
     if stackSize:
@@ -189,8 +263,8 @@ class EclipseGenerator(object):
     print('Copying JRE from {} to {}'.format(jrePath, targetJrePath))
     copytree(jrePath, targetJrePath, symlinks=True)
 
-    relJreLocation = self.__jre_location()
-    iniLocation = self.__ini_location()
+    relJreLocation = self.os.jreLocation(self.arch == Arch.x64.value)
+    iniLocation = self.os.iniLocation(self.finalDestination)
     with open(iniLocation, 'r') as iniFile:
       iniText = iniFile.read()
     with open(iniLocation, 'w') as iniFile:
@@ -198,47 +272,25 @@ class EclipseGenerator(object):
       iniText = sub(r'-vm\n.+\n', '', iniText, flags=MULTILINE)
       iniFile.write('-vm\n{}\n'.format(relJreLocation) + iniText)
 
-  def archive(self, prefix='eclipse', postfix=''):
-    name = '{}-{}-{}{}'.format(prefix, self.config.os, self.config.arch, postfix)
+  def create_archive(self, prefix=DEFAULT_ARCHIVE_PREFIX, suffix=''):
+    name = '{}-{}-{}{}'.format(prefix, self.os.name, self.arch.name, suffix)
     print('Archiving Eclipse instance {}'.format(name))
     filename = path.join(self.requestedDestination, name)
-    with tempfile.TemporaryDirectory() as tempdir:
-      copytree(self.destination, path.join(tempdir, name), symlinks=True)
-      if self.config.os == 'macosx' or self.config.os == 'linux':
-        return make_archive(filename, format='gztar', root_dir=tempdir, base_dir=name)
-      elif self.config.os == 'win32':
-        return make_archive(filename, format='zip', root_dir=tempdir, base_dir=name)
-      else:
-        raise RuntimeError('Unsupported OS {}'.format(self.config.os))
-
-  @staticmethod
-  def __get_p2_director():
-    if system() == 'Windows':
-      executable = EclipseGenerator.__to_storage_location('director/director/director.bat')
+    if self.os == Os.macosx.value:
+      appFile = '{}.app'.format(self.name)
+      return make_archive(filename, format=self.os.archiveFormat, root_dir=self.destination, base_dir=appFile)
     else:
-      executable = EclipseGenerator.__to_storage_location('director/director/director')
-
-    if path.isfile(executable):
-      return executable
-
-    url = 'http://eclipse.mirror.triple-it.nl/tools/buckminster/products/director_latest.zip'
-    directorZipLoc = EclipseGenerator.__to_storage_location('director.zip')
-    with urllib.request.urlopen(url) as response, open(directorZipLoc, 'wb') as outFile:
-      print('Downloading director from {} to {}'.format(url, directorZipLoc))
-      copyfileobj(response, outFile)
-    with ZipFile(directorZipLoc) as zipFile:
-      unpackLoc = EclipseGenerator.__to_storage_location('director')
-      zipFile.extractall(path=unpackLoc)
-    chmod(executable, 0o744)
-
-    return executable
+      with tempfile.TemporaryDirectory() as tempdir:
+        # Copy into another temp dir to have a directory with target as the root in archive, instead of the Eclipse directory.
+        target = path.join(tempdir, self.name)
+        copytree(self.destination, target, symlinks=True)
+        return make_archive(filename, format=self.os.archiveFormat, root_dir=tempdir, base_dir=self.name)
 
   def __to_uri(self, location):
     if location.startswith('http'):
       return location
     else:
-      if not path.isabs(location):
-        location = path.normpath(path.join(self.workingDir, location))
+      location = _make_abs(location, self.workingDir)
       return urllib.parse.urljoin('file:', urllib.request.pathname2url(location))
 
   def __download_jre(self):
@@ -246,30 +298,16 @@ class EclipseGenerator(object):
     build = 'b14'
     urlPrefix = 'http://download.oracle.com/otn-pub/java/jdk/{0}-{1}/jre-{0}-'.format(version, build)
     extension = 'tar.gz'
+    jreOs = self.os.jreOs
+    jreArch = self.arch.jreArch
 
-    if self.config.os == 'macosx':
-      jreOS = 'macosx'
-    elif self.config.os == 'linux':
-      jreOS = 'linux'
-    elif self.config.os == 'win32':
-      jreOS = 'windows'
-    else:
-      raise RuntimeError('Unsupported JRE OS {}'.format(self.config.os))
-
-    if self.config.arch == 'x86_64':
-      jreArch = 'x64'
-    elif self.config.arch == 'x86':
-      jreArch = 'i586'
-    else:
-      raise RuntimeError('Unsupported JRE architecture {}'.format(self.config.arch))
-
-    location = self.__to_storage_location(path.join('jre', version, build))
+    location = _to_storage_location(path.join('jre', version, build))
     makedirs(location, exist_ok=True)
 
-    fileName = '{}-{}.{}'.format(jreOS, jreArch, extension)
+    fileName = '{}-{}.{}'.format(jreOs, jreArch, extension)
     filePath = path.join(location, fileName)
 
-    dirName = '{}-{}'.format(jreOS, jreArch)
+    dirName = '{}-{}'.format(jreOs, jreArch)
     dirPath = path.join(location, dirName)
 
     if path.isdir(dirPath):
@@ -296,37 +334,12 @@ class EclipseGenerator(object):
 
     return dirPath
 
-  def __jre_location(self):
-    if self.config.os == 'macosx':
-      return '../../jre/Contents/Home/bin/java'
-    elif self.config.os == 'linux':
-      return 'jre/bin/java'
-    elif self.config.os == 'win32':
-      if self.config.arch == 'x86_64':
-        return 'jre\\bin\\server\\jvm.dll'
-      elif self.config.arch == 'x86':
-        return 'jre\\bin\\client\\jvm.dll'
-      else:
-        raise RuntimeError('Unsupported Eclipse arch {}'.format(self.config.arch))
-    else:
-      raise RuntimeError('Unsupported Eclipse OS {}'.format(self.config.os))
 
-  def __ini_location(self):
-    if self.config.os == 'macosx':
-      return '{}/Contents/Eclipse/eclipse.ini'.format(self.finalDestination)
-    elif self.config.os == 'linux':
-      return '{}/eclipse.ini'.format(self.destination)
-    elif self.config.os == 'win32':
-      return '{}/eclipse.ini'.format(self.destination)
-    else:
-      raise RuntimeError('Unsupported Eclipse OS {}'.format(self.config.os))
-
-  @staticmethod
-  def __to_storage_location(location):
-    storageLocation = path.join(path.expanduser('~'), '.eclipsegen')
-    if not path.isdir(storageLocation):
-      mkdir(storageLocation)
-    return path.join(storageLocation, location)
+def _to_storage_location(location):
+  storageLocation = path.join(path.expanduser('~'), '.eclipsegen')
+  if not path.isdir(storageLocation):
+    mkdir(storageLocation)
+  return path.join(storageLocation, location)
 
 
 def _common_prefix(paths, sep='/'):
@@ -341,3 +354,16 @@ def _common_prefix(paths, sep='/'):
     return all(n == name[0] for n in name[1:])
 
   return sep.join(x[0] for x in takewhile(all_names_equal, byDirectoryLevels))
+
+
+def _make_abs(directory, relativeTo):
+  if not path.isabs(directory):
+    return path.normpath(path.join(relativeTo, directory))
+  return directory
+
+
+def _make_writeable(directory):
+  for root, _, files in walk(directory):
+    for name in files:
+      full_path = path.join(root, name)
+      chmod(full_path, 0o744)
