@@ -30,16 +30,12 @@ def _download_director():
 
 
 class PostDevelopCommand(develop):
-  """Post-installation for development mode."""
-
   def run(self):
     _download_director()
     develop.run(self)
 
 
 class PostInstallCommand(install):
-  """Post-installation for installation mode."""
-
   def run(self):
     _download_director()
     install.run(self)
