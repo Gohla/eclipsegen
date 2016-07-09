@@ -19,7 +19,13 @@ class TestPreset(Preset):
 
 
 class Test(TestCase):
-  def test_eclipse_gen(self):
+  def test_eclipse_generate_noop(self):
+    repositories, installUnits = Presets.combine_presets([TestPreset()])
+    generator = EclipseGenerator(workingDir=_DATA_DIR, destination='noop', repositories=repositories,
+      installUnits=[], name='eclipse-test-noop', fixIni=False)
+    generator.generate()
+
+  def test_longrunning_eclipse_generate(self):
     destination = 'eclipse-single'
     shutil.rmtree(os.path.join(_DATA_DIR, destination), ignore_errors=True)
 
@@ -28,7 +34,7 @@ class Test(TestCase):
       installUnits=installUnits, name='eclipse-test-single')
     generator.generate()
 
-  def test_eclipse_multi_gen(self):
+  def test_longrunning_eclipse_multi_gen(self):
     destination = 'eclipse-multiple'
     shutil.rmtree(os.path.join(_DATA_DIR, destination), ignore_errors=True)
 
