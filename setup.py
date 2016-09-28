@@ -42,12 +42,12 @@ class PostInstallCommand(install):
 
 
 dependencies = [
-  'requests>=2.10.0'
+  'requests==2.10.0'
 ]
 
 setup(
   name='eclipsegen',
-  version='0.2.0',
+  version='0.2.1',
   description='Generate Eclipse instances in Python',
   url='http://github.com/Gohla/eclipsegen',
   author='Gabriel Konat',
