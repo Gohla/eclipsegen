@@ -42,6 +42,10 @@ class Os(Enum):
     return Os.__members__.keys()
 
   @staticmethod
+  def values():
+    return [o.value for o in Os]
+
+  @staticmethod
   def exists(sys):
     return sys in Os.__members__.keys()
 
@@ -62,6 +66,10 @@ class Arch(Enum):
   @staticmethod
   def keys():
     return Arch.__members__.keys()
+
+  @staticmethod
+  def values():
+    return [a.value for a in Arch]
 
   @staticmethod
   def exists(arch):
@@ -89,8 +97,8 @@ class EclipseMultiGenerator(object):
       name=None, fixIni=True, addJre=False, archiveJreSeparately=False, archivePrefix=None, archiveSuffix=None):
     self.workingDir = workingDir
     self.destination = destination
-    self.oss = oss if oss else [o.value for o in Os]
-    self.archs = archs if archs else [a.value for a in Arch]
+    self.oss = oss if oss else Os.values()
+    self.archs = archs if archs else Arch.values()
     self.repositories = repositories
     self.installUnits = installUnits
     self.name = name
@@ -103,8 +111,11 @@ class EclipseMultiGenerator(object):
   def generate(self):
     """
     Generate all Eclipse instances.
-    :return: None
+
+    :return: List of Eclipes that were generated (EclipseOutput*).
     """
+
+    outputs = []
     combinations = [(o, a) for o in self.oss for a in self.archs]
     for os, arch in combinations:
       if not _is_invalid_combination(os, arch):
@@ -113,7 +124,16 @@ class EclipseMultiGenerator(object):
           repositories=self.repositories, installUnits=self.installUnits, name=self.name, fixIni=self.fixIni,
           addJre=self.addJre, archive=True, archiveJreSeparately=self.archiveJreSeparately,
           archivePrefix=self.archivePrefix, archiveSuffix=self.archiveSuffix)
-        generator.generate()
+        outputs.extend(generator.generate())
+    return outputs
+
+
+class EclipseOutput(object):
+  def __init__(self, os, arch, withJre, location):
+    self.os = os
+    self.arch = arch
+    self.withJre = withJre
+    self.location = location
 
 
 class EclipseGenerator(object):
@@ -159,20 +179,33 @@ class EclipseGenerator(object):
       self.tempdir.cleanup()
 
   def generate(self):
-    self.create_eclipse()
+    """
+    Generate an Eclipse instance.
+
+    :return: List of Eclipes that were generated (EclipseOutput*). Multiple Eclipes are generated when self.addJre and
+             self.archiveJreSeparately are set to true, causing two archives to be created.
+    """
+    outputs = []
+    directory = self.create_eclipse()
     if self.fixIni:
       self.fix_ini()
     if self.archive and self.archiveJreSeparately and self.addJre:
-      self.create_archive(prefix=self.archivePrefix, suffix=self.archiveSuffix)
+      archive = self.create_archive(prefix=self.archivePrefix, suffix=self.archiveSuffix)
+      outputs.append(EclipseOutput(self.os, self.arch, False, archive))
     if self.addJre:
       self.add_jre()
     # Make everything writeable such that all files can be modified and deleted.
     _make_writeable(self.finalDestination)
     if self.archive:
       if self.archiveJreSeparately and self.addJre:
-        self.create_archive(prefix=self.archivePrefix, suffix='-jre' + self.archiveSuffix)
+        archive = self.create_archive(prefix=self.archivePrefix, suffix='-jre' + self.archiveSuffix)
+        outputs.append(EclipseOutput(self.os, self.arch, True, archive))
       else:
-        self.create_archive(prefix=self.archivePrefix, suffix=self.archiveSuffix)
+        archive = self.create_archive(prefix=self.archivePrefix, suffix=self.archiveSuffix)
+        outputs.append(EclipseOutput(self.os, self.arch, True, archive))
+    else:
+      outputs.append(EclipseOutput(self.os, self.arch, self.addJre, directory))
+    return outputs
 
   def create_eclipse(self):
     if _is_invalid_combination(self.os, self.arch):
@@ -206,6 +239,8 @@ class EclipseGenerator(object):
         raise RuntimeError("Eclipse generation failed")
     except KeyboardInterrupt:
       raise RuntimeError("Eclipse generation interrupted")
+
+    return self.finalDestination
 
   def fix_ini(self, stackSize='16M', heapSize='1G', maxHeapSize='1G', maxPermGen='256M',
       requiredJavaVersion='1.8', server=True):
@@ -278,13 +313,14 @@ class EclipseGenerator(object):
     filename = path.join(self.requestedDestination, name)
     if self.os == Os.macosx.value:
       appFile = '{}.app'.format(self.name)
-      return make_archive(filename, format=self.os.archiveFormat, root_dir=self.destination, base_dir=appFile)
+      archive = make_archive(filename, format=self.os.archiveFormat, root_dir=self.destination, base_dir=appFile)
     else:
       with tempfile.TemporaryDirectory() as tempdir:
         # Copy into another temp dir to have a directory with target as the root in archive, instead of the Eclipse directory.
         target = path.join(tempdir, self.name)
         copytree(self.destination, target, symlinks=True)
-        return make_archive(filename, format=self.os.archiveFormat, root_dir=tempdir, base_dir=self.name)
+        archive = make_archive(filename, format=self.os.archiveFormat, root_dir=tempdir, base_dir=self.name)
+    return archive
 
   def __to_uri(self, location):
     if location.startswith('http'):
