@@ -248,7 +248,7 @@ class EclipseGenerator(object):
 
     return self.finalDestination
 
-  def fix_ini(self, stackSize='16M', heapSize='1G', maxHeapSize='1G', maxPermGen='256M',
+  def fix_ini(self, stackSize='16M', heapSize='2G', maxHeapSize='2G', maxPermGen=None,
       requiredJavaVersion='1.8', server=True):
     iniLocation = self.os.iniLocation(self.finalDestination)
 
