@@ -13,7 +13,9 @@ from sys import maxsize
 
 import requests
 
+from eclipsegen import director_path
 from eclipsegen.config import X86Arch, X64Arch, WindowsOs, MacOs, LinuxOs
+
 
 DEFAULT_NAME = 'Eclipse'
 DEFAULT_ARCHIVE_PREFIX = 'eclipse'
@@ -211,8 +213,12 @@ class EclipseGenerator(object):
     if _is_invalid_combination(self.os, self.arch):
       raise RuntimeError(
         'Combination {}, {} is invalid, cannot generate Eclipse instance'.format(self.os, self.arch))
-    searchPath = path.join(path.dirname(__file__), 'director')
+    searchPath = director_path()
     directorPath = which('director', path=searchPath)
+    if not directorPath:
+      raise RuntimeError(
+        'Director application was not found at {} nor on the system path, cannot generate Eclipse instance'.format(
+          searchPath))
     args = [directorPath]
 
     if len(self.repositories) != 0:
