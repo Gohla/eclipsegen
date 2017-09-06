@@ -2,6 +2,7 @@ import tarfile
 import tempfile
 import urllib.parse
 import urllib.request
+import os
 from enum import Enum, unique
 from itertools import takewhile
 from os import path, makedirs, listdir, rmdir, mkdir, remove, walk, chmod
@@ -336,9 +337,10 @@ class EclipseGenerator(object):
       return urllib.parse.urljoin('file:', urllib.request.pathname2url(location))
 
   def __download_jre(self):
-    version = '8u92'
-    build = 'b14'
-    urlPrefix = 'http://download.oracle.com/otn-pub/java/jdk/{0}-{1}/jre-{0}-'.format(version, build)
+    version = '8u144'
+    build = 'b01'
+    downloadId = '090f390dda5b47b9b721c7dfaa008135'
+    urlPrefix = 'http://download.oracle.com/otn-pub/java/jdk/{0}-{1}/{2}/jre-{0}-'.format(version, build, downloadId)
     extension = 'tar.gz'
     jreOs = self.os.jreOs
     jreArch = self.arch.jreArch
@@ -371,6 +373,12 @@ class EclipseGenerator(object):
       for name in listdir(rootDir):
         move(path.join(rootDir, name), path.join(dirPath, name))
       rmdir(rootDir)
+
+    # Delete ._ files found on macOS
+    for walkDirPath, dirs, files in os.walk(dirPath):
+      for walkFileName in files:
+        if '._' in walkFileName:
+          os.remove(os.path.join(walkDirPath, walkFileName))
 
     remove(filePath)
 
