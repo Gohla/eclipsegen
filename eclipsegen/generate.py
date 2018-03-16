@@ -337,15 +337,15 @@ class EclipseGenerator(object):
       return urllib.parse.urljoin('file:', urllib.request.pathname2url(location))
 
   def __download_jre(self):
-    # http://download.oracle.com/otn-pub/java/jdk/8u152-b16/aa0333dd3019491ca4f6ddbe78cdb6d0/jdk-8u152-windows-i586.exe
-    # http://download.oracle.com/otn-pub/java/jdk/8u152-b16/aa0333dd3019491ca4f6ddbe78cdb6d0/jdk-8u152-windows-x64.exe
-    # http://download.oracle.com/otn-pub/java/jdk/8u152-b16/aa0333dd3019491ca4f6ddbe78cdb6d0/jdk-8u152-linux-i586.tar.gz
-    # http://download.oracle.com/otn-pub/java/jdk/8u152-b16/aa0333dd3019491ca4f6ddbe78cdb6d0/jdk-8u152-linux-x64.rpm
-    # http://download.oracle.com/otn-pub/java/jdk/8u152-b16/aa0333dd3019491ca4f6ddbe78cdb6d0/jdk-8u152-macosx-x64.dmg
+    # http://download.oracle.com/otn-pub/java/jdk/8u162-b12/0da788060d494f5095bf8624735fa2f1/jdk-8u162-windows-i586.exe
+    # http://download.oracle.com/otn-pub/java/jdk/8u162-b12/0da788060d494f5095bf8624735fa2f1/jdk-8u162-windows-x64.exe
+    # http://download.oracle.com/otn-pub/java/jdk/8u162-b12/0da788060d494f5095bf8624735fa2f1/jdk-8u162-linux-i586.tar.gz
+    # http://download.oracle.com/otn-pub/java/jdk/8u162-b12/0da788060d494f5095bf8624735fa2f1/jdk-8u162-linux-x64.rpm
+    # http://download.oracle.com/otn-pub/java/jdk/8u162-b12/0da788060d494f5095bf8624735fa2f1/jdk-8u162-macosx-x64.dmg
 
-    version = '8u152'
-    build = 'b16'
-    downloadId = 'aa0333dd3019491ca4f6ddbe78cdb6d0'
+    version = '8u162'
+    build = 'b12'
+    downloadId = '0da788060d494f5095bf8624735fa2f1'
     urlPrefix = 'http://download.oracle.com/otn-pub/java/jdk/{0}-{1}/{2}/jre-{0}-'.format(version, build, downloadId)
     extension = 'tar.gz'
     jreOs = self.os.jreOs
