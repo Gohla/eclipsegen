@@ -6,7 +6,7 @@ dependencies = [
 
 setup(
   name='eclipsegen',
-  version='0.3.1',
+  version='0.3.2',
   description='Generate Eclipse instances in Python',
   url='http://github.com/Gohla/eclipsegen',
   author='Gabriel Konat',
