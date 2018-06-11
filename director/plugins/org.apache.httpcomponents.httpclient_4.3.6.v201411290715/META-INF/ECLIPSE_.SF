@@ -1,0 +1,1713 @@
+Signature-Version: 1.0
+SHA1-Digest-Manifest: iQWJ82OJfwYHQ3juFw3TzrSn1zw=
+Created-By: 1.6.0 (IBM Corporation)
+SHA1-Digest-Manifest-Main-Attributes: amugmg425ntmzGuNQCBOnTIFgcc=
+
+Name: org/apache/http/impl/conn/SystemDefaultRoutePlanner.class
+SHA1-Digest: l0885ww1lRaBS0wcvwTGXMNngiA=
+
+Name: org/apache/http/impl/conn/LoggingManagedHttpClientConnection.cla
+ ss
+SHA1-Digest: uSIORsaKvFZUMFApQjRZS7teLXM=
+
+Name: org/apache/http/cookie/CookieSpecRegistry.class
+SHA1-Digest: ftbgFA1gd4YXA4cX7CdnBzjY2ik=
+
+Name: org/apache/http/cookie/CookieRestrictionViolationException.class
+SHA1-Digest: PhbQdywD/eU70fUCuguPwVgSsFQ=
+
+Name: org/apache/http/cookie/CookiePathComparator.class
+SHA1-Digest: RyMxNUA2lh4zFEc8Mti9SY2KeEQ=
+
+Name: org/apache/http/conn/ssl/SSLContextBuilder$TrustManagerDelegate.
+ class
+SHA1-Digest: 4rswgurQe9gjSj5ifXKriodoyzA=
+
+Name: org/apache/http/conn/scheme/SocketFactory.class
+SHA1-Digest: sI2xInOa9KZucyLK2YxNnNX+6tc=
+
+Name: org/apache/http/impl/auth/SPNegoSchemeFactory.class
+SHA1-Digest: Zn5WuTcMtjwZJJ9dk6iEGLXAdSU=
+
+Name: org/apache/http/impl/conn/AbstractPooledConnAdapter.class
+SHA1-Digest: kR3uupigXDA6DRHWCLcT9pnvw/w=
+
+Name: org/apache/http/client/cache/HttpCacheStorage.class
+SHA1-Digest: /RSCUoZMwIq45ak8sKIhj+behoE=
+
+Name: org/apache/http/impl/conn/SystemDefaultDnsResolver.class
+SHA1-Digest: f1/zYgwerNF6gmtF1RfpmFJ7Ow0=
+
+Name: org/apache/http/impl/client/FutureRequestExecutionService.class
+SHA1-Digest: 7ORuuh6rb+WKKeEcbJoaWhLGjWY=
+
+Name: org/apache/http/impl/execchain/ProtocolExec.class
+SHA1-Digest: i4vzIynXqZOFeFCIpHrMsrMyOLM=
+
+Name: org/apache/http/client/RequestDirector.class
+SHA1-Digest: fF3p5J1o+Usxyodse5eMWF3UboY=
+
+Name: org/apache/http/impl/auth/KerberosScheme.class
+SHA1-Digest: WgvcHnzlkj/8K6pKKJjYNNGvSi8=
+
+Name: org/apache/http/impl/auth/NTLMEngineImpl$MD4.class
+SHA1-Digest: g7nuFRQvn3XePUD+KkhoFHY4er8=
+
+Name: org/apache/http/impl/client/cache/ManagedHttpCacheStorage.class
+SHA1-Digest: QMJqFlCvWp4uLoI3IP6yFIX2wvg=
+
+Name: org/apache/http/impl/auth/GGSSchemeBase$State.class
+SHA1-Digest: da+aKOF8vapA7bCdQyF/53iaJjI=
+
+Name: org/apache/http/impl/client/cache/memcached/MemcachedCacheEntryF
+ actory.class
+SHA1-Digest: dRtQ/hkoL+bnZIpri+012rNPBz4=
+
+Name: org/apache/http/impl/auth/HttpAuthenticator$1.class
+SHA1-Digest: 0tcoy1AHfbX8QoHXSwsVZPr8clY=
+
+Name: org/apache/http/client/params/ClientPNames.class
+SHA1-Digest: QRLo3tOK8beaSXYJhRIOXV3AnTs=
+
+Name: org/apache/http/client/fluent/Content.class
+SHA1-Digest: sccILh/uKVtU3735RydvczqEt2E=
+
+Name: org/apache/http/conn/scheme/SchemeSocketFactory.class
+SHA1-Digest: zuAq12uoTRo7uj5OqtwCk4BlTcY=
+
+Name: org/apache/http/conn/params/ConnRoutePNames.class
+SHA1-Digest: XMXQvEdSKuSn9Mm0S3Ueph/NlzI=
+
+Name: org/apache/http/client/AuthenticationStrategy.class
+SHA1-Digest: fcIV8Hm7LNr9AhbQ7sWMHZaB9s0=
+
+Name: org/apache/http/impl/conn/BasicHttpClientConnectionManager$1.cla
+ ss
+SHA1-Digest: 4o+C8cQpF5paMibsqGVB+u/2v+8=
+
+Name: org/apache/http/impl/client/cache/HttpCache.class
+SHA1-Digest: iTEHAj0XWKrKJesSsawQM9K+fyQ=
+
+Name: org/apache/http/impl/conn/DefaultClientConnectionOperator.class
+SHA1-Digest: f+lfS1h5EJPwEQTZA4wiCT9nF2o=
+
+Name: org/apache/http/conn/routing/RouteTracker.class
+SHA1-Digest: DwsjUJZpaJ2/fH6v85JzInZvdKw=
+
+Name: org/apache/http/entity/mime/AbstractMultipartForm.class
+SHA1-Digest: mpcUg/jyrS49Mu72KCOSNSyxaaI=
+
+Name: org/apache/http/impl/client/cache/ResponseProxyHandler.class
+SHA1-Digest: osspMlvabrs2wUqKsvGcNiCS3dU=
+
+Name: org/apache/http/client/entity/DeflateDecompressingEntity.class
+SHA1-Digest: KjjGhwU/EC7qMQe6S3lFpdOoT0Y=
+
+Name: org/apache/http/client/HttpResponseException.class
+SHA1-Digest: cXhgqTwo5dsU6G8JiTp2G24wRho=
+
+Name: org/apache/http/client/fluent/Executor.class
+SHA1-Digest: 9zAmQk3qc7fH0Xhhv9djQbKRb2w=
+
+Name: org/apache/http/client/cache/HttpCacheContext.class
+SHA1-Digest: TbA9dWQv5Vh3Kn7WpJBS9BfzSHk=
+
+Name: org/apache/http/auth/AuthProtocolState.class
+SHA1-Digest: GLAj8Wb4xCf84a1ZK7RXdkO8n4s=
+
+Name: org/apache/http/conn/SchemePortResolver.class
+SHA1-Digest: 1MzczK7KKHinM5/EHFoC7eChSHo=
+
+Name: org/apache/http/client/protocol/RequestAuthenticationBase$1.clas
+ s
+SHA1-Digest: MX18wTLR2KQ2y9JtoMX39A9Wk6o=
+
+Name: org/apache/http/conn/params/ConnManagerPNames.class
+SHA1-Digest: UQblJhx0R9sv8vt2FMkjAv64r1Q=
+
+Name: org/apache/http/client/cache/HeaderConstants.class
+SHA1-Digest: 8sT1Db8dV6eNHTyKKgBexPo6d0Y=
+
+Name: org/apache/http/impl/conn/tsccm/ConnPoolByRoute.class
+SHA1-Digest: JRakwF9mIa3SfI+U4+qO+4Oh0BU=
+
+Name: org/apache/http/impl/cookie/RFC2109Spec.class
+SHA1-Digest: D/Ri5n4JFqvEMQcr3Q1YYpvIzXI=
+
+Name: org/apache/http/impl/auth/NTLMEngineImpl$HMACMD5.class
+SHA1-Digest: QtFGSgtgXRw7lI16zWlsslvCPyQ=
+
+Name: org/apache/http/impl/client/DefaultServiceUnavailableRetryStrate
+ gy.class
+SHA1-Digest: 3bGaSN9lXDSqnWbh1d/dopnojA8=
+
+Name: org/apache/http/impl/client/cache/FailureCacheValue.class
+SHA1-Digest: ymnK3PyeeyH/3mv+FlZdcy6ZQa0=
+
+Name: org/apache/http/impl/execchain/RedirectExec.class
+SHA1-Digest: 1V22yMHfyziqAcU6gjmV38Ez1bA=
+
+Name: org/apache/http/cookie/SetCookie.class
+SHA1-Digest: HEuMKtaYies66c41iwIh8289L/8=
+
+Name: org/apache/http/impl/conn/DefaultHttpRoutePlanner.class
+SHA1-Digest: kw22w5WjzTu0thYlEGTOtgQEAHE=
+
+Name: org/apache/http/impl/cookie/NetscapeDomainHandler.class
+SHA1-Digest: 2/hvvcE7JZ0QenLEzXWJyFQtXrQ=
+
+Name: org/apache/http/auth/AuthSchemeProvider.class
+SHA1-Digest: afeyCU5GYXK5wpzS5r6NMS+re3g=
+
+Name: org/apache/http/conn/EofSensorWatcher.class
+SHA1-Digest: dz9QdiSfgUlhrfDxgaoEybTP+lM=
+
+Name: org/apache/http/impl/execchain/MinimalClientExec.class
+SHA1-Digest: 4M4au9wl4MgboNKhbRWT8YWbFfY=
+
+Name: org/apache/http/impl/conn/tsccm/BasicPooledConnAdapter.class
+SHA1-Digest: YSxGinGQjAd3yETDQBiGT5P3YIs=
+
+Name: org/apache/http/client/protocol/ResponseAuthCache$1.class
+SHA1-Digest: lroW3p2+Sz6M1Tkgv/ESU6YJWWE=
+
+Name: org/apache/http/conn/scheme/SchemeLayeredSocketFactory.class
+SHA1-Digest: AlGN3F1oPf8uv95c6Ag8dtfpY3I=
+
+Name: org/apache/http/cookie/params/CookieSpecPNames.class
+SHA1-Digest: f8GSisvVI6R98N17Spj8TRcYCTs=
+
+Name: org/apache/http/client/cache/HttpCacheEntrySerializer.class
+SHA1-Digest: exY9a75NkfVmRHjnL30n/UGqmLc=
+
+Name: org/apache/http/impl/client/RequestWrapper.class
+SHA1-Digest: c6v+jgCq/ry575R+izOU17AnFLc=
+
+Name: org/apache/http/conn/routing/HttpRoutePlanner.class
+SHA1-Digest: xYpJgUKFPSS4MSqCX2BllxaB+Yw=
+
+Name: org/apache/http/cookie/CookieAttributeHandler.class
+SHA1-Digest: 4z5IuWMAy3DgptOGsojNqKT03cY=
+
+Name: org/apache/http/auth/AuthSchemeRegistry$1.class
+SHA1-Digest: 1kzEPaAZAhOuEGeCfVNlZ4aMtX8=
+
+Name: org/apache/http/impl/cookie/BasicMaxAgeHandler.class
+SHA1-Digest: 9513C1Vbeh1z9qhJclu0Tnlzmq8=
+
+Name: org/apache/http/impl/conn/LoggingInputStream.class
+SHA1-Digest: JWk0vaWxIopUkuTD4T+YmI5WQoU=
+
+Name: org/apache/http/impl/client/ClientParamsStack.class
+SHA1-Digest: NoNdZFuE1/s1D/DeYKSA8F5Qwvo=
+
+Name: org/apache/http/client/cache/CacheResponseStatus.class
+SHA1-Digest: VgRYiCTKeMz290DpEIDWW8nMjLo=
+
+Name: org/apache/http/impl/client/cache/CachedHttpResponseGenerator.cl
+ ass
+SHA1-Digest: Qu4B6/moS2OpUawDUkZwTfPqPV8=
+
+Name: org/apache/http/entity/mime/HttpBrowserCompatibleMultipart.class
+SHA1-Digest: 2jSTVSBh5S4fCslf/AOpDNQGTj0=
+
+Name: org/apache/http/impl/cookie/RFC2965DomainAttributeHandler.class
+SHA1-Digest: BQpJV/0yUpGGcA8njGwBX1tRxHU=
+
+Name: org/apache/http/conn/routing/RouteInfo.class
+SHA1-Digest: 3lv2HqmUF4/eFSsTF0m/eaUT43Y=
+
+Name: org/apache/http/client/protocol/ClientContext.class
+SHA1-Digest: 9zMBmenham6hS60M71gdvZ/aOUo=
+
+Name: org/apache/http/client/utils/CloneUtils.class
+SHA1-Digest: O+rwASL+V99ccOoRBrA45UnM1Ls=
+
+Name: org/apache/http/conn/scheme/PlainSocketFactory.class
+SHA1-Digest: xd8pGHH1zIvo15KjJlzjaO7pYhc=
+
+Name: org/apache/http/impl/client/cache/WarningValue.class
+SHA1-Digest: 49puQQTssj95Xj3sYEEOurrPNFg=
+
+Name: org/apache/http/impl/cookie/BrowserCompatVersionAttributeHandler
+ .class
+SHA1-Digest: dey1oK+tIeO5OxjgrMmVFx4TgMw=
+
+Name: org/apache/http/conn/routing/RouteInfo$TunnelType.class
+SHA1-Digest: AczXLlAC33W9rGahgA5J0WmZLdc=
+
+Name: org/apache/http/entity/mime/MultipartEntity.class
+SHA1-Digest: C7Tuv/g6dMc6zp3oS5PNg9i/bD0=
+
+Name: org/apache/http/client/cache/ResourceFactory.class
+SHA1-Digest: JfUuea44MVLO7Wv3MM9xUoWV9jU=
+
+Name: org/apache/http/client/methods/HttpGet.class
+SHA1-Digest: VFc1+l0lKAibJ2ZZkKO9brB1hE0=
+
+Name: org/apache/http/impl/auth/SpnegoTokenGenerator.class
+SHA1-Digest: aTlL59D/Snc0RGKaIC6FceUHKiA=
+
+Name: org/apache/http/conn/routing/BasicRouteDirector.class
+SHA1-Digest: IZYS74LDpy+vtRRAPO3fnfiLJDw=
+
+Name: org/apache/http/conn/routing/RouteInfo$LayerType.class
+SHA1-Digest: h5anB7JdabqwZJMDq6IkDlmiIOE=
+
+Name: org/apache/http/impl/client/cache/CacheEntryUpdater.class
+SHA1-Digest: n2mwPml3owY/sA9Hohvh8AyNCiA=
+
+Name: org/apache/http/impl/conn/SingleClientConnManager$ConnAdapter.cl
+ ass
+SHA1-Digest: 2eBRNVziR9t97UJc2WxHOoXsgfU=
+
+Name: org/apache/http/conn/HttpClientConnectionManager.class
+SHA1-Digest: T2WaiRsVv/O5UZAGKBWzcx3S2uQ=
+
+Name: org/apache/http/entity/mime/Header.class
+SHA1-Digest: i2baEtR5je7cEAB60IqI9oNNJro=
+
+Name: org/apache/http/conn/ssl/PrivateKeyDetails.class
+SHA1-Digest: lA4NfqlZJv+fyzvLGaC8ukMvc2c=
+
+Name: org/apache/http/impl/client/ProxyAuthenticationStrategy.class
+SHA1-Digest: xASzuvWdLxbSKWQzGpzV/qDxO5E=
+
+Name: org/apache/http/conn/ClientConnectionRequest.class
+SHA1-Digest: PCZ5nBUI8aHHWWKrxzW23I6XMj8=
+
+Name: org/apache/http/client/protocol/RequestTargetAuthentication.clas
+ s
+SHA1-Digest: GrpTfNGKdin1/oGLpg80PAikBa0=
+
+Name: org/apache/http/impl/conn/PoolingHttpClientConnectionManager$Con
+ figData.class
+SHA1-Digest: NlIm/VfC+PTLN6VUTwS+XJVnxmQ=
+
+Name: org/apache/http/conn/ManagedClientConnection.class
+SHA1-Digest: kPAO4iSWYrguAdcfeNoU+wiviOU=
+
+Name: org/apache/http/impl/client/cache/AsynchronousValidator.class
+SHA1-Digest: +qxr0W+W+N8EJNdaLVHNFGzce/Q=
+
+Name: org/apache/http/client/methods/HttpRequestWrapper$HttpEntityEncl
+ osingRequestWrapper.class
+SHA1-Digest: aHUBdrl7Xl2WdzS+MPL/7KTwLXQ=
+
+Name: org/apache/http/impl/cookie/AbstractCookieAttributeHandler.class
+SHA1-Digest: 6s+HsKSA0c863xnsXzQyU290fgM=
+
+Name: org/apache/http/conn/ConnectionReleaseTrigger.class
+SHA1-Digest: POHjMMoC5DbKZjbqTOYQ86VlKRs=
+
+Name: org/apache/http/client/CircularRedirectException.class
+SHA1-Digest: 1EtEOauDSP/GanPLOZ9u2/BNzNs=
+
+Name: org/apache/http/client/RedirectStrategy.class
+SHA1-Digest: eGotePTojnn2TXeDtU3worvdiDE=
+
+Name: org/apache/http/impl/execchain/ClientExecChain.class
+SHA1-Digest: Ysdv5tDWEAuEtKZfUtQeFUpUVQA=
+
+Name: org/apache/http/client/fluent/InternalHttpRequest.class
+SHA1-Digest: w6G9lM90XfrU0ksR3WYeMUOaiTc=
+
+Name: org/apache/http/impl/client/cache/memcached/MemcachedSerializati
+ onException.class
+SHA1-Digest: JnhrmCFJMq33wAxfHOIjjPCAL18=
+
+Name: org/apache/http/client/cache/HttpCacheUpdateException.class
+SHA1-Digest: GtXo1FuVKeGt+fU2e5Mke4A2JTc=
+
+Name: org/apache/http/client/methods/AbortableHttpRequest.class
+SHA1-Digest: QZpNxfgH7hwwX8dasYtrf2tMwNQ=
+
+Name: org/apache/http/client/cache/InputLimit.class
+SHA1-Digest: R6ZCsd5A7MGISZf5oQBEUnGzDfk=
+
+Name: org/apache/http/conn/HttpInetSocketAddress.class
+SHA1-Digest: HiQ1BLkltzDi7jD4Hk7bCav/Myc=
+
+Name: org/apache/http/auth/AuthOption.class
+SHA1-Digest: gilvR8f1G8DCmn7fXrbDJsN31Yk=
+
+Name: org/apache/http/client/cache/HttpCacheInvalidator.class
+SHA1-Digest: PC6H3JC5fP7AkVMppZLuIMxp52E=
+
+Name: org/apache/http/auth/UsernamePasswordCredentials.class
+SHA1-Digest: avSz7duXq7QsIOTk0r7GxHRdSwk=
+
+Name: org/apache/http/impl/auth/NTLMScheme.class
+SHA1-Digest: GYdAxKbuR2Wrbfkoz1cuiv7HL7g=
+
+Name: org/apache/http/impl/auth/RFC2617Scheme.class
+SHA1-Digest: OYSPm7c2eBGu7DBrg2kTP4RvXH4=
+
+Name: org/apache/http/client/protocol/HttpClientContext.class
+SHA1-Digest: b6AWNSard3MnEEgUJH3SKvvHtlM=
+
+Name: org/apache/http/impl/cookie/IgnoreSpec.class
+SHA1-Digest: TJgkawlqAE0OESfbqNdThtkt39c=
+
+Name: org/apache/http/conn/params/ConnConnectionParamBean.class
+SHA1-Digest: e4ciaY/93TTV/us7u2dXG0TA6OY=
+
+Name: org/apache/http/conn/ManagedHttpClientConnection.class
+SHA1-Digest: EZpOBnx/U9cadjHrzwU38D/mz7E=
+
+Name: org/apache/http/conn/ClientConnectionOperator.class
+SHA1-Digest: kMiGPyFX584jrJn4zuyZo9+2/lQ=
+
+Name: org/apache/http/conn/scheme/LayeredSocketFactory.class
+SHA1-Digest: 6ZydjbjoavZtpOhhIxzgzpAWtl0=
+
+Name: org/apache/http/impl/client/cache/CachingHttpClient.class
+SHA1-Digest: j1CXcN/yuzGxcgMkLoRGowbNuYY=
+
+Name: org/apache/http/auth/AuthenticationException.class
+SHA1-Digest: AOcEjq7cygakotdxWr6wfB2pviU=
+
+Name: org/apache/http/impl/conn/PoolingClientConnectionManager.class
+SHA1-Digest: KjXumhXlMXmNlKN8XmxUlBTCgW0=
+
+Name: org/apache/http/impl/client/cache/memcached/KeyHashingScheme.cla
+ ss
+SHA1-Digest: TmxJzIz4EJXD8uFjFyozkX7dSvs=
+
+Name: org/apache/http/cookie/MalformedCookieException.class
+SHA1-Digest: zPTR+DiCGV85LSZkTsd2pMMOCrU=
+
+Name: org/apache/http/impl/client/cache/BasicHttpCache$2.class
+SHA1-Digest: vRNXPx1/1s5i+IIuyLO8PF6mjIA=
+
+Name: org/apache/http/impl/client/DefaultHttpRequestRetryHandler.class
+SHA1-Digest: erLvasmEm0oRx8AkfQTPWPZoAMU=
+
+Name: org/apache/http/client/params/AuthPolicy.class
+SHA1-Digest: uv9wUA7VNtBadabV5y7dXU2Or48=
+
+Name: org/apache/http/cookie/CookieSpecFactory.class
+SHA1-Digest: UkqPHJPWZRh/K+OcP01eHOOYp/A=
+
+Name: org/apache/http/impl/auth/NTLMEngineImpl.class
+SHA1-Digest: iE+goBYjpVOU3x1IdLwrb5kQ2i0=
+
+Name: org/apache/http/entity/mime/MIME.class
+SHA1-Digest: yldjZVUqKB5PlI0+KkWAPpseqnE=
+
+Name: org/apache/http/conn/params/ConnRouteParamBean.class
+SHA1-Digest: Ea34M+3nTARFHtHAr1qXJpXuwYg=
+
+Name: org/apache/http/impl/conn/CPoolEntry.class
+SHA1-Digest: PR6opfkSMp8ktMK2BBkGFBa0jZI=
+
+Name: org/apache/http/client/BackoffManager.class
+SHA1-Digest: 1O8AP9C8KrYxXrY9mJLR/SsB9Zk=
+
+Name: org/apache/http/entity/mime/MinimalField.class
+SHA1-Digest: rB9PT+heOGdt59rMKwuc2YDQFhI=
+
+Name: org/apache/http/conn/scheme/LayeredSchemeSocketFactory.class
+SHA1-Digest: hVxF/AZtQopIAhYelpbJGKDY2FY=
+
+Name: org/apache/http/impl/auth/NTLMEngineImpl$Type2Message.class
+SHA1-Digest: Zftgy6v2Y7TB/YKNKR53zWtDxpg=
+
+Name: org/apache/http/impl/conn/PoolingHttpClientConnectionManager$Int
+ ernalConnectionFactory.class
+SHA1-Digest: r3hN0BekOG1dlSjFPxuQ4b+q6Aw=
+
+Name: org/apache/http/conn/routing/HttpRoute.class
+SHA1-Digest: yTQehjrlZlvrZQTvT8FmaeZTwzs=
+
+Name: org/apache/http/client/methods/HttpRequestWrapper$1.class
+SHA1-Digest: +aMEafDIGHrrD+PYyxbZHAB1d2M=
+
+Name: org/apache/http/client/methods/Configurable.class
+SHA1-Digest: VQSTs/yBffG+lnLgyuuWJyQMVx8=
+
+Name: org/apache/http/impl/client/LaxRedirectStrategy.class
+SHA1-Digest: T7G9+2+ZTJdstiL/rhg3DNZYhhU=
+
+Name: org/apache/http/impl/client/TunnelRefusedException.class
+SHA1-Digest: 7DECVpANsdX3v0egdjLD3uDGeJw=
+
+Name: org/apache/http/client/cache/Resource.class
+SHA1-Digest: B5rzFRrmRvyk81IYIQ0N8lskbuU=
+
+Name: org/apache/http/client/config/RequestConfig$Builder.class
+SHA1-Digest: 7oF7lh+5ICRkfLR91TJ0G2NiMmg=
+
+Name: org/apache/http/impl/cookie/BasicClientCookie.class
+SHA1-Digest: CzrXFUOxpHpykQdYt1QYsrQfSIs=
+
+Name: org/apache/http/client/utils/DateUtils$DateFormatHolder$1.class
+SHA1-Digest: wd2VqmE7PSUGkQ80kh5VFILylmA=
+
+Name: org/apache/http/impl/cookie/BrowserCompatSpecFactory.class
+SHA1-Digest: bhwt2ROWkmtt9tL2jPBWpTNRFsg=
+
+Name: org/apache/http/conn/HttpConnectionFactory.class
+SHA1-Digest: vNpbYCzi1f0n4bvN+2Ei9vC779I=
+
+Name: org/apache/http/auth/ContextAwareAuthScheme.class
+SHA1-Digest: kbDKCdpIq0GMpWUEzedBVqbv87c=
+
+Name: org/apache/http/client/methods/HttpHead.class
+SHA1-Digest: 4TT9Q6zlgOYnTT3+DfSkiWMsneI=
+
+Name: org/apache/http/impl/client/ContentEncodingHttpClient.class
+SHA1-Digest: /ztMziuIgkY24WYCLJdrpqdwOck=
+
+Name: org/apache/http/impl/conn/HttpClientConnectionOperator.class
+SHA1-Digest: GdA2mV9HoHE6t/ABgfCE5ZVhP4g=
+
+Name: org/apache/http/impl/client/MinimalHttpClient$1.class
+SHA1-Digest: L+4+/hGTri4hmgjgw340vKv89+Y=
+
+Name: org/apache/http/impl/client/cache/RequestProtocolCompliance$1.cl
+ ass
+SHA1-Digest: GcIGLvDedat6pODCc+pAM6YCMvc=
+
+Name: org/apache/http/impl/client/cache/HeapResourceFactory.class
+SHA1-Digest: MUK3wsBXNG680zB1KyTVF9UY0rg=
+
+Name: org/apache/http/impl/client/cache/ExponentialBackOffSchedulingSt
+ rategy.class
+SHA1-Digest: ZGsbyRw8S4fo1JqOe5Bg56Cm0Jo=
+
+Name: org/apache/http/impl/conn/ProxySelectorRoutePlanner$1.class
+SHA1-Digest: b7GQDrzkvzumDklbQF5ljoHGwJc=
+
+Name: org/apache/http/impl/client/DefaultProxyAuthenticationHandler.cl
+ ass
+SHA1-Digest: /gJ6csiRKUMnXJfYbjXK7ynkW1Q=
+
+Name: org/apache/http/impl/client/DefaultBackoffStrategy.class
+SHA1-Digest: NqNRvp75C2NR/njbPU7bcGM8fjo=
+
+Name: org/apache/http/client/fluent/Response.class
+SHA1-Digest: 5Shn3kWrrtU2JT32OScqhNoQahA=
+
+Name: org/apache/http/client/cache/HttpCacheUpdateCallback.class
+SHA1-Digest: Av05piN23mcAT/cIUUcXkV4CvxI=
+
+Name: org/apache/http/client/utils/Punycode.class
+SHA1-Digest: of4FMq56lJyQHmFt0Ju9gbQhNqc=
+
+Name: org/apache/http/impl/client/cache/CachingHttpClients.class
+SHA1-Digest: jSQeqmt+nXGnq92oQ/kxZawr9jc=
+
+Name: org/apache/http/client/fluent/Async$ExecRunnable.class
+SHA1-Digest: 77BKUxjyp9jv07onvruDjwEQY1Q=
+
+Name: org/apache/http/client/methods/RequestBuilder$InternalEntityEclo
+ singRequest.class
+SHA1-Digest: mqWCRD1xy9i0BSwWkQAbhUt6HZc=
+
+Name: org/apache/http/client/entity/DeflateInputStream.class
+SHA1-Digest: 71tUStEW6OlJJ7KJMol0zSmxc2k=
+
+Name: org/apache/http/impl/client/SystemClock.class
+SHA1-Digest: Rt2xgH3cG2Zz2HRFC1aR+ze9nRg=
+
+Name: org/apache/http/impl/conn/BasicClientConnectionManager.class
+SHA1-Digest: rANs3q37xWuJmLRISFBIYIqqqCI=
+
+Name: org/apache/http/impl/client/cache/AsynchronousValidationRequest.
+ class
+SHA1-Digest: FugOv44pRkzKKwACXqNtVpEuLuw=
+
+Name: org/apache/http/client/methods/HttpRequestWrapper.class
+SHA1-Digest: egyjI8BipYRTDNflFImdKwbTcuk=
+
+Name: org/apache/http/impl/auth/KerberosSchemeFactory.class
+SHA1-Digest: yn84va5oiheosETsxgln+jhdxlA=
+
+Name: org/apache/http/impl/client/SystemDefaultCredentialsProvider.cla
+ ss
+SHA1-Digest: syTYtzHqStTBZDSdXe/SUQCNDrE=
+
+Name: org/apache/http/impl/conn/SystemDefaultRoutePlanner$1.class
+SHA1-Digest: Pq44TbvXtuLq/jaE8JRlYgaysE4=
+
+Name: org/apache/http/cookie/CookieSpecRegistry$1.class
+SHA1-Digest: hW3v4WYpS43TlR5wUQ52xjZTX0E=
+
+Name: org/apache/http/impl/cookie/BasicPathHandler.class
+SHA1-Digest: CH0yfeoaBwmmRMD08SV155m/bhw=
+
+Name: org/apache/http/impl/client/cache/CachingHttpClient$Asynchronous
+ Validator.class
+SHA1-Digest: S1GbAMLKVSOY3FGx/cFACTMW9U8=
+
+Name: org/apache/http/impl/cookie/RFC2965CommentUrlAttributeHandler.cl
+ ass
+SHA1-Digest: fPAUKMjVrmmPeC88iLTmLzpWarI=
+
+Name: org/apache/http/impl/conn/BasicClientConnectionManager$1.class
+SHA1-Digest: pVyNzAhI62oKfEGS9TtNVaMkwyI=
+
+Name: org/apache/http/client/methods/HttpTrace.class
+SHA1-Digest: HWRMWLE5tSkbuz4a6cdriEfwTdg=
+
+Name: org/apache/http/conn/ssl/AbstractVerifier.class
+SHA1-Digest: dzOu/Nnz0PvlILvSNC+b/gOPYvY=
+
+Name: org/apache/http/impl/client/cache/memcached/MemcachedKeyHashingE
+ xception.class
+SHA1-Digest: POObX2PtWxPLNc25S2OmSbCjusE=
+
+Name: org/apache/http/impl/conn/tsccm/AbstractConnPool.class
+SHA1-Digest: 3xSxrJdZdy3VXIbH/V6FzSO6s4I=
+
+Name: org/apache/http/conn/MultihomePlainSocketFactory.class
+SHA1-Digest: mcUkTyJyvHaBMm6l+yxVtNZRmcE=
+
+Name: org/apache/http/impl/conn/DefaultManagedHttpClientConnection.cla
+ ss
+SHA1-Digest: GDk06zTp1zSLTZJgSep6zruGkjs=
+
+Name: org/apache/http/impl/client/cache/RequestProtocolError.class
+SHA1-Digest: jePo4uLynSl2n4M1JTxgVDzllSs=
+
+Name: org/apache/http/client/utils/URIUtils.class
+SHA1-Digest: inG0atfu/Sbx2xjJavs7JcRcagQ=
+
+Name: org/apache/http/impl/cookie/BrowserCompatSpec.class
+SHA1-Digest: vXsc3itFY0D8l7+71O2gc4o/09A=
+
+Name: org/apache/http/conn/scheme/SchemeRegistry.class
+SHA1-Digest: KUSG1ilsoJtXroxKCWxjg3OHF/o=
+
+Name: org/apache/http/conn/params/ConnManagerParams$1.class
+SHA1-Digest: BE/BmiXb/ZpmKt+nOQPPnacQnEI=
+
+Name: org/apache/http/conn/ssl/SSLSocketFactory.class
+SHA1-Digest: gvwNVEeMOIQY9Lh2wbpoYzoGPv8=
+
+Name: org/apache/http/auth/params/AuthParams.class
+SHA1-Digest: C+MD5SjJoQRM6vk56mNuoJRDb3I=
+
+Name: org/apache/http/impl/client/BasicResponseHandler.class
+SHA1-Digest: 6QghBFC/FMWm4ymKlkNZ9I9ENt4=
+
+Name: about.html
+SHA1-Digest: E7HTt4klLexx63GVfbQF9/5WPdY=
+
+Name: org/apache/http/impl/cookie/BrowserCompatSpec$2.class
+SHA1-Digest: TGVnSgONyogNHjEFSDU5JIyXKjY=
+
+Name: org/apache/http/client/protocol/RequestExpectContinue.class
+SHA1-Digest: +1z7/D3dLrp9Y/nq8bE/XSphjSQ=
+
+Name: org/apache/http/auth/MalformedChallengeException.class
+SHA1-Digest: 2/qlMBqjLuzzbTaLtoQQFDJ4siU=
+
+Name: org/apache/http/entity/mime/MultipartFormEntity.class
+SHA1-Digest: yHFLti2tA2keaqiRClSY/54r+y0=
+
+Name: org/apache/http/impl/cookie/NetscapeDraftHeaderParser.class
+SHA1-Digest: E1K61frpt7fsioTR1Z/kQzziXOU=
+
+Name: org/apache/http/impl/auth/NegotiateScheme.class
+SHA1-Digest: 3n9J6mVdYyL7XeMeECSkSjE27Us=
+
+Name: org/apache/http/impl/client/cache/CachingHttpClientBuilder.class
+SHA1-Digest: cFHup8rekjbSYafMIqn/umWeQKY=
+
+Name: org/apache/http/impl/auth/NTLMEngineException.class
+SHA1-Digest: P+cQWzoEE697RCL2kciddm3onY0=
+
+Name: org/apache/http/impl/client/cache/CachingExec.class
+SHA1-Digest: v4NE1GStD1ziLVJCvCkynKNx6ec=
+
+Name: org/apache/http/impl/client/HttpClientBuilder.class
+SHA1-Digest: LgVnhFFkWmaY9XdL/mpZmwwnmJ0=
+
+Name: org/apache/http/impl/cookie/RFC2965Spec.class
+SHA1-Digest: 28JqSS6DX0fQKZzO9Yze3kwfsqk=
+
+Name: org/apache/http/impl/cookie/RFC2109SpecFactory.class
+SHA1-Digest: TcWI3e3nhvhzGD4CFes2Eybxp/U=
+
+Name: org/apache/http/entity/mime/content/ContentBody.class
+SHA1-Digest: lwssD8FwXHXwG4prWJxi44YdidY=
+
+Name: org/apache/http/impl/client/AbstractAuthenticationHandler.class
+SHA1-Digest: S6DV6OVVUCfsG1QKgx98y4b07xQ=
+
+Name: org/apache/http/impl/client/cache/CacheMap.class
+SHA1-Digest: onOO147WfA71rkfmZ7vpPWlhiIY=
+
+Name: org/apache/http/client/fluent/InternalInputStreamEntity.class
+SHA1-Digest: 5oITwUxhx7VoAMfg7y18x1Ca8HM=
+
+Name: org/apache/http/impl/client/BasicAuthCache.class
+SHA1-Digest: z/Om6pQbUQzaQ4F914q9gPrdiYs=
+
+Name: org/apache/http/client/methods/HttpPut.class
+SHA1-Digest: M1mT7ssAD16WwCNdKDxe+6Oc8qI=
+
+Name: org/apache/http/conn/ssl/SSLInitializationException.class
+SHA1-Digest: F2jQmWMBrE0jZl2BwjhuRbU57AY=
+
+Name: org/apache/http/impl/client/cache/Proxies.class
+SHA1-Digest: 62GJH9wEn3Orh8bbbg52+TQCB88=
+
+Name: org/apache/http/impl/client/cache/CombinedEntity.class
+SHA1-Digest: 0BgW0IAnNq8IOPAHccQac7pZxKE=
+
+Name: org/apache/http/client/protocol/RequestProxyAuthentication.class
+SHA1-Digest: y/zLAnbDMLr4u79E/eb3yC6IWcs=
+
+Name: org/apache/http/client/methods/RequestBuilder.class
+SHA1-Digest: RwKI69eQ7b5VriqZbMehIEt6dJY=
+
+Name: org/apache/http/auth/AuthSchemeRegistry.class
+SHA1-Digest: oiTGpsahhc18JAlXmbiJqprBa/s=
+
+Name: org/apache/http/impl/client/DefaultRequestDirector.class
+SHA1-Digest: SZ9tZtKUNa/wDqqoaQIR7TcfqBA=
+
+Name: org/apache/http/impl/conn/tsccm/BasicPoolEntryRef.class
+SHA1-Digest: cISD9b/pzn/E++6z7k7kaivgni8=
+
+Name: org/apache/http/impl/conn/SingleClientConnManager.class
+SHA1-Digest: uhCi4sPafZH9z5mR04ztVx6uxRs=
+
+Name: org/apache/http/cookie/ClientCookie.class
+SHA1-Digest: kftEqY//U5Wq0NaunhOMRuRyAnk=
+
+Name: org/apache/http/impl/cookie/BasicCommentHandler.class
+SHA1-Digest: ejw2fZom+22s+6W7NZJriP5jDis=
+
+Name: org/apache/http/impl/client/cache/BasicHttpCache$1.class
+SHA1-Digest: A197Z3o9xJwwclsL4bAZ03dxYjc=
+
+Name: org/apache/http/impl/client/cache/CachedResponseSuitabilityCheck
+ er.class
+SHA1-Digest: U6zoty6qfE7Mx7kqkENzRRKQjXw=
+
+Name: org/apache/http/client/fluent/Request.class
+SHA1-Digest: aTBPJWuvn1jLBLyVWTGRMI4pjqE=
+
+Name: org/apache/http/conn/routing/HttpRouteDirector.class
+SHA1-Digest: dW+VulIwJd0u6aTC0mif2StlJXU=
+
+Name: org/apache/http/impl/client/HttpClients.class
+SHA1-Digest: 99rdLn8hv8x5BTyHsYxEzZCpNw4=
+
+Name: org/apache/http/impl/conn/PoolingHttpClientConnectionManager.cla
+ ss
+SHA1-Digest: RyvHfR0gcZi0uBgkWpifgk6hrbc=
+
+Name: org/apache/http/cookie/Cookie.class
+SHA1-Digest: Avx9t+kBj6K76qBDyrFtJ4LXghE=
+
+Name: org/apache/http/entity/mime/version.properties
+SHA1-Digest: G/mQJaLYjdcXWJaYPz//7UGyDJQ=
+
+Name: org/apache/http/conn/BasicEofSensorWatcher.class
+SHA1-Digest: /cbbdnTf2vFXiyt+KJ5tDrekiqg=
+
+Name: org/apache/http/impl/auth/HttpAuthenticator.class
+SHA1-Digest: EWgHRz7veyfRWYe4L46VFKto06s=
+
+Name: org/apache/http/impl/cookie/RFC2965DiscardAttributeHandler.class
+SHA1-Digest: sdr3v6wjipUe8XF1Clel68YER1Y=
+
+Name: org/apache/http/impl/client/cache/DefaultFailureCache.class
+SHA1-Digest: wUxv9l452jreXjcu51DQF3b2LS4=
+
+Name: org/apache/http/impl/conn/PoolingHttpClientConnectionManager$1.c
+ lass
+SHA1-Digest: QkMWkOFZLxgO171o9Cen+dMaW6c=
+
+Name: org/apache/http/entity/mime/content/StringBody.class
+SHA1-Digest: HN7WkL8YqND7ZGguc08GIhaUIVQ=
+
+Name: org/apache/http/impl/auth/GGSSchemeBase$1.class
+SHA1-Digest: k96/m9vnp/MyoTW4jpw3PO8Ntnw=
+
+Name: org/apache/http/impl/conn/tsccm/BasicPoolEntry.class
+SHA1-Digest: iMYorXEQoj9LhwSIRaceVKqGNeY=
+
+Name: org/apache/http/impl/client/MinimalHttpClient.class
+SHA1-Digest: YPjArbQgDRep4Vl7VEmFUL/58To=
+
+Name: org/apache/http/impl/client/cache/memcached/PrefixKeyHashingSche
+ me.class
+SHA1-Digest: eJfPxlHVjwLoD5zt782JHKGYEsM=
+
+Name: org/apache/http/conn/ClientConnectionManagerFactory.class
+SHA1-Digest: niAZKYV/3W+ltADXkKOnJQdBcoc=
+
+Name: org/apache/http/client/CredentialsProvider.class
+SHA1-Digest: H6HRouHsCdBIeJMvI4CQwL/5CDc=
+
+Name: org/apache/http/impl/client/AbstractHttpClient.class
+SHA1-Digest: c0kY3d6Lnz7LhDCGfqYESJQLcVM=
+
+Name: org/apache/http/impl/client/cache/memcached/MemcachedCacheEntry.
+ class
+SHA1-Digest: /bl+zEPP6cu+fBJZ3VkVmI99qBY=
+
+Name: org/apache/http/auth/params/AuthParamBean.class
+SHA1-Digest: dVgxIpP1DVgQ51IxgvqgKoSfE50=
+
+Name: org/apache/http/impl/client/TargetAuthenticationStrategy.class
+SHA1-Digest: vzaGi5P75fK4DBnBb04kmch7hZs=
+
+Name: org/apache/http/impl/execchain/TunnelRefusedException.class
+SHA1-Digest: GNzBx1vrJgSA9C5Sy4mtFwuw66U=
+
+Name: org/apache/http/client/methods/HttpOptions.class
+SHA1-Digest: bJXaK21OhaKWjaXyY/bTW00MBSQ=
+
+Name: org/apache/http/impl/client/StandardHttpRequestRetryHandler.clas
+ s
+SHA1-Digest: IqLyMQD9RFnPR4OGslHmUhvYUHE=
+
+Name: org/apache/http/impl/execchain/HttpResponseProxy.class
+SHA1-Digest: icUCunrc3mdz24BUJT0KldIMwCs=
+
+Name: org/apache/http/client/protocol/ClientContextConfigurer.class
+SHA1-Digest: nhhtgNsdv05nAX3HcSLxab1LIbI=
+
+Name: org/apache/http/impl/client/AuthenticationStrategyImpl.class
+SHA1-Digest: LM8xhkQqQz6MmH5WwLrlWaBSZt0=
+
+Name: org/apache/http/impl/conn/CPoolProxy.class
+SHA1-Digest: 1vTu+h7NRyDlFXED1S6nXlsSR8c=
+
+Name: org/apache/http/impl/client/cache/CombinedEntity$ResourceStream.
+ class
+SHA1-Digest: iDuxQkYJDur6LQaYKO8N913Fcjo=
+
+Name: org/apache/http/impl/auth/DigestSchemeFactory.class
+SHA1-Digest: s+m7buhA8kvh5pfUCJ/3devhpjo=
+
+Name: org/apache/http/impl/conn/tsccm/ThreadSafeClientConnManager.clas
+ s
+SHA1-Digest: Ayk33MW9vY2twv53Y9T789nefXc=
+
+Name: org/apache/http/impl/conn/DefaultProxyRoutePlanner.class
+SHA1-Digest: u6sKZz6dnTvoaR3eQVCc1dZ8A0A=
+
+Name: org/apache/http/conn/DnsResolver.class
+SHA1-Digest: Rz9yNsGS3OILAs6iCg53Er9S+zI=
+
+Name: org/apache/http/impl/client/DefaultConnectionKeepAliveStrategy.c
+ lass
+SHA1-Digest: O56l6TFrx1L0FAVQSVsrn1jr42A=
+
+Name: org/apache/http/auth/AuthScheme.class
+SHA1-Digest: 5ZQ4eKskZlJpPhWDn6I8del1sUY=
+
+Name: org/apache/http/cookie/CookieOrigin.class
+SHA1-Digest: 9maOVXYqh28Vk/+zqZO81i7dGqI=
+
+Name: org/apache/http/conn/EofSensorInputStream.class
+SHA1-Digest: aLxum6uLu62AX+dV7Eg0ZdtbYDk=
+
+Name: org/apache/http/client/AuthCache.class
+SHA1-Digest: 2nOHKkTc/u2KORLqy97pvYh2VQA=
+
+Name: org/apache/http/auth/AuthSchemeFactory.class
+SHA1-Digest: vaGIlb5kEszn40PVyMP1jd0ZCYQ=
+
+Name: org/apache/http/conn/ssl/StrictHostnameVerifier.class
+SHA1-Digest: 3agIVMSzIz2szv8cPkj2RizbLSI=
+
+Name: org/apache/http/impl/client/cache/RequestProtocolCompliance.clas
+ s
+SHA1-Digest: xRdRphucZBjDRPTT+E5ASoAWkiM=
+
+Name: org/apache/http/client/params/HttpClientParams.class
+SHA1-Digest: AWrHI2UWhMo9jVoKU/QdcM1jKXw=
+
+Name: org/apache/http/client/UserTokenHandler.class
+SHA1-Digest: wl3lrE7ict/Jc04sn3ZrkjbRmlY=
+
+Name: org/apache/http/client/methods/HttpPatch.class
+SHA1-Digest: p9NViyJ2YuJ8emScKIrL9f94oiI=
+
+Name: org/apache/http/impl/conn/tsccm/WaitingThread.class
+SHA1-Digest: B32SQrxKEA8xcRnTHddPdH+kHfI=
+
+Name: org/apache/http/impl/conn/tsccm/ConnPoolByRoute$1.class
+SHA1-Digest: iaeWMMxmHrsgPAmkIWyPvDe7bno=
+
+Name: org/apache/http/impl/execchain/MainClientExec.class
+SHA1-Digest: U+FPk93AslxdNPSPEAosg6TTnjs=
+
+Name: org/apache/http/impl/conn/BasicHttpClientConnectionManager.class
+SHA1-Digest: CASSK3ocd49Fmb+Lulu9g7L0ODQ=
+
+Name: org/apache/http/conn/socket/LayeredConnectionSocketFactory.class
+SHA1-Digest: xZxjP8+L4Pw5oBY03Mn/2tu38OI=
+
+Name: org/apache/http/cookie/SM.class
+SHA1-Digest: IdR0Y302TTGWrC8vfbZYsiPzGYE=
+
+Name: org/apache/http/client/ResponseHandler.class
+SHA1-Digest: dymD5Vx4HzpX9UEJMoBhAt0ZeLA=
+
+Name: org/apache/http/client/fluent/InternalByteArrayEntity.class
+SHA1-Digest: VYfzFK8p71MTO5aXgEYKed1HUVQ=
+
+Name: org/apache/http/impl/client/cache/IOUtils.class
+SHA1-Digest: UWLgk6p0PkCfGUUQLAsU0FcbPHE=
+
+Name: org/apache/http/impl/conn/CPool.class
+SHA1-Digest: J+F6UUlsEAnIlPEhwLkXpRTkeKc=
+
+Name: org/apache/http/client/protocol/RequestClientConnControl.class
+SHA1-Digest: BPkwo4iIGZx7rBUC/ZpZrZb4uPw=
+
+Name: org/apache/http/entity/mime/HttpStrictMultipart.class
+SHA1-Digest: V/2T6Ca1nB/bUKvKdN4bGMmiEO0=
+
+Name: org/apache/http/impl/cookie/RFC2109VersionHandler.class
+SHA1-Digest: hs7KowxPAoxZu1uVnaHIN1acP/k=
+
+Name: org/apache/http/impl/client/cache/memcached/MemcachedCacheEntryI
+ mpl.class
+SHA1-Digest: Vve7slTD4pAXbIHt8VDw3J96V5U=
+
+Name: org/apache/http/impl/conn/IdleConnectionHandler$TimeValues.class
+SHA1-Digest: zH3viHD7B/bA1hh1pd2ugtnmONo=
+
+Name: org/apache/http/impl/auth/NTLMScheme$State.class
+SHA1-Digest: /iMFG1c6FnFHaMSDPkX76xL/AC0=
+
+Name: org/apache/http/impl/client/cache/CacheKeyGenerator.class
+SHA1-Digest: ClHx9WhF9rSi2YQ6jZpcX1MxKb8=
+
+Name: org/apache/http/impl/conn/InMemoryDnsResolver.class
+SHA1-Digest: nuk8ZI3X2OaNwaLaWUjiTiSmrCA=
+
+Name: org/apache/http/entity/mime/HttpMultipart.class
+SHA1-Digest: 3Zul4gH3h4U20qd3PRwoXt54OpU=
+
+Name: org/apache/http/impl/cookie/BrowserCompatSpec$1.class
+SHA1-Digest: LKdoigXKX8xI+APf3U66xIWjicQ=
+
+Name: org/apache/http/impl/auth/SPNegoScheme.class
+SHA1-Digest: qCVh4WDfCWrEVv2s/8C1Gt9eyFU=
+
+Name: org/apache/http/impl/client/DefaultRedirectStrategy.class
+SHA1-Digest: 5a3y9amOjs2XLMCikJhXI5anG3g=
+
+Name: org/apache/http/client/params/CookiePolicy.class
+SHA1-Digest: gKG8iF2ZKovEUHB295fDo8dG/78=
+
+Name: org/apache/http/client/config/AuthSchemes.class
+SHA1-Digest: gS0Nk4Fkg0PUp89r+gwQWheugGk=
+
+Name: org/apache/http/impl/cookie/AbstractCookieSpec.class
+SHA1-Digest: niwUkHEIq+zOFFqC8NlI1oBK9Sg=
+
+Name: org/apache/http/impl/client/cache/CacheValidityPolicy.class
+SHA1-Digest: 466B/Jg3RO4KrhW+llfi4/7dEyc=
+
+Name: org/apache/http/auth/InvalidCredentialsException.class
+SHA1-Digest: 3iBbVe6IHOz7l2qJ4p9Nji9Z0e0=
+
+Name: org/apache/http/impl/conn/SingleClientConnManager$1.class
+SHA1-Digest: 5x/y02keEOOi6fyAKPzKNM3EmIQ=
+
+Name: org/apache/http/client/cache/HttpCacheEntry.class
+SHA1-Digest: +308sn+C2DTQAcy5LK+Lpvv+1CI=
+
+Name: org/apache/http/client/utils/Rfc3492Idn.class
+SHA1-Digest: /09wFyoUi+apSxeWxcw01Noyyl0=
+
+Name: org/apache/http/impl/execchain/RetryExec.class
+SHA1-Digest: Kt4PCR5pj5ViSN1XS2CtFALKMoI=
+
+Name: org/apache/http/impl/conn/tsccm/RouteSpecificPool$1.class
+SHA1-Digest: +BaB55D8ELnG/bjgvm3RsE+t/vg=
+
+Name: org/apache/http/impl/client/cache/CacheInvalidator.class
+SHA1-Digest: WFw5OUc0ivhq85oWCbD0Vx0GiRs=
+
+Name: org/apache/http/client/utils/URLEncodedUtils.class
+SHA1-Digest: SfTQCXQKRFzafYkisTZV+PmzJ8Y=
+
+Name: org/apache/http/impl/cookie/PublicSuffixListParser.class
+SHA1-Digest: 85OIk4lF3+iPKLzwygoWyhoZLng=
+
+Name: org/apache/http/conn/ssl/X509HostnameVerifier.class
+SHA1-Digest: WjytTUBaTumZHKYUSQ/Ktz8Ux9k=
+
+Name: org/apache/http/auth/NTUserPrincipal.class
+SHA1-Digest: BuWkaT8tiXoI69Q2FFxu0u51V1I=
+
+Name: org/apache/http/conn/params/ConnManagerParamBean.class
+SHA1-Digest: GHZKq//BTYLXzCkRT4BjJdiXlEw=
+
+Name: org/apache/http/impl/client/cache/OptionsHttp11Response.class
+SHA1-Digest: 9Z/6ZCHAVj+vlkJK8TCTr3YaFOQ=
+
+Name: org/apache/http/conn/ssl/AllowAllHostnameVerifier.class
+SHA1-Digest: PCSgjxU7UNOJez28Z7TvX6s2AVQ=
+
+Name: org/apache/http/conn/params/ConnConnectionPNames.class
+SHA1-Digest: yBljL98MQd36l2lfBcvN/261U4A=
+
+Name: org/apache/http/cookie/CookieSpec.class
+SHA1-Digest: EGfiYaVNHtlwCy21RAV6I/w4bRU=
+
+Name: org/apache/http/client/RedirectHandler.class
+SHA1-Digest: 8DAoJwP44J7Bc7ikZysFoJys/zA=
+
+Name: org/apache/http/auth/AUTH.class
+SHA1-Digest: jrk/rYbnt5PAM55llV7KwoULFCI=
+
+Name: org/apache/http/impl/conn/tsccm/PoolEntryRequest.class
+SHA1-Digest: hG3ofj31SPwR8t3nKfczC+SSO+M=
+
+Name: org/apache/http/conn/ssl/SSLConnectionSocketFactory.class
+SHA1-Digest: 3QQ1yKCZaOYEYbFXYkb7T3au97Y=
+
+Name: org/apache/http/client/protocol/ResponseProcessCookies.class
+SHA1-Digest: 1myPc9aH31P1E6BGoK4+J9ZGc0E=
+
+Name: org/apache/http/impl/conn/DefaultHttpResponseParserFactory.class
+SHA1-Digest: xv5KKyNm9+hktL5f2KvKQw3bG60=
+
+Name: org/apache/http/auth/Credentials.class
+SHA1-Digest: Li0efDaQQFkKpb4HsoMIl8tDIoo=
+
+Name: org/apache/http/impl/client/Clock.class
+SHA1-Digest: CcIytBkPthC/f3hjEfK/I+nxGVo=
+
+Name: org/apache/http/impl/client/cache/memcached/MemcachedOperationTi
+ meoutException.class
+SHA1-Digest: X91NN5o3vb9lgaOksNsUlm07RrY=
+
+Name: org/apache/http/conn/params/ConnRouteParams.class
+SHA1-Digest: hxRCSRaMZaU6pbt/8p+nmvYiWZw=
+
+Name: org/apache/http/impl/conn/LoggingSessionInputBuffer.class
+SHA1-Digest: vqSGsSQBKf7PwtXjG/yKr6hu23U=
+
+Name: org/apache/http/impl/client/DefaultHttpClient.class
+SHA1-Digest: TImdh16Zd/m6sf5WpKOZ8pC65I8=
+
+Name: org/apache/http/impl/conn/AbstractPoolEntry.class
+SHA1-Digest: UagJ6y9gVHlxtzLWEGwtHytY994=
+
+Name: org/apache/http/impl/client/ProxyClient.class
+SHA1-Digest: StX/9W8Ax7DQXonzpV5WOtOH2zo=
+
+Name: org/apache/http/client/protocol/RequestAuthenticationBase.class
+SHA1-Digest: asf/bwgv0ydqo8bsvqAJ4lBDIuI=
+
+Name: org/apache/http/impl/client/InternalHttpClient.class
+SHA1-Digest: Ipu3dNtyBmo3Wcp9nP0Cl/79Nt8=
+
+Name: org/apache/http/impl/cookie/RFC2965PortAttributeHandler.class
+SHA1-Digest: obwONzmQDwNo1WVn4aJIyaYNaDI=
+
+Name: org/apache/http/client/config/RequestConfig.class
+SHA1-Digest: dxpAiHNlwd/TIdoQ8TZ/AS65FNA=
+
+Name: org/apache/http/conn/ConnectionPoolTimeoutException.class
+SHA1-Digest: DMz9My+r3n/zGx6iRXY7NLRELPQ=
+
+Name: org/apache/http/client/methods/HttpUriRequest.class
+SHA1-Digest: 8J4oYG1+iTVChIzfq13bTRtSrs4=
+
+Name: org/apache/http/impl/cookie/RFC2965VersionAttributeHandler.class
+SHA1-Digest: Gn3PT43YSOQvm4k//WNJRYZ8fmw=
+
+Name: org/apache/http/impl/client/cache/ConditionalRequestBuilder.clas
+ s
+SHA1-Digest: zY2bSljTxeQp2RBm75J8a8LoXvM=
+
+Name: org/apache/http/conn/ssl/SSLContextBuilder.class
+SHA1-Digest: 34buEx1a/ndlf94Jp+d8IkJH9Yk=
+
+Name: org/apache/http/impl/conn/DefaultHttpResponseParser.class
+SHA1-Digest: chaTBt1IRnLtXrjhEv1CjTOvVHM=
+
+Name: org/apache/http/impl/conn/tsccm/ThreadSafeClientConnManager$1.cl
+ ass
+SHA1-Digest: LPk6ZydNM+43OdxpPmtYsEffiMI=
+
+Name: org/apache/http/impl/cookie/RFC2965SpecFactory.class
+SHA1-Digest: m6deMzKe5LqpRJGp/5R6dHSTa4I=
+
+Name: org/apache/http/impl/auth/AuthSchemeBase.class
+SHA1-Digest: r6cZezLhH/8dgAiu8736KfotAqY=
+
+Name: org/apache/http/client/methods/CloseableHttpResponse.class
+SHA1-Digest: xQaTj8eCXsTi82rdweuz27kbeug=
+
+Name: org/apache/http/impl/auth/NTLMEngineImpl$NTLMMessage.class
+SHA1-Digest: jK03ObTeEK4rGsxYV48kjZ6Z3PE=
+
+Name: org/apache/http/impl/client/NullBackoffStrategy.class
+SHA1-Digest: 0BNvimSJ5JElIqsu+UkgYnfDfO8=
+
+Name: org/apache/http/conn/params/ConnManagerParams.class
+SHA1-Digest: bwoeUFcTTSVE76w5vpxYzgbzvV0=
+
+Name: org/apache/http/impl/auth/UnsupportedDigestAlgorithmException.cl
+ ass
+SHA1-Digest: Uu/HVaeOogSpuAzARx2KrfhLRoU=
+
+Name: org/apache/http/impl/conn/ProxySelectorRoutePlanner.class
+SHA1-Digest: j1ErDk9na5T5zVtUqwSYlhVAAtg=
+
+Name: org/apache/http/conn/scheme/HostNameResolver.class
+SHA1-Digest: rfWmxX8Nrj4ArZcw19oNRzQ4wts=
+
+Name: org/apache/http/conn/ssl/SSLContextBuilder$KeyManagerDelegate.cl
+ ass
+SHA1-Digest: rnE/jkh/qMopysCToC/idOnySsY=
+
+Name: org/apache/http/impl/client/cache/InternalURIUtils.class
+SHA1-Digest: kWbYuFpexuKLxpcbKn9rhOYU0QU=
+
+Name: META-INF/eclipse.inf
+SHA1-Digest: SAqY+5ITAL0mkdYeijlSRhyIaZk=
+
+Name: org/apache/http/impl/client/cache/BasicHttpCacheStorage.class
+SHA1-Digest: p9SqMKOR2SCsUyCea++GGWSlfW0=
+
+Name: org/apache/http/impl/cookie/PublicSuffixFilter.class
+SHA1-Digest: siSmOe4NY3hBEldcpbxvRX1RADc=
+
+Name: org/apache/http/impl/client/cache/BasicHttpCache.class
+SHA1-Digest: SGiEaUOFrlwOwmhf93bj6JIsAA4=
+
+Name: org/apache/http/impl/auth/NTLMEngineImpl$Type3Message.class
+SHA1-Digest: BPagKyGsEgtJVeRU4BtWP6ADOS8=
+
+Name: org/apache/http/client/methods/HttpDelete.class
+SHA1-Digest: Ivf+Nps/+WoBV7zHcPRpZOqwLSg=
+
+Name: org/apache/http/client/CookieStore.class
+SHA1-Digest: NCmvlh1s+U9JNfA23eUlig830RA=
+
+Name: org/apache/http/cookie/CookieSpecProvider.class
+SHA1-Digest: YJsJOF1Tepl2zQr7dSpX1vrhNGE=
+
+Name: org/apache/http/impl/auth/BasicScheme.class
+SHA1-Digest: hSllfx2FxaNRLtcRQZk01CqxbdI=
+
+Name: org/apache/http/client/ServiceUnavailableRetryStrategy.class
+SHA1-Digest: V2vq9ZmriHZZ90wsJX8/3b617Hw=
+
+Name: org/apache/http/impl/client/RoutedRequest.class
+SHA1-Digest: 1uIHnpqPlM8AhvITnBbhWGeA9HI=
+
+Name: org/apache/http/impl/auth/NegotiateSchemeFactory.class
+SHA1-Digest: uVIVYQenDpgdWl3pLYkspyaj/CY=
+
+Name: org/apache/http/entity/mime/content/InputStreamBody.class
+SHA1-Digest: uxaJncaajrbu+7VxG7yid5deh8w=
+
+Name: org/apache/http/client/methods/AbstractExecutionAwareRequest.cla
+ ss
+SHA1-Digest: 2gI7sHBcX5M9u2aB1zT6aRsCKiI=
+
+Name: org/apache/http/conn/socket/PlainConnectionSocketFactory.class
+SHA1-Digest: JYw1YUPm1IVnnuI7MD8LhbiuST0=
+
+Name: org/apache/http/entity/mime/FormBodyPart.class
+SHA1-Digest: mygDnlFcnfni0JuSZoE3VU17Fig=
+
+Name: org/apache/http/impl/client/cache/SchedulingStrategy.class
+SHA1-Digest: 28ljhIXh1iw/Zn6H5aCnb/29g1A=
+
+Name: org/apache/http/entity/mime/content/ByteArrayBody.class
+SHA1-Digest: bvH4EhxHrElkJly9TaaDTzkzIkc=
+
+Name: org/apache/http/conn/ssl/BrowserCompatHostnameVerifier.class
+SHA1-Digest: Ulo9/KZZr2ODnLu9mWsZXd/qemU=
+
+Name: org/apache/http/client/entity/UrlEncodedFormEntity.class
+SHA1-Digest: ZABF9ny9G/5+9oxxzBUc/O2Vjek=
+
+Name: org/apache/http/impl/cookie/NetscapeDraftSpecFactory.class
+SHA1-Digest: PqNuzcicNnfObua2p1BdQt7rEQA=
+
+Name: org/apache/http/auth/ChallengeState.class
+SHA1-Digest: Hgp28gHA9MYbUNH0+/GkXKVuuFg=
+
+Name: org/apache/http/impl/auth/HttpEntityDigester.class
+SHA1-Digest: 0zTMS/ULHZo1ouao54EpINC2ojA=
+
+Name: org/apache/http/conn/UnsupportedSchemeException.class
+SHA1-Digest: DUdYRDwh6OQq1ULhK1p5fyrhvCk=
+
+Name: org/apache/http/impl/conn/HttpPoolEntry.class
+SHA1-Digest: 3gxGqRoRGGj5L1KcGMkQPsSMxho=
+
+Name: org/apache/http/client/entity/DecompressingEntity.class
+SHA1-Digest: Yh8JASoH3jBfRgizGVSIlKR+rV4=
+
+Name: org/apache/http/impl/conn/tsccm/WaitingThreadAborter.class
+SHA1-Digest: zdOKrMOXwlg5miSoWvlYaswj5TI=
+
+Name: org/apache/http/impl/client/DecompressingHttpClient.class
+SHA1-Digest: kC+DChN2RJ17ecNjIqfSB2e+DzE=
+
+Name: org/apache/http/impl/execchain/BackoffStrategyExec.class
+SHA1-Digest: TC2ZlTU/pC9yKli1TWr3YRbQh14=
+
+Name: org/apache/http/conn/params/ConnPerRoute.class
+SHA1-Digest: wRLgFV1rsaK4FSj0sbN5jwTA9ow=
+
+Name: org/apache/http/impl/client/cache/CacheEntity.class
+SHA1-Digest: 7/r9/afrgt0JF4btse3RYK30OuU=
+
+Name: org/apache/http/client/protocol/ResponseAuthCache.class
+SHA1-Digest: Mvm4aMAaV5vVoQZwZ8iwb/PxzIk=
+
+Name: OSGI-INF/l10n/metatype/metatype.xml
+SHA1-Digest: 91ToDYvczSvUGGwZHgKLwBYpuAI=
+
+Name: org/apache/http/impl/conn/SingleClientConnManager$PoolEntry.clas
+ s
+SHA1-Digest: RJ3oJ23CfvdmvJXPuon3w8xG94U=
+
+Name: org/apache/http/impl/client/cache/ehcache/EhcacheHttpCacheStorag
+ e.class
+SHA1-Digest: FPQ5fHF61NE+9q5XUjSXAmNWwYQ=
+
+Name: org/apache/http/client/methods/HttpExecutionAware.class
+SHA1-Digest: X0MNKC8iiEeMesD3+XFcTWFmhrI=
+
+Name: org/apache/http/client/entity/EntityBuilder.class
+SHA1-Digest: A+soB1FdZWKQymXQqTE5Q1tRCCk=
+
+Name: org/apache/http/auth/NTCredentials.class
+SHA1-Digest: JrzF93c4gPVSBXG262X5c3P9zCs=
+
+Name: org/apache/http/conn/ConnectTimeoutException.class
+SHA1-Digest: FuFIUhMsnKd4JU5hZb5EkEhYOUQ=
+
+Name: org/apache/http/conn/scheme/LayeredSocketFactoryAdaptor.class
+SHA1-Digest: +wkuvHoVhLifLoE/fynC81sqzYc=
+
+Name: org/apache/http/client/methods/HttpEntityEnclosingRequestBase.cl
+ ass
+SHA1-Digest: nhn0fXPwMlq3jPrqH2kU3VM7q5Y=
+
+Name: org/apache/http/impl/conn/PoolingClientConnectionManager$1.class
+SHA1-Digest: nBs8CxZoJzFm2o3X7gsTZJR2OiQ=
+
+Name: org/apache/http/impl/client/cache/CacheConfig.class
+SHA1-Digest: qQkCB5SkvBAXQ6rjssVGSzJjy7E=
+
+Name: org/apache/http/entity/mime/content/FileBody.class
+SHA1-Digest: S8i+6+TVoqRabrxrbEkBW3GIEiE=
+
+Name: org/apache/http/impl/auth/NTLMSchemeFactory.class
+SHA1-Digest: caABgEqqLdyBnUEetQ6npJy4FXk=
+
+Name: org/apache/http/impl/cookie/BasicExpiresHandler.class
+SHA1-Digest: zBj6rj6uoAuRvhBOd29Qmji9uGM=
+
+Name: about_files/RELEASE_NOTES.txt
+SHA1-Digest: JZUzsrMoeccQotTokLCfaraEopc=
+
+Name: org/apache/http/impl/execchain/RequestEntityProxy.class
+SHA1-Digest: rQ9URuUkzuNobLcBKmN9b3e0Ul0=
+
+Name: org/apache/http/client/protocol/RequestAddCookies.class
+SHA1-Digest: XC1QdbxHdbAVXsQhLcWEF6CTEU4=
+
+Name: org/apache/http/impl/client/CloseableHttpResponseProxy.class
+SHA1-Digest: M5BozPKNeS5+Gk0PXYm424sb+Ck=
+
+Name: org/apache/http/impl/cookie/BestMatchSpecFactory.class
+SHA1-Digest: 1Garr4Cf6U06GusBCZ/DiVg++gE=
+
+Name: org/apache/http/impl/client/cache/BasicIdGenerator.class
+SHA1-Digest: dVViO0wfyzwFM1gomJUk8iJJmjs=
+
+Name: org/apache/http/impl/client/CloseableHttpClient.class
+SHA1-Digest: vWyviwC9uoX7UgJByqvHVkC/NPo=
+
+Name: org/apache/http/impl/auth/GGSSchemeBase.class
+SHA1-Digest: RGxn2I3yN1zekZ815ZXDS0LkVFM=
+
+Name: org/apache/http/impl/conn/ManagedClientConnectionImpl.class
+SHA1-Digest: sgvMi8QBL1jU2YETbnaNKI1i4e8=
+
+Name: org/apache/http/client/utils/DateUtils$DateFormatHolder.class
+SHA1-Digest: WJRu+gJDhVnGHAjj38BImUHrEeE=
+
+Name: org/apache/http/client/methods/AbstractExecutionAwareRequest$2.c
+ lass
+SHA1-Digest: 3QgcFlmdDJMAofwOUt6RMLrIDBM=
+
+Name: org/apache/http/client/HttpClient.class
+SHA1-Digest: 6ZYu9vPFfmCKuUrULJUgfMrIsZE=
+
+Name: org/apache/http/impl/client/DefaultTargetAuthenticationHandler.c
+ lass
+SHA1-Digest: 9gnjGfDuTBIa/KWhvj6ydImfD9k=
+
+Name: org/apache/http/conn/HttpHostConnectException.class
+SHA1-Digest: 0x1L1FIfcB8zDB8QllX5NNdEERg=
+
+Name: org/apache/http/impl/conn/DefaultSchemePortResolver.class
+SHA1-Digest: c+v5dC/g5QgKGMNqHNbwGzClyUw=
+
+Name: org/apache/http/client/ConnectionBackoffStrategy.class
+SHA1-Digest: BJnTn7p4kB0gzIhNGwzkMhiABCw=
+
+Name: org/apache/http/client/protocol/RequestAuthCache.class
+SHA1-Digest: XTBC2lpPJ2mnMCOTmIJ4KuTCWr0=
+
+Name: org/apache/http/client/entity/GzipDecompressingEntity.class
+SHA1-Digest: yUdt3WMTfnb94V6S/d83Z6MGGSQ=
+
+Name: org/apache/http/conn/scheme/SchemeLayeredSocketFactoryAdaptor2.c
+ lass
+SHA1-Digest: rHEpd0Lcip3PeoVMQD9ki54zA90=
+
+Name: org/apache/http/impl/execchain/RequestAbortedException.class
+SHA1-Digest: PBl4/NNwonfOeazzoHFa1WDfjEI=
+
+Name: org/apache/http/client/utils/DateUtils.class
+SHA1-Digest: d4QrSuR7h4T2CKAnAEjGVb8Q1vk=
+
+Name: org/apache/http/auth/params/AuthPNames.class
+SHA1-Digest: QdfMFXmUtE/Wbb/0nnxQqSu0NTE=
+
+Name: org/apache/http/client/fluent/HttpHeader.class
+SHA1-Digest: bOAT43JJ99D/iEpw/HryTNiO9lw=
+
+Name: org/apache/http/impl/conn/ConnectionShutdownException.class
+SHA1-Digest: z5s9OH++aP15e5Gy5Bndv6K1SaI=
+
+Name: org/apache/http/client/entity/LazyDecompressingInputStream.class
+SHA1-Digest: pzsk9d0FZ+Zof83UltGFN3WwkaU=
+
+Name: org/apache/http/client/ClientProtocolException.class
+SHA1-Digest: Kb76kTvk5SvDXLWpZemPR8hzeaw=
+
+Name: org/apache/http/client/config/CookieSpecs.class
+SHA1-Digest: J7eDYJ2mo+URuIFJpVYRvBn0jfY=
+
+Name: org/apache/http/client/params/ClientParamBean.class
+SHA1-Digest: kqA+asi6w90yWSkA08rbvcmC11k=
+
+Name: org/apache/http/impl/cookie/CookieSpecBase.class
+SHA1-Digest: II0Kd/6KiN5TQgoPt9Pj82baQxo=
+
+Name: org/apache/http/impl/conn/LoggingSessionOutputBuffer.class
+SHA1-Digest: nGRi8mdTtfdfmKJ/bV6GEdu8AWc=
+
+Name: org/apache/http/impl/conn/ManagedHttpClientConnectionFactory.cla
+ ss
+SHA1-Digest: 2D1UVX8lzNhwTxssNKriT5Xq+i8=
+
+Name: org/apache/http/conn/params/ConnPerRouteBean.class
+SHA1-Digest: /4X7ly2dOA7rg3L7e+NTNMYhWLI=
+
+Name: OSGI-INF/l10n/metatype/metatype.properties
+SHA1-Digest: Wmbn9MfJLqQ1SES/WE9u/5QSDlg=
+
+Name: org/apache/http/conn/ssl/PrivateKeyStrategy.class
+SHA1-Digest: znROAA8DMWVgrntv/YfcTcAchrw=
+
+Name: org/apache/http/conn/BasicManagedEntity.class
+SHA1-Digest: qi+DRrcs78o/aEHIgki7fmKctdA=
+
+Name: org/apache/http/impl/conn/Wire.class
+SHA1-Digest: 5XirvB+Auks8F7vIJJjvSdzIzYY=
+
+Name: org/apache/http/impl/client/cache/SizeLimitedResponseReader.clas
+ s
+SHA1-Digest: rdqTnu0M/JfocfTl4TzmZxrEvuU=
+
+Name: org/apache/http/impl/client/cache/FailureCache.class
+SHA1-Digest: KKODcXZW0kpDEfgyv0m3OS59q0w=
+
+Name: about_files/README.txt
+SHA1-Digest: WoORKpEqgGdVbzWaZxR2cBexs1o=
+
+Name: org/apache/http/impl/auth/DigestScheme.class
+SHA1-Digest: HzKhjcyFrWLsWXU6t9c/KGGkK5c=
+
+Name: org/apache/http/conn/HttpRoutedConnection.class
+SHA1-Digest: gslZxcVkDd4fIgFoJxqYNjH8FMs=
+
+Name: org/apache/http/impl/auth/NTLMEngineImpl$CipherGen.class
+SHA1-Digest: 06kxRPullj09mFIyNlxOAjFt6FQ=
+
+Name: org/apache/http/impl/client/DefaultRedirectStrategyAdaptor.class
+SHA1-Digest: CZOC6e0MgJ2y5pa5y19NeuvbxJ8=
+
+Name: org/apache/http/impl/client/RedirectLocations.class
+SHA1-Digest: 9526uUB8lZXqdXLgQsSFoV+cmEQ=
+
+Name: org/apache/http/impl/client/cache/FileResource.class
+SHA1-Digest: QEHgBPUX7R87wH6TJuRT2LNE7Eo=
+
+Name: org/apache/http/impl/client/HttpRequestTaskCallable.class
+SHA1-Digest: 7oyT9FsdKLvSuv1YeAhfaQUqqsk=
+
+Name: org/apache/http/impl/cookie/BasicDomainHandler.class
+SHA1-Digest: A/59ofYCFd+0W3RUJ5acU1K4JWs=
+
+Name: org/apache/http/impl/client/cache/ImmediateSchedulingStrategy.cl
+ ass
+SHA1-Digest: QVK1eqRNYlptLhpnN/Es7SVXOS0=
+
+Name: org/apache/http/client/protocol/ResponseContentEncoding.class
+SHA1-Digest: NsJ+rhaEEzy1+nGz4Jx4MT6YJyU=
+
+Name: org/apache/http/impl/client/AIMDBackoffManager.class
+SHA1-Digest: TWS3OqITPn/gWFUqSJGEgJzm54w=
+
+Name: org/apache/http/conn/scheme/SchemeSocketFactoryAdaptor.class
+SHA1-Digest: XfiKmu9TWOCPxMw6VEJv5565/tw=
+
+Name: org/apache/http/impl/client/cache/memcached/MemcachedHttpCacheSt
+ orage.class
+SHA1-Digest: +Xs1PsKcXxCsmZFi1GQI+HvpQGw=
+
+Name: org/apache/http/impl/client/cache/memcached/MemcachedCacheEntryF
+ actoryImpl.class
+SHA1-Digest: YLv3MrUeCdWKaVmiJVDNzqZ6i18=
+
+Name: about_files/LICENSE.txt
+SHA1-Digest: LlzuUKHTGEJhI/VsligAeXqglcc=
+
+Name: org/apache/http/impl/cookie/IgnoreSpecFactory.class
+SHA1-Digest: Swc0+YX95Lh16ZAgdsuaJrwRaxo=
+
+Name: org/apache/http/conn/ClientConnectionManager.class
+SHA1-Digest: w3EB9aMgnTXb0YYKEeVOpU30X58=
+
+Name: org/apache/http/entity/mime/content/ContentDescriptor.class
+SHA1-Digest: 9XSNHIqe+vZzi2juvCitHUqZnHU=
+
+Name: org/apache/http/impl/conn/IdleConnectionHandler.class
+SHA1-Digest: tsgh5ipTwnZxQ+V7SGzlyIRxgfo=
+
+Name: org/apache/http/impl/client/AuthenticationStrategyAdaptor.class
+SHA1-Digest: AUGPwjC9kwCsh6O/Jdz4i3m8rRA=
+
+Name: org/apache/http/client/HttpRequestRetryHandler.class
+SHA1-Digest: 32vmPm/ZlsgeiaFwIAazz33oaSE=
+
+Name: org/apache/http/client/cache/HttpCacheEntrySerializationExceptio
+ n.class
+SHA1-Digest: /yNA6iJoLW6sg4eDPh49D3r4rk0=
+
+Name: about_files/NOTICE.txt
+SHA1-Digest: cE41WXk8ihaTD7xchDNdacIv1Oc=
+
+Name: org/apache/http/impl/client/cache/ResponseCachingPolicy.class
+SHA1-Digest: VvlA7wWmwnlyjnmKSpCbVl7G0gc=
+
+Name: org/apache/http/client/RedirectException.class
+SHA1-Digest: I87RsXZKBtmV7jUYWXNCCD4z0n4=
+
+Name: org/apache/http/client/utils/Idn.class
+SHA1-Digest: OTHiwwGIFCHW+e8Qg7ZNIupTiiU=
+
+Name: org/apache/http/impl/auth/NTLMEngineImpl$Type1Message.class
+SHA1-Digest: 7Y7Ocd6c0vuLLOyALnYa4xCv5/o=
+
+Name: org/apache/http/client/fluent/Form.class
+SHA1-Digest: Z2/2LHB2rC/gzhVWagvXTy4lRJM=
+
+Name: org/apache/http/impl/client/NoopUserTokenHandler.class
+SHA1-Digest: xrt4anzF5aZlRmNSoEA9A00UJ8w=
+
+Name: org/apache/http/impl/conn/DefaultClientConnection.class
+SHA1-Digest: RynUxW3vzr8sj6AjC2QRmT9TZJQ=
+
+Name: org/apache/http/impl/client/HttpAuthenticator.class
+SHA1-Digest: xu+DCfawMQ8t0yIcqphfb/devfA=
+
+Name: org/apache/http/client/methods/RequestBuilder$InternalRequest.cl
+ ass
+SHA1-Digest: ZL6ueBVwLsrOB9vHQT21NtdxNBw=
+
+Name: org/apache/http/conn/util/InetAddressUtils.class
+SHA1-Digest: tDSNQv6HlkI9M4O+k3cBrbKR53E=
+
+Name: org/apache/http/impl/cookie/BasicSecureHandler.class
+SHA1-Digest: FaLzyLjJS+FTpv2FxmkKDTC/zRc=
+
+Name: org/apache/http/impl/conn/HttpConnPool.class
+SHA1-Digest: LNOkXRL9CjkJauKXrMg5yqlIkNA=
+
+Name: org/apache/http/impl/client/BasicCookieStore.class
+SHA1-Digest: lnMgEgfvGDz8fZrZQSouhPmEv2Y=
+
+Name: org/apache/http/auth/AuthScope.class
+SHA1-Digest: HRBaB4mLCSPvgyfwGVoJnT6++Xo=
+
+Name: org/apache/http/impl/client/cache/SizeLimitedResponseReader$1.cl
+ ass
+SHA1-Digest: f0llI8y4dex14hZs42a8Q7EnLDQ=
+
+Name: org/apache/http/impl/client/DefaultUserTokenHandler.class
+SHA1-Digest: Jww3hs2Q2uwh3kSVExRGFxU5GtU=
+
+Name: org/apache/http/conn/ssl/SSLContexts.class
+SHA1-Digest: JVqXoG745g2fYz47FYr5xw7OpPg=
+
+Name: org/apache/http/conn/ssl/TrustSelfSignedStrategy.class
+SHA1-Digest: RcnF3asqSZTMir2XoUEs8vhU+fc=
+
+Name: org/apache/http/conn/ConnectionRequest.class
+SHA1-Digest: nDABV/OYINIqm+pOhnRz4UbR3Rk=
+
+Name: org/apache/http/client/AuthenticationHandler.class
+SHA1-Digest: xwns/NEMCm456W+VD366DjYjFK8=
+
+Name: org/apache/http/client/utils/URIBuilder.class
+SHA1-Digest: 2WQ/i68T8rkr2AaeOh4tG/BFAVA=
+
+Name: org/apache/http/impl/auth/BasicSchemeFactory.class
+SHA1-Digest: oMIWG4xZLl5ENjP7r75D8gLYr1Q=
+
+Name: org/apache/http/entity/mime/content/AbstractContentBody.class
+SHA1-Digest: JuZLdEiidurfQk5N9m8orJT3yes=
+
+Name: org/apache/http/client/protocol/RequestAcceptEncoding.class
+SHA1-Digest: mxSpSebUPoUkzy+CcfO+aEA2whg=
+
+Name: org/apache/http/client/params/HttpClientParamConfig.class
+SHA1-Digest: eSPXus16DWmD2ex4+7AKIxrSh6Q=
+
+Name: org/apache/http/impl/client/cache/CacheConfig$Builder.class
+SHA1-Digest: GG9MxtUwLODuzbGR6ixZvefJwRM=
+
+Name: org/apache/http/impl/client/cache/FileResourceFactory.class
+SHA1-Digest: 7NcauMTt/BVUY9tV8njNUcM477A=
+
+Name: org/apache/http/impl/cookie/BestMatchSpec.class
+SHA1-Digest: AFGcmgxRE9AfnqRr9pWVGfB0zyI=
+
+Name: org/apache/http/client/NonRepeatableRequestException.class
+SHA1-Digest: xZk9t0Gtnh+SAAGz9lt4iUsvPBY=
+
+Name: org/apache/http/conn/socket/ConnectionSocketFactory.class
+SHA1-Digest: j4Ey8LuC4VJNYYpoi56i1ACGaGM=
+
+Name: org/apache/http/client/protocol/RequestDefaultHeaders.class
+SHA1-Digest: 8z/dsUaQJ/gNXQEF07kQB7Im66k=
+
+Name: org/apache/http/impl/client/FutureRequestExecutionMetrics.class
+SHA1-Digest: CHpuOV18q05/lkK/J0mFbhV0cb0=
+
+Name: org/apache/http/cookie/CookieIdentityComparator.class
+SHA1-Digest: TGC9v1fmxreQ3XjTLw5KLMf0Noo=
+
+Name: org/apache/http/impl/client/FutureRequestExecutionMetrics$Durati
+ onCounter.class
+SHA1-Digest: JnrZL8nkOuIItg+6NfGdXTxZEss=
+
+Name: org/apache/http/conn/ssl/TrustStrategy.class
+SHA1-Digest: W3TfzW+jBe7ShsoeouED+t/Hk8Y=
+
+Name: org/apache/http/impl/cookie/DateParseException.class
+SHA1-Digest: DpYmwc2kuLp+17iPNXeAU8w68Cc=
+
+Name: org/apache/http/impl/client/cache/DefaultHttpCacheEntrySerialize
+ r.class
+SHA1-Digest: e22MJFdUxJIB+uYBtKRXC31mdtA=
+
+Name: org/apache/http/entity/mime/MultipartEntityBuilder$1.class
+SHA1-Digest: ZlNltDI4RZhzv080CKd9o22EdYI=
+
+Name: org/apache/http/conn/OperatedClientConnection.class
+SHA1-Digest: 297bXjulAsE4Ds1pwPw3RNx++nk=
+
+Name: org/apache/http/impl/execchain/ServiceUnavailableRetryExec.class
+SHA1-Digest: bGYq0RI5B7Ce8raF6zzOjcnlDcE=
+
+Name: org/apache/http/impl/cookie/BasicClientCookie2.class
+SHA1-Digest: bNvLn+bTC1mf1823IvgmqDtDIdg=
+
+Name: org/apache/http/impl/conn/DefaultRoutePlanner.class
+SHA1-Digest: HlPeP4R2Jv1dPb1W5Ib3aPs09SI=
+
+Name: org/apache/http/impl/client/BasicCredentialsProvider.class
+SHA1-Digest: 9TIVWCfs7cL9r2IKJQ2X4ud1+6Q=
+
+Name: org/apache/http/impl/execchain/ConnectionHolder.class
+SHA1-Digest: e0L8FnyAXoLu3ZF06QkqPZignmY=
+
+Name: org/apache/http/entity/mime/HttpMultipartMode.class
+SHA1-Digest: etXN2rHOcCnKlmANEAxsR9HIF6Q=
+
+Name: org/apache/http/auth/BasicUserPrincipal.class
+SHA1-Digest: QBdxzWKeTgZIV57zKLYjPBd+xVY=
+
+Name: org/apache/http/impl/client/cache/memcached/SHA256KeyHashingSche
+ me.class
+SHA1-Digest: mDeQ5HT5xorrgebx0aNvlP7VJKE=
+
+Name: org/apache/http/impl/execchain/ResponseEntityProxy.class
+SHA1-Digest: P9pIxguvXNt0tU1pgSRKYv5On/4=
+
+Name: org/apache/http/impl/client/cache/HeapResource.class
+SHA1-Digest: H+zSYGI3K1ObBGzXMDG7YVtUJ0Y=
+
+Name: org/apache/http/cookie/params/CookieSpecParamBean.class
+SHA1-Digest: X7WHUIl3hJP/t8ajEuWjiO9i0pI=
+
+Name: org/apache/http/client/fluent/ContentResponseHandler.class
+SHA1-Digest: L6YOJMNYh0HiF1Ecdir7kUipfN4=
+
+Name: org/apache/http/impl/conn/tsccm/RouteSpecificPool.class
+SHA1-Digest: r5GWGFzEPk52dMRgZ2Wi2MQblT4=
+
+Name: org/apache/http/impl/conn/HttpConnPool$InternalConnFactory.class
+SHA1-Digest: PuCVVpLEi+mnMW36ylhbTZT/8xM=
+
+Name: org/apache/http/impl/auth/NTLMEngine.class
+SHA1-Digest: J4K1iTGJOOaq70PY4Wcnhca4nAU=
+
+Name: org/apache/http/client/utils/JdkIdn.class
+SHA1-Digest: aRyoGFGmI76bY+mTib5LpCYt2zI=
+
+Name: org/apache/http/impl/client/cache/CacheableRequestPolicy.class
+SHA1-Digest: +e3MPDxXT1Pcn+/fHpu4TlDFn7M=
+
+Name: org/apache/http/client/fluent/InternalFileEntity.class
+SHA1-Digest: +Vf3BgBjcK64MiM13bkjv13+GeQ=
+
+Name: org/apache/http/conn/scheme/Scheme.class
+SHA1-Digest: WgjJIeKIR33ooG6zeuOCMpcLMXY=
+
+Name: OSGI-INF/l10n/bundle.properties
+SHA1-Digest: DC8SPHRLVWVFxIcOUAW5v8JYArI=
+
+Name: org/apache/http/client/entity/DeflateInputStream$DeflateStream.c
+ lass
+SHA1-Digest: 8NRieiHtGbzHK1yMeuUC6o+afsA=
+
+Name: org/apache/http/impl/client/SystemDefaultHttpClient.class
+SHA1-Digest: 3WDmUBTktgmLpssLDNAVRDve10c=
+
+Name: org/apache/http/conn/scheme/SchemeLayeredSocketFactoryAdaptor.cl
+ ass
+SHA1-Digest: TWVurvXkpyfR+L3/sLlWEdEbJc4=
+
+Name: org/apache/http/impl/client/InternalHttpClient$1.class
+SHA1-Digest: iFB7f5YzJPVaGtKizEPB2gVZOuE=
+
+Name: org/apache/http/client/methods/AbstractExecutionAwareRequest$1.c
+ lass
+SHA1-Digest: /nyFLHMVLLHyCPxDbkYM7aOueys=
+
+Name: org/apache/http/conn/scheme/SocketFactoryAdaptor.class
+SHA1-Digest: pGGXJBAdUd7VtVrnp/1XEzb7ONU=
+
+Name: org/apache/http/impl/client/cache/ResponseProtocolCompliance.cla
+ ss
+SHA1-Digest: by1cvxsddYpP6JQ397LqpuQ6FA4=
+
+Name: org/apache/http/impl/client/EntityEnclosingRequestWrapper.class
+SHA1-Digest: D06g0TfqQYD2+5auAhu/gm5Lk1g=
+
+Name: org/apache/http/client/methods/HttpRequestBase.class
+SHA1-Digest: CG/w27mxDnGt/2MvpZdQ1BO//K0=
+
+Name: org/apache/http/impl/client/HttpRequestFutureTask.class
+SHA1-Digest: meBSwtlCu/tFVUtxetOOkpejwLw=
+
+Name: org/apache/http/impl/client/cache/CachingHttpClient$Asynchronous
+ ValidationRequest.class
+SHA1-Digest: +AkE0ePMKwq1kSz8voAEAMdpwB0=
+
+Name: org/apache/http/conn/ConnectionKeepAliveStrategy.class
+SHA1-Digest: dVsah+/QbuS78u7/dMfHA4aoGfM=
+
+Name: org/apache/http/entity/mime/MultipartEntityBuilder.class
+SHA1-Digest: Vx7wkzEEH5QF0k2SIic1mWQKbic=
+
+Name: org/apache/http/impl/client/cache/Variant.class
+SHA1-Digest: DUJXlg8poy8Ue9peHGl61j8YzcU=
+
+Name: org/apache/http/impl/cookie/DateUtils.class
+SHA1-Digest: IHKDr6IqsgP8YdI3jsZo3Fh3fRk=
+
+Name: org/apache/http/client/methods/HttpPost.class
+SHA1-Digest: w4KM3a00WGVSEwDpnSVbVb+iVlY=
+
+Name: org/apache/http/impl/conn/LoggingOutputStream.class
+SHA1-Digest: quPIxwAxfW4LAAOVTLVXkBu/BYw=
+
+Name: org/apache/http/client/fluent/InternalEntityEnclosingHttpRequest
+ .class
+SHA1-Digest: AyuVc1CkYw3zT21ElGK1CHI+F3c=
+
+Name: org/apache/http/impl/cookie/RFC2109DomainHandler.class
+SHA1-Digest: UbY7+c8nkOq2jWRi1idprwo8nmg=
+
+Name: org/apache/http/impl/conn/DefaultResponseParser.class
+SHA1-Digest: fihRAQabYMpBWOg2aDYBYIkpkNw=
+
+Name: org/apache/http/client/fluent/Async.class
+SHA1-Digest: JOJVncTKvdLdH4u8VwIEFANCZr8=
+
+Name: org/apache/http/impl/conn/SchemeRegistryFactory.class
+SHA1-Digest: ngD8m1gIYfQp67U04/9P/YclNUk=
+
+Name: org/apache/http/impl/cookie/NetscapeDraftSpec.class
+SHA1-Digest: fK8LYZZm4IZLugVi9hWUPeDnjnk=
+
+Name: org/apache/http/cookie/SetCookie2.class
+SHA1-Digest: R842RarJvUg+7JAZU67HU/SAIYY=
+
+Name: org/apache/http/impl/client/AutoRetryHttpClient.class
+SHA1-Digest: VWqgsLxBspH3b6wEF5YzjrzCDSA=
+
+Name: org/apache/http/entity/mime/HttpRFC6532Multipart.class
+SHA1-Digest: yCmFOLZJF2zkK62lEI7Cata1Pis=
+
+Name: org/apache/http/impl/client/cache/ResourceReference.class
+SHA1-Digest: uEkDLKkLwUuPkNj/vzs5p8H3gRg=
+
+Name: org/apache/http/client/utils/HttpClientUtils.class
+SHA1-Digest: SoS1gIzQwaIki32hWUreiCySiBw=
+
+Name: org/apache/http/client/params/AllClientPNames.class
+SHA1-Digest: cqldvpODlNCHNvbpcTBd8xgqNfE=
+
+Name: org/apache/http/client/entity/GzipCompressingEntity.class
+SHA1-Digest: LKLFvjGUwJkQUcwdnZUesTxruhE=
+
+Name: org/apache/http/impl/conn/AbstractClientConnAdapter.class
+SHA1-Digest: EaZAuwiauIb7g7lEMNTeDSx4zCY=
+
+Name: org/apache/http/entity/mime/HttpMultipart$1.class
+SHA1-Digest: PjMPXGW5FVqeCIMp4Vi6Z6Is7p4=
+
+Name: org/apache/http/impl/cookie/BrowserCompatSpecFactory$SecurityLev
+ el.class
+SHA1-Digest: x8E4e1ioC5bI5qyVKRgueQuZoZk=
+
+Name: org/apache/http/client/version.properties
+SHA1-Digest: 0NYlTO7E+nd7IZGntJ2o3DhKywA=
+
+Name: org/apache/http/auth/AuthState.class
+SHA1-Digest: k+970JT9zsNaaKw+Oql4xO2u/O4=
+
+Name: org/apache/http/impl/client/DefaultRedirectHandler.class
+SHA1-Digest: lp6bqnZN50fPAZSuLPjMHVBtnoI=
+
+Name: org/apache/http/impl/client/EntityEnclosingRequestWrapper$Entity
+ Wrapper.class
+SHA1-Digest: +hx1QN2SYHrahNLJHlgJWNaZaGg=
+
