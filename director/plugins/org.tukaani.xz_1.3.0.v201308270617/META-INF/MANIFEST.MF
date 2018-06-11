@@ -1,0 +1,338 @@
+Manifest-Version: 1.0
+Bundle-Description: %pluginDescription
+Bundle-DocURL: http://tukaani.org/xz/java.html
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: J2SE-1.4
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.tukaani.xz
+Eclipse-SourceReferences: scm:cvs:pserver:dev.eclipse.org:/cvsroot/too
+ ls:org.eclipse.orbit/org.tukaani.xz;tag=v201308270617
+Bundle-Version: 1.3.0.v201308270617
+Export-Package: org.tukaani.xz;version="1.3.0",org.tukaani.xz.check;ve
+ rsion="1.3.0",org.tukaani.xz.common;version="1.3.0",org.tukaani.xz.de
+ lta;version="1.3.0",org.tukaani.xz.index;version="1.3.0",org.tukaani.
+ xz.lz;version="1.3.0",org.tukaani.xz.lzma;version="1.3.0",org.tukaani
+ .xz.rangecoder;version="1.3.0",org.tukaani.xz.simple;version="1.3.0"
+Bundle-ManifestVersion: 2
+
+Name: org/tukaani/xz/rangecoder/RangeDecoder.class
+SHA1-Digest: piojy22nV0wrlS71WASOfN4X3gY=
+
+Name: org/tukaani/xz/lz/BT4.class
+SHA1-Digest: 2Zlwq4pzKhz9z0LNAxTnk/UUxmk=
+
+Name: org/tukaani/xz/common/StreamFlags.class
+SHA1-Digest: +Dzp0MRI8jlkGAsJhzK1IaGOdt0=
+
+Name: org/tukaani/xz/DeltaEncoder.class
+SHA1-Digest: W5kq1cRbjSszNMUnFvqmdWJ0wzg=
+
+Name: org/tukaani/xz/PowerPCOptions.class
+SHA1-Digest: Xj6Vzd+cfLfQVe4U1vRcSeSt9F8=
+
+Name: org/tukaani/xz/DeltaOptions.class
+SHA1-Digest: OjDNp1GJzK6j0/Pa7ijgDADxjIk=
+
+Name: org/tukaani/xz/X86Options.class
+SHA1-Digest: nayjhIEhAC/ykDmccMv2EhsG/hs=
+
+Name: org/tukaani/xz/SeekableInputStream.class
+SHA1-Digest: bfnbnCGTDzwgcK3uI82AxwgXgEU=
+
+Name: org/tukaani/xz/SPARCOptions.class
+SHA1-Digest: A0n5N82kWqsIRRhV0Q94zzr36H0=
+
+Name: org/tukaani/xz/lzma/LZMAEncoderFast.class
+SHA1-Digest: DNXq4BcAmXclJGyoHdPKKXs0XIM=
+
+Name: org/tukaani/xz/lzma/LZMAEncoder.class
+SHA1-Digest: GeqChC0Da6n1OeaqzDQ48rREKGo=
+
+Name: org/tukaani/xz/BCJEncoder.class
+SHA1-Digest: 8nuckZpfnqmAE1UjU+t5NkRkY+Y=
+
+Name: org/tukaani/xz/index/IndexHash.class
+SHA1-Digest: gYd4ljVUGTtiIaE69xkltTODYcw=
+
+Name: org/tukaani/xz/lzma/LZMAEncoderNormal.class
+SHA1-Digest: orbAPrQ/X5MXOPE5oEsx4kL1IdU=
+
+Name: org/tukaani/xz/LZMA2Coder.class
+SHA1-Digest: ondKKaLIbRlhQQlEhMmdoj6igpU=
+
+Name: org/tukaani/xz/BCJOptions.class
+SHA1-Digest: WODcEV9Cw3NxzN6cjObUhz+SpTU=
+
+Name: org/tukaani/xz/LZMA2InputStream.class
+SHA1-Digest: XwwdWcbB7qS3IuDu0xN3+PL4Pf4=
+
+Name: org/tukaani/xz/common/EncoderUtil.class
+SHA1-Digest: kz97+GMxaZI2f61OO31ApUyqZ4c=
+
+Name: org/tukaani/xz/BCJCoder.class
+SHA1-Digest: OOsVxs/yTL69V36uUIYTFdhJQj0=
+
+Name: org/tukaani/xz/BlockInputStream.class
+SHA1-Digest: J/a6+qPhN4EN0T5pqAHcbxI3HE8=
+
+Name: org/tukaani/xz/FilterCoder.class
+SHA1-Digest: kIYxaS/y3YElyAhTcEwWFjkM56M=
+
+Name: org/tukaani/xz/lz/CRC32Hash.class
+SHA1-Digest: lLTrXy4vpQ6RT7mPqqpHqTnFFCo=
+
+Name: org/tukaani/xz/XZ.class
+SHA1-Digest: m/kCxAzGY4NdOAf3tfpj9Zb6U8g=
+
+Name: org/tukaani/xz/SimpleInputStream.class
+SHA1-Digest: ccGPwuA+aCLyMpTWbW8looFDE/A=
+
+Name: org/tukaani/xz/DeltaDecoder.class
+SHA1-Digest: TEcce6YkMlTvAx8hZTVbYLQoesU=
+
+Name: org/tukaani/xz/FinishableOutputStream.class
+SHA1-Digest: MdZ7WuEo8dQHd4mHGn4QiKGXSjo=
+
+Name: org/tukaani/xz/SimpleOutputStream.class
+SHA1-Digest: 8J1N65sNoZSlbcRlw4UZXjSBKCo=
+
+Name: org/tukaani/xz/MemoryLimitException.class
+SHA1-Digest: 0ckXNvr/UE63QXs9K33L1id2O3I=
+
+Name: org/tukaani/xz/lzma/LZMADecoder.class
+SHA1-Digest: 5qMysEbIRGXN41DUA9tynn7dKWI=
+
+Name: org/tukaani/xz/lz/HC4.class
+SHA1-Digest: FYOu21GyN0T4Q7ozyRuq8cqaeic=
+
+Name: org/tukaani/xz/BCJDecoder.class
+SHA1-Digest: X/Kq/TenoyJ50NW1KJP+GydjBZI=
+
+Name: org/tukaani/xz/lzma/LZMAEncoder$LiteralEncoder$LiteralSubencoder
+ .class
+SHA1-Digest: 67sCKTUP7Qlo3+RqSlIqS57qOaA=
+
+Name: org/tukaani/xz/IndexIndicatorException.class
+SHA1-Digest: DqiKw+ovO3yN/zGq2PkNQ/n2nxk=
+
+Name: org/tukaani/xz/common/DecoderUtil.class
+SHA1-Digest: 4zJddgO2vbK7J4Pw0gY4XcNtChI=
+
+Name: org/tukaani/xz/simple/IA64.class
+SHA1-Digest: l4uk++CMIMty+qEkkLXybJTiDrs=
+
+Name: org/tukaani/xz/lz/Hash234.class
+SHA1-Digest: 803GziaOqxJY+5HVvldHv9h8ztM=
+
+Name: org/tukaani/xz/UncompressedLZMA2OutputStream.class
+SHA1-Digest: iaZM5iaEl2qDlpS7JrvpBpbS+Qg=
+
+Name: org/tukaani/xz/DeltaOutputStream.class
+SHA1-Digest: U1et3MzSW+eHMTB1QYUe2NCWkg8=
+
+Name: org/tukaani/xz/DeltaCoder.class
+SHA1-Digest: jRAF0NFv2b+VW5+ghfyBGTKwvP0=
+
+Name: org/tukaani/xz/lz/LZEncoder.class
+SHA1-Digest: x1Yex84Tf+Yf7XCHgZ8Jg+CaEik=
+
+Name: org/tukaani/xz/check/SHA256.class
+SHA1-Digest: lG/kdEJdPhiPeWorzg5zrHOxHL8=
+
+Name: org/tukaani/xz/DeltaInputStream.class
+SHA1-Digest: d0ne2IVNaNZo3gakkfk8k7hl+Dg=
+
+Name: org/tukaani/xz/lzma/LZMADecoder$LiteralDecoder.class
+SHA1-Digest: jveQBNxjS7WrculNNc8IqoaRkZE=
+
+Name: org/tukaani/xz/lzma/LZMAEncoder$LiteralEncoder.class
+SHA1-Digest: 6MXXKEB8J5U9MG+NiMPRzIG+ttQ=
+
+Name: org/tukaani/xz/simple/SimpleFilter.class
+SHA1-Digest: XNppM1qXCJ70sIeTP743dnBzH4o=
+
+Name: about_files/LICENSE.txt
+SHA1-Digest: dBMduMveWH8TVQgovFqENbQ6kGc=
+
+Name: org/tukaani/xz/IA64Options.class
+SHA1-Digest: LI7xUfC8aVPbP5O6wRQ2RZlcN2U=
+
+Name: org/tukaani/xz/simple/X86.class
+SHA1-Digest: oToEEHbhP5eZ/ht7sQRXwFwxeZQ=
+
+Name: org/tukaani/xz/check/None.class
+SHA1-Digest: MCF02ejoDuVBV9KiKBHGBBhPGH8=
+
+Name: org/tukaani/xz/lzma/LZMAEncoder$LengthEncoder.class
+SHA1-Digest: E1VZ/kToWN9VGdASHH5NaiQpjVI=
+
+Name: org/tukaani/xz/XZOutputStream.class
+SHA1-Digest: xFQMXf0Y4B+ZkrA4dACkcGMVl8k=
+
+Name: org/tukaani/xz/lzma/LZMADecoder$LiteralDecoder$LiteralSubdecoder
+ .class
+SHA1-Digest: BnrLaa28zuv69nqmRbOudBD4HQE=
+
+Name: org/tukaani/xz/lzma/State.class
+SHA1-Digest: 92R2tqOMU5Yzv6ViEvTRKun0MXQ=
+
+Name: about.html
+SHA1-Digest: qYYPheKu/CEcloBpaqayL93+6m0=
+
+Name: org/tukaani/xz/lzma/LZMACoder$LengthCoder.class
+SHA1-Digest: V3sm+AHQ25RdsDp0kMs5e2lepms=
+
+Name: org/tukaani/xz/lz/LZDecoder.class
+SHA1-Digest: +s/1htliJ4dJ5NdaBNbF5o+QCiw=
+
+Name: org/tukaani/xz/UnsupportedOptionsException.class
+SHA1-Digest: DcvLiNVdWtjLRrxB3XUSGdHmqhM=
+
+Name: org/tukaani/xz/FinishableWrapperOutputStream.class
+SHA1-Digest: C1ipcZzyARJyYZozFFaOP3BR4/0=
+
+Name: org/tukaani/xz/LZMA2OutputStream.class
+SHA1-Digest: 52vU0LBct4qJhZJX6Afx2ivHaLw=
+
+Name: org/tukaani/xz/lzma/Optimum.class
+SHA1-Digest: nkMu4jFnqnOwQVZid2xA9g+z+n0=
+
+Name: org/tukaani/xz/CountingInputStream.class
+SHA1-Digest: gwdMqFieO8XTHrv+B4xSVkWUn3o=
+
+Name: org/tukaani/xz/index/IndexEncoder.class
+SHA1-Digest: EH2JxDhy80R6vW7/BiRoAaJA+sQ=
+
+Name: org/tukaani/xz/SingleXZInputStream.class
+SHA1-Digest: FhngOLczbJIWwiabVII45jDY+sI=
+
+Name: org/tukaani/xz/index/IndexBase.class
+SHA1-Digest: 7F7WABR/RrvjHYtK8AfCcEHE6C4=
+
+Name: org/tukaani/xz/lzma/LZMACoder.class
+SHA1-Digest: eGAtV4YVJ84eGHw7lZCIhgC7TAk=
+
+Name: org/tukaani/xz/lzma/LZMAEncoder$1.class
+SHA1-Digest: 7IMpJanwvVZauzOs31dePyXHL98=
+
+Name: org/tukaani/xz/simple/PowerPC.class
+SHA1-Digest: kf3LoO+NlaQy60fXBgjhriArBa8=
+
+Name: org/tukaani/xz/rangecoder/RangeCoder.class
+SHA1-Digest: gWQxz3akkrVYlL6qDpE2pUhLlUY=
+
+Name: META-INF/eclipse.inf
+SHA1-Digest: KyT9FF7C7t86NoBoa2kZT3ZJBfw=
+
+Name: org/tukaani/xz/lzma/LZMACoder$LiteralCoder$LiteralSubcoder.class
+SHA1-Digest: bZCbJ8Y3G0v7hkGtoCY4Vfg4OLM=
+
+Name: org/tukaani/xz/XZFormatException.class
+SHA1-Digest: m/Uzk7HPOduGDimbWVTSUo3EjNc=
+
+Name: org/tukaani/xz/index/BlockInfo.class
+SHA1-Digest: zh4c4h0z8nNJd47GNFw5sFJSblg=
+
+Name: org/tukaani/xz/index/IndexDecoder.class
+SHA1-Digest: gnIzE6tF3kTFskil9UM9J11LEpQ=
+
+Name: org/tukaani/xz/lzma/LZMADecoder$LengthDecoder.class
+SHA1-Digest: 4tIFbtXXauHvrNd2qy5xOV0DLKc=
+
+Name: org/tukaani/xz/lz/Matches.class
+SHA1-Digest: z+HAj5K9YgWww6NfcO0tQVfxC0Q=
+
+Name: org/tukaani/xz/ARMThumbOptions.class
+SHA1-Digest: T3C53Hd7Yf7B5WlX+d9kpJ9m3ig=
+
+Name: org/tukaani/xz/CountingOutputStream.class
+SHA1-Digest: QRvDJHi7T7+c6jpYiqtiTvEaHZU=
+
+Name: org/tukaani/xz/lzma/LZMACoder$LiteralCoder.class
+SHA1-Digest: us7/tUpaX5h64pNVh1cMGfwhrqs=
+
+Name: org/tukaani/xz/common/Util.class
+SHA1-Digest: 1pFTh125xmzTZEmMc63uuPxBOg4=
+
+Name: org/tukaani/xz/XZIOException.class
+SHA1-Digest: DLXkolPoMmbMFksucjx+SXPvf3E=
+
+Name: org/tukaani/xz/simple/SPARC.class
+SHA1-Digest: poE+ZGVr3YKzK7kYvUz7P5CUFwQ=
+
+Name: org/tukaani/xz/delta/DeltaEncoder.class
+SHA1-Digest: K/u7B4avvuZ2q9y0Wtq/DAMenQ0=
+
+Name: org/tukaani/xz/check/CRC32.class
+SHA1-Digest: 3KF5mGEkdDEGcp8R5ZPhP0fna0I=
+
+Name: org/tukaani/xz/simple/ARM.class
+SHA1-Digest: NSWuqbLhZjVSGepj+YsUkYCspa8=
+
+Name: org/tukaani/xz/CorruptedInputException.class
+SHA1-Digest: QjdBUU4mL9dYcSCqHZHSL+Cxsis=
+
+Name: org/tukaani/xz/lzma/LZMADecoder$1.class
+SHA1-Digest: LwS1Ae3eIqWuUZCmp+Qo+4LbYmE=
+
+Name: org/tukaani/xz/delta/DeltaCoder.class
+SHA1-Digest: aCEcxtt8j66PKjz8D8jGouQmIKU=
+
+Name: org/tukaani/xz/SeekableXZInputStream.class
+SHA1-Digest: 1HTwF518XHCVZ+sjWxfdiwMlPrY=
+
+Name: plugin.properties
+SHA1-Digest: uz6J9LwXOXqiXqVyY0PcIKCGk7E=
+
+Name: org/tukaani/xz/LZMA2Encoder.class
+SHA1-Digest: A2AbDeZC9hJMs+2uqAV/MIyBea8=
+
+Name: org/tukaani/xz/LZMA2Options.class
+SHA1-Digest: SenJqINQUI6gM8FzHz+LRRRmomg=
+
+Name: org/tukaani/xz/check/Check.class
+SHA1-Digest: bNJoq7ahbS4CE65WUE8srK2YyFc=
+
+Name: org/tukaani/xz/FilterEncoder.class
+SHA1-Digest: W2flWy5tMNlCoHPFbqFe6GdXykk=
+
+Name: org/tukaani/xz/rangecoder/RangeEncoder.class
+SHA1-Digest: r5CtAWX9asYymaeD2eCSxHruxV8=
+
+Name: org/tukaani/xz/FilterOptions.class
+SHA1-Digest: HU97/uF2Qj8k5DbPAtYZGYolK64=
+
+Name: org/tukaani/xz/index/IndexRecord.class
+SHA1-Digest: 8y7Q+kFjg/e8jkSrHJaE3NpoNSs=
+
+Name: org/tukaani/xz/check/CRC64.class
+SHA1-Digest: I0Z6Y0cJNVOyPwwTGhqgJE6IXXQ=
+
+Name: org/tukaani/xz/RawCoder.class
+SHA1-Digest: DAD+Bw4FzG60FKp8Sd8KkZuqVRQ=
+
+Name: org/tukaani/xz/BlockOutputStream.class
+SHA1-Digest: z6VDuItUav+5DsColzu90pxAIq8=
+
+Name: org/tukaani/xz/ARMOptions.class
+SHA1-Digest: aBeAMdu/Oua0CdUlBBqE8ezc2Y8=
+
+Name: org/tukaani/xz/delta/DeltaDecoder.class
+SHA1-Digest: 2gQFMDe1sO5SYwkHRJl7JkUGNio=
+
+Name: org/tukaani/xz/simple/ARMThumb.class
+SHA1-Digest: X7fQf4HC36P7kZQM2vUVeqPV600=
+
+Name: org/tukaani/xz/SeekableFileInputStream.class
+SHA1-Digest: YV8DJ2jGP8Y+mDt6SB3JoxNn1Ls=
+
+Name: org/tukaani/xz/LZMA2Decoder.class
+SHA1-Digest: 6BIB/YYLqj3HwxXSwfEb/GjfwMc=
+
+Name: org/tukaani/xz/XZInputStream.class
+SHA1-Digest: o1Jp5VJJJ6JwwOTqChXabRPz7qI=
+
+Name: org/tukaani/xz/FilterDecoder.class
+SHA1-Digest: gunUM3CrxAh8P757cdDARy5w0Kg=
+

@@ -1,0 +1,917 @@
+Manifest-Version: 1.0
+Implementation-Vendor: The Apache Software Foundation
+X-Compile-Target-JDK: 1.5
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Built-By: ggregory
+Bundle-Version: 1.6.0.v201305230611
+X-Compile-Source-JDK: 1.5
+Specification-Title: Commons Codec
+Specification-Version: 1.6
+Build-Jdk: 1.6.0_29
+Specification-Vendor: The Apache Software Foundation
+Include-Resource: org/apache/commons/codec/language/bm/ash_approx_any.
+ txt=src/main/resources/org/apache/commons/codec/language/bm/ash_appro
+ x_any.txt,org/apache/commons/codec/language/bm/ash_approx_common.txt=
+ src/main/resources/org/apache/commons/codec/language/bm/ash_approx_co
+ mmon.txt,org/apache/commons/codec/language/bm/ash_approx_cyrillic.txt
+ =src/main/resources/org/apache/commons/codec/language/bm/ash_approx_c
+ yrillic.txt,org/apache/commons/codec/language/bm/ash_approx_english.t
+ xt=src/main/resources/org/apache/commons/codec/language/bm/ash_approx
+ _english.txt,org/apache/commons/codec/language/bm/ash_approx_french.t
+ xt=src/main/resources/org/apache/commons/codec/language/bm/ash_approx
+ _french.txt,org/apache/commons/codec/language/bm/ash_approx_german.tx
+ t=src/main/resources/org/apache/commons/codec/language/bm/ash_approx_
+ german.txt,org/apache/commons/codec/language/bm/ash_approx_hebrew.txt
+ =src/main/resources/org/apache/commons/codec/language/bm/ash_approx_h
+ ebrew.txt,org/apache/commons/codec/language/bm/ash_approx_hungarian.t
+ xt=src/main/resources/org/apache/commons/codec/language/bm/ash_approx
+ _hungarian.txt,org/apache/commons/codec/language/bm/ash_approx_polish
+ .txt=src/main/resources/org/apache/commons/codec/language/bm/ash_appr
+ ox_polish.txt,org/apache/commons/codec/language/bm/ash_approx_romania
+ n.txt=src/main/resources/org/apache/commons/codec/language/bm/ash_app
+ rox_romanian.txt,org/apache/commons/codec/language/bm/ash_approx_russ
+ ian.txt=src/main/resources/org/apache/commons/codec/language/bm/ash_a
+ pprox_russian.txt,org/apache/commons/codec/language/bm/ash_approx_spa
+ nish.txt=src/main/resources/org/apache/commons/codec/language/bm/ash_
+ approx_spanish.txt,org/apache/commons/codec/language/bm/ash_exact_any
+ .txt=src/main/resources/org/apache/commons/codec/language/bm/ash_exac
+ t_any.txt,org/apache/commons/codec/language/bm/ash_exact_approx_commo
+ n.txt=src/main/resources/org/apache/commons/codec/language/bm/ash_exa
+ ct_approx_common.txt,org/apache/commons/codec/language/bm/ash_exact_c
+ ommon.txt=src/main/resources/org/apache/commons/codec/language/bm/ash
+ _exact_common.txt,org/apache/commons/codec/language/bm/ash_exact_cyri
+ llic.txt=src/main/resources/org/apache/commons/codec/language/bm/ash_
+ exact_cyrillic.txt,org/apache/commons/codec/language/bm/ash_exact_eng
+ lish.txt=src/main/resources/org/apache/commons/codec/language/bm/ash_
+ exact_english.txt,org/apache/commons/codec/language/bm/ash_exact_fren
+ ch.txt=src/main/resources/org/apache/commons/codec/language/bm/ash_ex
+ act_french.txt,org/apache/commons/codec/language/bm/ash_exact_german.
+ txt=src/main/resources/org/apache/commons/codec/language/bm/ash_exact
+ _german.txt,org/apache/commons/codec/language/bm/ash_exact_hebrew.txt
+ =src/main/resources/org/apache/commons/codec/language/bm/ash_exact_he
+ brew.txt,org/apache/commons/codec/language/bm/ash_exact_hungarian.txt
+ =src/main/resources/org/apache/commons/codec/language/bm/ash_exact_hu
+ ngarian.txt,org/apache/commons/codec/language/bm/ash_exact_polish.txt
+ =src/main/resources/org/apache/commons/codec/language/bm/ash_exact_po
+ lish.txt,org/apache/commons/codec/language/bm/ash_exact_romanian.txt=
+ src/main/resources/org/apache/commons/codec/language/bm/ash_exact_rom
+ anian.txt,org/apache/commons/codec/language/bm/ash_exact_russian.txt=
+ src/main/resources/org/apache/commons/codec/language/bm/ash_exact_rus
+ sian.txt,org/apache/commons/codec/language/bm/ash_exact_spanish.txt=s
+ rc/main/resources/org/apache/commons/codec/language/bm/ash_exact_span
+ ish.txt,org/apache/commons/codec/language/bm/ash_hebrew_common.txt=sr
+ c/main/resources/org/apache/commons/codec/language/bm/ash_hebrew_comm
+ on.txt,org/apache/commons/codec/language/bm/ash_languages.txt=src/mai
+ n/resources/org/apache/commons/codec/language/bm/ash_languages.txt,or
+ g/apache/commons/codec/language/bm/ash_rules_any.txt=src/main/resourc
+ es/org/apache/commons/codec/language/bm/ash_rules_any.txt,org/apache/
+ commons/codec/language/bm/ash_rules_cyrillic.txt=src/main/resources/o
+ rg/apache/commons/codec/language/bm/ash_rules_cyrillic.txt,org/apache
+ /commons/codec/language/bm/ash_rules_english.txt=src/main/resources/o
+ rg/apache/commons/codec/language/bm/ash_rules_english.txt,org/apache/
+ commons/codec/language/bm/ash_rules_french.txt=src/main/resources/org
+ /apache/commons/codec/language/bm/ash_rules_french.txt,org/apache/com
+ mons/codec/language/bm/ash_rules_german.txt=src/main/resources/org/ap
+ ache/commons/codec/language/bm/ash_rules_german.txt,org/apache/common
+ s/codec/language/bm/ash_rules_hebrew.txt=src/main/resources/org/apach
+ e/commons/codec/language/bm/ash_rules_hebrew.txt,org/apache/commons/c
+ odec/language/bm/ash_rules_hungarian.txt=src/main/resources/org/apach
+ e/commons/codec/language/bm/ash_rules_hungarian.txt,org/apache/common
+ s/codec/language/bm/ash_rules_polish.txt=src/main/resources/org/apach
+ e/commons/codec/language/bm/ash_rules_polish.txt,org/apache/commons/c
+ odec/language/bm/ash_rules_romanian.txt=src/main/resources/org/apache
+ /commons/codec/language/bm/ash_rules_romanian.txt,org/apache/commons/
+ codec/language/bm/ash_rules_russian.txt=src/main/resources/org/apache
+ /commons/codec/language/bm/ash_rules_russian.txt,org/apache/commons/c
+ odec/language/bm/ash_rules_spanish.txt=src/main/resources/org/apache/
+ commons/codec/language/bm/ash_rules_spanish.txt,org/apache/commons/co
+ dec/language/bm/gen_approx_any.txt=src/main/resources/org/apache/comm
+ ons/codec/language/bm/gen_approx_any.txt,org/apache/commons/codec/lan
+ guage/bm/gen_approx_arabic.txt=src/main/resources/org/apache/commons/
+ codec/language/bm/gen_approx_arabic.txt,org/apache/commons/codec/lang
+ uage/bm/gen_approx_common.txt=src/main/resources/org/apache/commons/c
+ odec/language/bm/gen_approx_common.txt,org/apache/commons/codec/langu
+ age/bm/gen_approx_cyrillic.txt=src/main/resources/org/apache/commons/
+ codec/language/bm/gen_approx_cyrillic.txt,org/apache/commons/codec/la
+ nguage/bm/gen_approx_czech.txt=src/main/resources/org/apache/commons/
+ codec/language/bm/gen_approx_czech.txt,org/apache/commons/codec/langu
+ age/bm/gen_approx_dutch.txt=src/main/resources/org/apache/commons/cod
+ ec/language/bm/gen_approx_dutch.txt,org/apache/commons/codec/language
+ /bm/gen_approx_english.txt=src/main/resources/org/apache/commons/code
+ c/language/bm/gen_approx_english.txt,org/apache/commons/codec/languag
+ e/bm/gen_approx_french.txt=src/main/resources/org/apache/commons/code
+ c/language/bm/gen_approx_french.txt,org/apache/commons/codec/language
+ /bm/gen_approx_german.txt=src/main/resources/org/apache/commons/codec
+ /language/bm/gen_approx_german.txt,org/apache/commons/codec/language/
+ bm/gen_approx_greek.txt=src/main/resources/org/apache/commons/codec/l
+ anguage/bm/gen_approx_greek.txt,org/apache/commons/codec/language/bm/
+ gen_approx_greeklatin.txt=src/main/resources/org/apache/commons/codec
+ /language/bm/gen_approx_greeklatin.txt,org/apache/commons/codec/langu
+ age/bm/gen_approx_hebrew.txt=src/main/resources/org/apache/commons/co
+ dec/language/bm/gen_approx_hebrew.txt,org/apache/commons/codec/langua
+ ge/bm/gen_approx_hungarian.txt=src/main/resources/org/apache/commons/
+ codec/language/bm/gen_approx_hungarian.txt,org/apache/commons/codec/l
+ anguage/bm/gen_approx_italian.txt=src/main/resources/org/apache/commo
+ ns/codec/language/bm/gen_approx_italian.txt,org/apache/commons/codec/
+ language/bm/gen_approx_polish.txt=src/main/resources/org/apache/commo
+ ns/codec/language/bm/gen_approx_polish.txt,org/apache/commons/codec/l
+ anguage/bm/gen_approx_portuguese.txt=src/main/resources/org/apache/co
+ mmons/codec/language/bm/gen_approx_portuguese.txt,org/apache/commons/
+ codec/language/bm/gen_approx_romanian.txt=src/main/resources/org/apac
+ he/commons/codec/language/bm/gen_approx_romanian.txt,org/apache/commo
+ ns/codec/language/bm/gen_approx_russian.txt=src/main/resources/org/ap
+ ache/commons/codec/language/bm/gen_approx_russian.txt,org/apache/comm
+ ons/codec/language/bm/gen_approx_spanish.txt=src/main/resources/org/a
+ pache/commons/codec/language/bm/gen_approx_spanish.txt,org/apache/com
+ mons/codec/language/bm/gen_approx_turkish.txt=src/main/resources/org/
+ apache/commons/codec/language/bm/gen_approx_turkish.txt,org/apache/co
+ mmons/codec/language/bm/gen_exact_any.txt=src/main/resources/org/apac
+ he/commons/codec/language/bm/gen_exact_any.txt,org/apache/commons/cod
+ ec/language/bm/gen_exact_approx_common.txt=src/main/resources/org/apa
+ che/commons/codec/language/bm/gen_exact_approx_common.txt,org/apache/
+ commons/codec/language/bm/gen_exact_arabic.txt=src/main/resources/org
+ /apache/commons/codec/language/bm/gen_exact_arabic.txt,org/apache/com
+ mons/codec/language/bm/gen_exact_common.txt=src/main/resources/org/ap
+ ache/commons/codec/language/bm/gen_exact_common.txt,org/apache/common
+ s/codec/language/bm/gen_exact_cyrillic.txt=src/main/resources/org/apa
+ che/commons/codec/language/bm/gen_exact_cyrillic.txt,org/apache/commo
+ ns/codec/language/bm/gen_exact_czech.txt=src/main/resources/org/apach
+ e/commons/codec/language/bm/gen_exact_czech.txt,org/apache/commons/co
+ dec/language/bm/gen_exact_dutch.txt=src/main/resources/org/apache/com
+ mons/codec/language/bm/gen_exact_dutch.txt,org/apache/commons/codec/l
+ anguage/bm/gen_exact_english.txt=src/main/resources/org/apache/common
+ s/codec/language/bm/gen_exact_english.txt,org/apache/commons/codec/la
+ nguage/bm/gen_exact_french.txt=src/main/resources/org/apache/commons/
+ codec/language/bm/gen_exact_french.txt,org/apache/commons/codec/langu
+ age/bm/gen_exact_german.txt=src/main/resources/org/apache/commons/cod
+ ec/language/bm/gen_exact_german.txt,org/apache/commons/codec/language
+ /bm/gen_exact_greek.txt=src/main/resources/org/apache/commons/codec/l
+ anguage/bm/gen_exact_greek.txt,org/apache/commons/codec/language/bm/g
+ en_exact_greeklatin.txt=src/main/resources/org/apache/commons/codec/l
+ anguage/bm/gen_exact_greeklatin.txt,org/apache/commons/codec/language
+ /bm/gen_exact_hebrew.txt=src/main/resources/org/apache/commons/codec/
+ language/bm/gen_exact_hebrew.txt,org/apache/commons/codec/language/bm
+ /gen_exact_hungarian.txt=src/main/resources/org/apache/commons/codec/
+ language/bm/gen_exact_hungarian.txt,org/apache/commons/codec/language
+ /bm/gen_exact_italian.txt=src/main/resources/org/apache/commons/codec
+ /language/bm/gen_exact_italian.txt,org/apache/commons/codec/language/
+ bm/gen_exact_polish.txt=src/main/resources/org/apache/commons/codec/l
+ anguage/bm/gen_exact_polish.txt,org/apache/commons/codec/language/bm/
+ gen_exact_portuguese.txt=src/main/resources/org/apache/commons/codec/
+ language/bm/gen_exact_portuguese.txt,org/apache/commons/codec/languag
+ e/bm/gen_exact_romanian.txt=src/main/resources/org/apache/commons/cod
+ ec/language/bm/gen_exact_romanian.txt,org/apache/commons/codec/langua
+ ge/bm/gen_exact_russian.txt=src/main/resources/org/apache/commons/cod
+ ec/language/bm/gen_exact_russian.txt,org/apache/commons/codec/languag
+ e/bm/gen_exact_spanish.txt=src/main/resources/org/apache/commons/code
+ c/language/bm/gen_exact_spanish.txt,org/apache/commons/codec/language
+ /bm/gen_exact_turkish.txt=src/main/resources/org/apache/commons/codec
+ /language/bm/gen_exact_turkish.txt,org/apache/commons/codec/language/
+ bm/gen_hebrew_common.txt=src/main/resources/org/apache/commons/codec/
+ language/bm/gen_hebrew_common.txt,org/apache/commons/codec/language/b
+ m/gen_languages.txt=src/main/resources/org/apache/commons/codec/langu
+ age/bm/gen_languages.txt,org/apache/commons/codec/language/bm/gen_rul
+ es_any.txt=src/main/resources/org/apache/commons/codec/language/bm/ge
+ n_rules_any.txt,org/apache/commons/codec/language/bm/gen_rules_arabic
+ .txt=src/main/resources/org/apache/commons/codec/language/bm/gen_rule
+ s_arabic.txt,org/apache/commons/codec/language/bm/gen_rules_cyrillic.
+ txt=src/main/resources/org/apache/commons/codec/language/bm/gen_rules
+ _cyrillic.txt,org/apache/commons/codec/language/bm/gen_rules_czech.tx
+ t=src/main/resources/org/apache/commons/codec/language/bm/gen_rules_c
+ zech.txt,org/apache/commons/codec/language/bm/gen_rules_dutch.txt=src
+ /main/resources/org/apache/commons/codec/language/bm/gen_rules_dutch.
+ txt,org/apache/commons/codec/language/bm/gen_rules_english.txt=src/ma
+ in/resources/org/apache/commons/codec/language/bm/gen_rules_english.t
+ xt,org/apache/commons/codec/language/bm/gen_rules_french.txt=src/main
+ /resources/org/apache/commons/codec/language/bm/gen_rules_french.txt,
+ org/apache/commons/codec/language/bm/gen_rules_german.txt=src/main/re
+ sources/org/apache/commons/codec/language/bm/gen_rules_german.txt,org
+ /apache/commons/codec/language/bm/gen_rules_greek.txt=src/main/resour
+ ces/org/apache/commons/codec/language/bm/gen_rules_greek.txt,org/apac
+ he/commons/codec/language/bm/gen_rules_greeklatin.txt=src/main/resour
+ ces/org/apache/commons/codec/language/bm/gen_rules_greeklatin.txt,org
+ /apache/commons/codec/language/bm/gen_rules_hebrew.txt=src/main/resou
+ rces/org/apache/commons/codec/language/bm/gen_rules_hebrew.txt,org/ap
+ ache/commons/codec/language/bm/gen_rules_hungarian.txt=src/main/resou
+ rces/org/apache/commons/codec/language/bm/gen_rules_hungarian.txt,org
+ /apache/commons/codec/language/bm/gen_rules_italian.txt=src/main/reso
+ urces/org/apache/commons/codec/language/bm/gen_rules_italian.txt,org/
+ apache/commons/codec/language/bm/gen_rules_polish.txt=src/main/resour
+ ces/org/apache/commons/codec/language/bm/gen_rules_polish.txt,org/apa
+ che/commons/codec/language/bm/gen_rules_portuguese.txt=src/main/resou
+ rces/org/apache/commons/codec/language/bm/gen_rules_portuguese.txt,or
+ g/apache/commons/codec/language/bm/gen_rules_romanian.txt=src/main/re
+ sources/org/apache/commons/codec/language/bm/gen_rules_romanian.txt,o
+ rg/apache/commons/codec/language/bm/gen_rules_russian.txt=src/main/re
+ sources/org/apache/commons/codec/language/bm/gen_rules_russian.txt,or
+ g/apache/commons/codec/language/bm/gen_rules_spanish.txt=src/main/res
+ ources/org/apache/commons/codec/language/bm/gen_rules_spanish.txt,org
+ /apache/commons/codec/language/bm/gen_rules_turkish.txt=src/main/reso
+ urces/org/apache/commons/codec/language/bm/gen_rules_turkish.txt,org/
+ apache/commons/codec/language/bm/lang.txt=src/main/resources/org/apac
+ he/commons/codec/language/bm/lang.txt,org/apache/commons/codec/langua
+ ge/bm/sep_approx_any.txt=src/main/resources/org/apache/commons/codec/
+ language/bm/sep_approx_any.txt,org/apache/commons/codec/language/bm/s
+ ep_approx_common.txt=src/main/resources/org/apache/commons/codec/lang
+ uage/bm/sep_approx_common.txt,org/apache/commons/codec/language/bm/se
+ p_approx_french.txt=src/main/resources/org/apache/commons/codec/langu
+ age/bm/sep_approx_french.txt,org/apache/commons/codec/language/bm/sep
+ _approx_hebrew.txt=src/main/resources/org/apache/commons/codec/langua
+ ge/bm/sep_approx_hebrew.txt,org/apache/commons/codec/language/bm/sep_
+ approx_italian.txt=src/main/resources/org/apache/commons/codec/langua
+ ge/bm/sep_approx_italian.txt,org/apache/commons/codec/language/bm/sep
+ _approx_portuguese.txt=src/main/resources/org/apache/commons/codec/la
+ nguage/bm/sep_approx_portuguese.txt,org/apache/commons/codec/language
+ /bm/sep_approx_spanish.txt=src/main/resources/org/apache/commons/code
+ c/language/bm/sep_approx_spanish.txt,org/apache/commons/codec/languag
+ e/bm/sep_exact_any.txt=src/main/resources/org/apache/commons/codec/la
+ nguage/bm/sep_exact_any.txt,org/apache/commons/codec/language/bm/sep_
+ exact_approx_common.txt=src/main/resources/org/apache/commons/codec/l
+ anguage/bm/sep_exact_approx_common.txt,org/apache/commons/codec/langu
+ age/bm/sep_exact_common.txt=src/main/resources/org/apache/commons/cod
+ ec/language/bm/sep_exact_common.txt,org/apache/commons/codec/language
+ /bm/sep_exact_french.txt=src/main/resources/org/apache/commons/codec/
+ language/bm/sep_exact_french.txt,org/apache/commons/codec/language/bm
+ /sep_exact_hebrew.txt=src/main/resources/org/apache/commons/codec/lan
+ guage/bm/sep_exact_hebrew.txt,org/apache/commons/codec/language/bm/se
+ p_exact_italian.txt=src/main/resources/org/apache/commons/codec/langu
+ age/bm/sep_exact_italian.txt,org/apache/commons/codec/language/bm/sep
+ _exact_portuguese.txt=src/main/resources/org/apache/commons/codec/lan
+ guage/bm/sep_exact_portuguese.txt,org/apache/commons/codec/language/b
+ m/sep_exact_spanish.txt=src/main/resources/org/apache/commons/codec/l
+ anguage/bm/sep_exact_spanish.txt,org/apache/commons/codec/language/bm
+ /sep_hebrew_common.txt=src/main/resources/org/apache/commons/codec/la
+ nguage/bm/sep_hebrew_common.txt,org/apache/commons/codec/language/bm/
+ sep_languages.txt=src/main/resources/org/apache/commons/codec/languag
+ e/bm/sep_languages.txt,org/apache/commons/codec/language/bm/sep_rules
+ _any.txt=src/main/resources/org/apache/commons/codec/language/bm/sep_
+ rules_any.txt,org/apache/commons/codec/language/bm/sep_rules_french.t
+ xt=src/main/resources/org/apache/commons/codec/language/bm/sep_rules_
+ french.txt,org/apache/commons/codec/language/bm/sep_rules_hebrew.txt=
+ src/main/resources/org/apache/commons/codec/language/bm/sep_rules_heb
+ rew.txt,org/apache/commons/codec/language/bm/sep_rules_italian.txt=sr
+ c/main/resources/org/apache/commons/codec/language/bm/sep_rules_itali
+ an.txt,org/apache/commons/codec/language/bm/sep_rules_portuguese.txt=
+ src/main/resources/org/apache/commons/codec/language/bm/sep_rules_por
+ tuguese.txt,org/apache/commons/codec/language/bm/sep_rules_spanish.tx
+ t=src/main/resources/org/apache/commons/codec/language/bm/sep_rules_s
+ panish.txt,META-INF/LICENSE.txt=LICENSE.txt,META-INF/NOTICE.txt=NOTIC
+ E.txt
+Implementation-Build: UNKNOWN_BRANCH@r??????; 2011-12-02 21:37:07-0500
+Tool: Bnd-1.43.0
+Created-By: Apache Maven Bundle Plugin
+Bundle-DocURL: http://commons.apache.org/codec/
+Implementation-Vendor-Id: org.apache
+Bundle-SymbolicName: org.apache.commons.codec
+Eclipse-SourceReferences: scm:cvs:pserver:dev.eclipse.org:/cvsroot/too
+ ls:org.eclipse.orbit/org.apache.commons.codec;tag=v201305230611
+Export-Package: org.apache.commons.codec;version="1.6",org.apache.comm
+ ons.codec.binary;version="1.6",org.apache.commons.codec.digest;versio
+ n="1.6",org.apache.commons.codec.language;version="1.6",org.apache.co
+ mmons.codec.language.bm;version="1.6",org.apache.commons.codec.net;ve
+ rsion="1.6"
+Bundle-Description: The codec package contains simple encoder and deco
+ ders for     various formats such as Base64 and Hexadecimal.  In addi
+ tion to these     widely used encoders and decoders, the codec packag
+ e also maintains a     collection of phonetic encoding utilities.
+Bundle-Vendor: %bundleProvider
+Bnd-LastModified: 1322879833852
+Bundle-Name: %bundleName
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Archiver-Version: Plexus Archiver
+Implementation-Title: Commons Codec
+Implementation-Version: 1.6
+Bundle-ManifestVersion: 2
+
+Name: org/apache/commons/codec/language/bm/gen_approx_common.txt
+SHA1-Digest: LdAHq1Uf7ZJObFLplHkMBg62o8g=
+
+Name: org/apache/commons/codec/language/bm/sep_approx_italian.txt
+SHA1-Digest: sQ1CrX8M+aYXtqb+FaAQJlodnx0=
+
+Name: org/apache/commons/codec/language/bm/gen_exact_spanish.txt
+SHA1-Digest: v/X501bGOhAvKUt41xXerI3WFvE=
+
+Name: org/apache/commons/codec/net/BCodec.class
+SHA1-Digest: 6asjrp0tNG1wBvGabM3N67HFQaU=
+
+Name: org/apache/commons/codec/StringDecoder.class
+SHA1-Digest: KA9woItB02Ep0CIb3Rx3vMM5ZPs=
+
+Name: org/apache/commons/codec/language/bm/gen_approx_greek.txt
+SHA1-Digest: ZK+AVLklo2cJUK6apOygqti1wRM=
+
+Name: org/apache/commons/codec/language/bm/BeiderMorseEncoder.class
+SHA1-Digest: lgGQgU1fBTxhvWE/B2WI2Esx5gc=
+
+Name: org/apache/commons/codec/BinaryDecoder.class
+SHA1-Digest: n6RXeq9tymzDRDsMUQbRPF6IVYE=
+
+Name: org/apache/commons/codec/Decoder.class
+SHA1-Digest: I048QAYfDpVki3rGyn3I3cfyTV8=
+
+Name: org/apache/commons/codec/language/ColognePhonetic.class
+SHA1-Digest: d3yOvVTakwJoR7Jq6WHC5tZ+AV8=
+
+Name: org/apache/commons/codec/language/bm/gen_approx_greeklatin.txt
+SHA1-Digest: KM44dvGlJjA1G1+QMxAorjQfVZo=
+
+Name: org/apache/commons/codec/language/bm/gen_approx_german.txt
+SHA1-Digest: 0/CejklscQ18lQIcpLZ4h2ZwsQ0=
+
+Name: org/apache/commons/codec/language/bm/Rule$8.class
+SHA1-Digest: 2GP0Y13BNYMXryLXpQ1dzDjlKRI=
+
+Name: org/apache/commons/codec/language/bm/gen_approx_polish.txt
+SHA1-Digest: e4PksIbpzRqmyfXiE+gxLVhuVNA=
+
+Name: org/apache/commons/codec/language/bm/Languages$LanguageSet.class
+SHA1-Digest: yi3GDs9yUw2wEwzm1Axiodd/Xew=
+
+Name: org/apache/commons/codec/language/bm/Rule$RPattern.class
+SHA1-Digest: lJKXf+ACdqWBSGgkcBSj+CumAcs=
+
+Name: org/apache/commons/codec/language/bm/gen_approx_french.txt
+SHA1-Digest: fG8iHIY7dmE+dzMnRN1V8U+CAWs=
+
+Name: org/apache/commons/codec/language/bm/gen_rules_dutch.txt
+SHA1-Digest: ubXAOlBgTG6cluGh9Yg9omLd9gY=
+
+Name: org/apache/commons/codec/language/bm/gen_exact_hebrew.txt
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: org/apache/commons/codec/language/bm/gen_exact_dutch.txt
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: org/apache/commons/codec/language/bm/ash_exact_common.txt
+SHA1-Digest: 4KUii83+gs6HZqsqdVTJKWmbKLE=
+
+Name: org/apache/commons/codec/language/SoundexUtils.class
+SHA1-Digest: b8mNVpTU6DJwlEdRWHmDuiZmTqc=
+
+Name: org/apache/commons/codec/language/bm/gen_approx_any.txt
+SHA1-Digest: 5FHNYWkE/iE9uhTrfBSWz2fh4rI=
+
+Name: org/apache/commons/codec/language/bm/gen_approx_english.txt
+SHA1-Digest: WdrL/vp21NUtryKaVCYaAfnUY9U=
+
+Name: org/apache/commons/codec/language/bm/gen_exact_approx_common.txt
+SHA1-Digest: Hxjkq50d1HJRTfhnGsjVmtUwQ38=
+
+Name: org/apache/commons/codec/language/bm/gen_rules_greeklatin.txt
+SHA1-Digest: epTnnPkJV3kP2U6NeMgMH2hMESs=
+
+Name: org/apache/commons/codec/language/bm/gen_approx_arabic.txt
+SHA1-Digest: 8LPDBpkhGMPrbgNH/3GMv5DW2Vs=
+
+Name: org/apache/commons/codec/language/bm/Lang$1.class
+SHA1-Digest: D7njlJjvrSTEKWmQX3SAEbdpX5g=
+
+Name: org/apache/commons/codec/language/bm/Rule.class
+SHA1-Digest: 0UzkH/3/cdDowBMI2K3mYASC3XQ=
+
+Name: org/apache/commons/codec/language/bm/Rule$PhonemeList.class
+SHA1-Digest: BvCMdUR48FQA5g7INdlEMfJd/4c=
+
+Name: org/apache/commons/codec/language/Soundex.class
+SHA1-Digest: zYneezbnSClLEdRPbSOAc5+g7SI=
+
+Name: org/apache/commons/codec/language/bm/Languages$1.class
+SHA1-Digest: 37+wvLfFsjfLC86gPNynG30DAPA=
+
+Name: org/apache/commons/codec/language/bm/ash_exact_german.txt
+SHA1-Digest: w4DMVKfl4a7tpge4d91vRsE09Uc=
+
+Name: org/apache/commons/codec/language/bm/ash_approx_any.txt
+SHA1-Digest: 54nb4ON7/wkHOr32PrSKqoszAGk=
+
+Name: org/apache/commons/codec/language/bm/sep_approx_portuguese.txt
+SHA1-Digest: wGpv/4nTHPd+c4HkTvDnN2PUYOU=
+
+Name: org/apache/commons/codec/language/bm/Rule$5.class
+SHA1-Digest: rxzzyXA1h4VdiURx1x/9BAW9yb8=
+
+Name: org/apache/commons/codec/binary/BaseNCodecOutputStream.class
+SHA1-Digest: sGZ8NjfYQ9b1rJ97c8BW7QeLb9A=
+
+Name: org/apache/commons/codec/language/bm/ash_exact_polish.txt
+SHA1-Digest: YtjlwefN2I0RWdC2euL3eS1iTgQ=
+
+Name: org/apache/commons/codec/language/bm/Rule$PhonemeExpr.class
+SHA1-Digest: J/M2us+XzjFo5jJjh+F5UPh4xpY=
+
+Name: org/apache/commons/codec/language/bm/ash_exact_french.txt
+SHA1-Digest: QN+UL/Br/fToWzAZVM6R8yBU8uA=
+
+Name: org/apache/commons/codec/language/bm/ash_approx_hungarian.txt
+SHA1-Digest: 604dJC1I4/8Oy3q/B/iDaSTWh7Y=
+
+Name: META-INF/maven/commons-codec/commons-codec/pom.properties
+SHA1-Digest: 4kOFyafWcWWaMUz7R4kCVhyikhw=
+
+Name: org/apache/commons/codec/language/bm/gen_exact_romanian.txt
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: org/apache/commons/codec/language/bm/Rule$10.class
+SHA1-Digest: 2y/LoftdE5EndsW2mekfvt3PFto=
+
+Name: org/apache/commons/codec/language/AbstractCaverphone.class
+SHA1-Digest: Okv+84vMm5jW6PGHDHNbpRRAWW4=
+
+Name: org/apache/commons/codec/language/bm/sep_languages.txt
+SHA1-Digest: N9Nby7yZl/CNB4XLYMOy4NPkDns=
+
+Name: org/apache/commons/codec/language/DoubleMetaphone.class
+SHA1-Digest: lQskr7r8t1Xx0n3dCM+5Ob/nXrU=
+
+Name: org/apache/commons/codec/language/bm/sep_rules_any.txt
+SHA1-Digest: tBhirNuraiANjlje0HNzz2Rd8XY=
+
+Name: org/apache/commons/codec/language/bm/gen_rules_cyrillic.txt
+SHA1-Digest: Yg5q1pDwdRE2199a3lBn//aVSZ0=
+
+Name: org/apache/commons/codec/language/bm/sep_rules_french.txt
+SHA1-Digest: B8soq3ODQdgyws77pmFOVzo66uI=
+
+Name: org/apache/commons/codec/language/bm/sep_exact_any.txt
+SHA1-Digest: vokBnqDrzgh7ubmg4N5ltqYJsgY=
+
+Name: org/apache/commons/codec/language/bm/Rule$Phoneme.class
+SHA1-Digest: t4Mmz3gw2r/SXZhAE8eJDxZp+WU=
+
+Name: org/apache/commons/codec/language/bm/ash_rules_romanian.txt
+SHA1-Digest: c2FG81GO6lTa5eTZpNvoIjKLPfw=
+
+Name: org/apache/commons/codec/language/bm/ash_languages.txt
+SHA1-Digest: x5ijgzijaJwexI8tGvYq1Ys8W0o=
+
+Name: org/apache/commons/codec/language/bm/ash_exact_cyrillic.txt
+SHA1-Digest: QN+UL/Br/fToWzAZVM6R8yBU8uA=
+
+Name: org/apache/commons/codec/language/bm/sep_rules_italian.txt
+SHA1-Digest: 4OtvhiYVCX6Pngy4UP1SKrIDoro=
+
+Name: org/apache/commons/codec/net/QCodec.class
+SHA1-Digest: FjnJbmuZFL7tog7elTN7/cRkf7w=
+
+Name: org/apache/commons/codec/language/bm/Rule$2.class
+SHA1-Digest: KINx/fpLBVPK4Edb2bPk+tGqCLM=
+
+Name: org/apache/commons/codec/language/bm/ash_rules_any.txt
+SHA1-Digest: dLYj+QzWWMV1HWCtEJPX4xYg2q0=
+
+Name: org/apache/commons/codec/binary/BaseNCodec.class
+SHA1-Digest: z00u6W8FP0bC1aj83eAMnYziU98=
+
+Name: org/apache/commons/codec/language/bm/sep_exact_portuguese.txt
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: org/apache/commons/codec/language/bm/gen_approx_cyrillic.txt
+SHA1-Digest: T3Kwm8H/aw/kkF6SaYfagX9J1mw=
+
+Name: org/apache/commons/codec/language/bm/PhoneticEngine$2.class
+SHA1-Digest: wLchrBvKl79pz3lPwwnn/9JOD4Q=
+
+Name: org/apache/commons/codec/language/bm/sep_exact_italian.txt
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: org/apache/commons/codec/language/bm/gen_exact_common.txt
+SHA1-Digest: u/mGD68aVPmhFiWBCiQdju9UoVw=
+
+Name: org/apache/commons/codec/language/bm/ash_exact_any.txt
+SHA1-Digest: 31+z+V5I9I/BsRgZo688C7Nmz5c=
+
+Name: org/apache/commons/codec/language/bm/RuleType.class
+SHA1-Digest: DypuotmhvV8xV/U+tsgbKLjJxTo=
+
+Name: META-INF/eclipse.inf
+SHA1-Digest: KyT9FF7C7t86NoBoa2kZT3ZJBfw=
+
+Name: org/apache/commons/codec/language/ColognePhonetic$CologneOutputB
+ uffer.class
+SHA1-Digest: C0M1qQ8hg0YvfxgVXGYY8dUiA48=
+
+Name: org/apache/commons/codec/DecoderException.class
+SHA1-Digest: VQ/J5LM64Qy2l4uWN0HZG2T/Pec=
+
+Name: org/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphon
+ eResult.class
+SHA1-Digest: beaUcnTJzRISDfgjfbBVd3eak+4=
+
+Name: org/apache/commons/codec/language/bm/gen_approx_dutch.txt
+SHA1-Digest: ZK+AVLklo2cJUK6apOygqti1wRM=
+
+Name: org/apache/commons/codec/language/bm/gen_exact_german.txt
+SHA1-Digest: 3GlHgMBkvi2mEoFnPYxoBXIh4No=
+
+Name: org/apache/commons/codec/language/bm/gen_rules_czech.txt
+SHA1-Digest: iPK8bJaVzSZc5K5rvtJ99cdrL3g=
+
+Name: org/apache/commons/codec/language/bm/ash_rules_russian.txt
+SHA1-Digest: T4ZqaaGytR6k0txV4R9HaAMRd8M=
+
+Name: org/apache/commons/codec/language/bm/ash_approx_cyrillic.txt
+SHA1-Digest: zhdfuG3lpctSYxuUJ7xTMIjSPNs=
+
+Name: org/apache/commons/codec/digest/DigestUtils.class
+SHA1-Digest: DpFmKywxXhScjgf+kCAulaIu3+M=
+
+Name: org/apache/commons/codec/language/bm/gen_approx_spanish.txt
+SHA1-Digest: lGrj01vFVhIZq42vqijMqqlw+eo=
+
+Name: org/apache/commons/codec/language/bm/gen_exact_czech.txt
+SHA1-Digest: 00E7VR452tbgGSDvaN2vH71JXd0=
+
+Name: org/apache/commons/codec/language/bm/gen_exact_polish.txt
+SHA1-Digest: C2oXvKtemOA5+wbuURYYZrRXawk=
+
+Name: org/apache/commons/codec/language/bm/gen_rules_hungarian.txt
+SHA1-Digest: w312gpWjUSsWx0VAK7N26JpOv3E=
+
+Name: org/apache/commons/codec/language/bm/ResourceConstants.class
+SHA1-Digest: 6yPzaKO+ki49fZnkzwsa0t3MOJ8=
+
+Name: org/apache/commons/codec/language/bm/ash_exact_russian.txt
+SHA1-Digest: rXaMJ4HIP1dVq2JA4YDx9goSHNo=
+
+Name: org/apache/commons/codec/language/bm/gen_rules_turkish.txt
+SHA1-Digest: rN+fxuizg39UWtnHiV1G1d2AaVY=
+
+Name: plugin.properties
+SHA1-Digest: 5MZzEYQvuEeJGsdwKs9rkvRxvis=
+
+Name: org/apache/commons/codec/language/bm/gen_exact_french.txt
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: org/apache/commons/codec/language/bm/gen_exact_hungarian.txt
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: org/apache/commons/codec/language/Caverphone2.class
+SHA1-Digest: mHnluVMgnJ196D5SdvB4rzPOxHo=
+
+Name: org/apache/commons/codec/net/Utils.class
+SHA1-Digest: Ek6Z9V/IN0Lv2GIPH8pHIbS5O+A=
+
+Name: org/apache/commons/codec/EncoderException.class
+SHA1-Digest: FwqmS7qdSF18jBI4Wt+yPd1yWJM=
+
+Name: org/apache/commons/codec/language/bm/gen_exact_turkish.txt
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: org/apache/commons/codec/language/bm/ash_rules_hebrew.txt
+SHA1-Digest: 1d23tX+8Zs6txZql1HQugopK6Dw=
+
+Name: org/apache/commons/codec/net/URLCodec.class
+SHA1-Digest: 0Y7UBvQGzpcyFQKyIIAdbUTTuzE=
+
+Name: org/apache/commons/codec/language/bm/Rule$7.class
+SHA1-Digest: EJXbswE1tiLy8p+qDq1iyTGc6vY=
+
+Name: org/apache/commons/codec/StringEncoder.class
+SHA1-Digest: NosJqtYGOOoxVVUzCGRFqhd0ucE=
+
+Name: org/apache/commons/codec/language/bm/gen_exact_arabic.txt
+SHA1-Digest: 6qj8otnCUSRgzzY1XsPSLprI8l4=
+
+Name: org/apache/commons/codec/language/bm/sep_exact_hebrew.txt
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: org/apache/commons/codec/language/bm/gen_exact_portuguese.txt
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: org/apache/commons/codec/language/bm/ash_rules_hungarian.txt
+SHA1-Digest: KxrQuSBewEePK/XN5khH0PWw7yE=
+
+Name: org/apache/commons/codec/BinaryEncoder.class
+SHA1-Digest: 0zH98R0FOI1pYnSV2tLVSY40vDg=
+
+Name: org/apache/commons/codec/Encoder.class
+SHA1-Digest: y62L+b3GIFlLyAh0bQ+wuubEJbY=
+
+Name: org/apache/commons/codec/binary/Base64.class
+SHA1-Digest: 6CuCz6SD/nSjE3o8LeJLkTmw1dY=
+
+Name: about_files/RELEASE-NOTES.txt
+SHA1-Digest: LQQ/Rcc/2UmuaEKx6Nz8PF6dZk8=
+
+Name: org/apache/commons/codec/language/bm/ash_exact_hungarian.txt
+SHA1-Digest: QN+UL/Br/fToWzAZVM6R8yBU8uA=
+
+Name: org/apache/commons/codec/language/bm/sep_approx_spanish.txt
+SHA1-Digest: wGpv/4nTHPd+c4HkTvDnN2PUYOU=
+
+Name: org/apache/commons/codec/language/bm/ash_approx_russian.txt
+SHA1-Digest: k/nguda0I1ot8kuzX5C5xNb+MhY=
+
+Name: org/apache/commons/codec/language/bm/Languages$SomeLanguages.cla
+ ss
+SHA1-Digest: MdQ77Geq8y91d9Ed/fGUOr7ZQys=
+
+Name: org/apache/commons/codec/binary/BinaryCodec.class
+SHA1-Digest: 4f72msONlOmGifBRPMnfQwwOK4E=
+
+Name: org/apache/commons/codec/language/bm/gen_rules_italian.txt
+SHA1-Digest: fpEQsllQFifzCfJ/dp1xEwvBVdg=
+
+Name: org/apache/commons/codec/language/bm/sep_hebrew_common.txt
+SHA1-Digest: pLUCmc4T/RjuklQ1aIULtSUwHKI=
+
+Name: org/apache/commons/codec/binary/Base64InputStream.class
+SHA1-Digest: 5vTqI57aagj5YrG9qEU9XGAJqu8=
+
+Name: org/apache/commons/codec/binary/Hex.class
+SHA1-Digest: sK8ZIidr3CCciwne5srZF0NM7iY=
+
+Name: org/apache/commons/codec/language/bm/gen_exact_italian.txt
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: org/apache/commons/codec/binary/Base32OutputStream.class
+SHA1-Digest: aS22dHTZdpEx/W5VNd3MzRKYIE8=
+
+Name: org/apache/commons/codec/StringEncoderComparator.class
+SHA1-Digest: fg0NISDe6R8Tq7zPxZ6usgZY/hE=
+
+Name: org/apache/commons/codec/language/bm/Rule$Phoneme$1.class
+SHA1-Digest: BaaeHlO76LfPc6Hw5bBIirfMCK0=
+
+Name: org/apache/commons/codec/language/bm/Rule$4.class
+SHA1-Digest: rNzrErC1UCc2E8Emdn8iaPoNsgU=
+
+Name: org/apache/commons/codec/language/bm/gen_rules_russian.txt
+SHA1-Digest: i18jgMcJnz+/whRVChudyvXR6bQ=
+
+Name: org/apache/commons/codec/language/bm/ash_rules_english.txt
+SHA1-Digest: xDM5Kj+RvDu2y5bXf+6seM3O0Ww=
+
+Name: org/apache/commons/codec/language/bm/ash_hebrew_common.txt
+SHA1-Digest: lhqN1L0rc6oqNcToAM5w5eXc69k=
+
+Name: org/apache/commons/codec/language/bm/sep_approx_hebrew.txt
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: org/apache/commons/codec/binary/BaseNCodecInputStream.class
+SHA1-Digest: 8vatJ34uoPbuCoKRjaH+Box0s9E=
+
+Name: org/apache/commons/codec/language/bm/gen_exact_russian.txt
+SHA1-Digest: lulM+eX+omlYPVagYcZ7S+1OOAg=
+
+Name: org/apache/commons/codec/language/bm/ash_exact_english.txt
+SHA1-Digest: QN+UL/Br/fToWzAZVM6R8yBU8uA=
+
+Name: org/apache/commons/codec/language/Caverphone.class
+SHA1-Digest: aETiPTpPqEqzvTbKTFgDoMVWCoo=
+
+Name: org/apache/commons/codec/net/RFC1522Codec.class
+SHA1-Digest: 3Fon1Rk76gES5+gbe367MtTdz+k=
+
+Name: org/apache/commons/codec/language/bm/gen_exact_greeklatin.txt
+SHA1-Digest: T0MDehullcH0uAY9slGJMUAhTkQ=
+
+Name: org/apache/commons/codec/language/bm/ash_approx_hebrew.txt
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: org/apache/commons/codec/language/bm/gen_rules_hebrew.txt
+SHA1-Digest: 80bIa465/ozUslfQBb84wPL42nY=
+
+Name: org/apache/commons/codec/language/bm/PhoneticEngine$RulesApplica
+ tion.class
+SHA1-Digest: ZI52NsAzINr0u/HdBSZCuF342V8=
+
+Name: org/apache/commons/codec/language/bm/gen_approx_czech.txt
+SHA1-Digest: ZK+AVLklo2cJUK6apOygqti1wRM=
+
+Name: org/apache/commons/codec/language/bm/Lang$LangRule.class
+SHA1-Digest: W/s6cwg4oFG53riNQpde3XplyHM=
+
+Name: org/apache/commons/codec/net/QuotedPrintableCodec.class
+SHA1-Digest: vw9K3bvqwCQAYINt4gSg3HalHuQ=
+
+Name: org/apache/commons/codec/language/bm/sep_exact_approx_common.txt
+SHA1-Digest: 2wGOF99LQlKr0epBg2LDfgg5c/k=
+
+Name: org/apache/commons/codec/language/bm/sep_exact_common.txt
+SHA1-Digest: yMn8iqUiPF5RM7J9xhj6gb3A6E4=
+
+Name: org/apache/commons/codec/binary/StringUtils.class
+SHA1-Digest: 32lHNHYV+Z83bJqLLO5ukrdtBe8=
+
+Name: org/apache/commons/codec/language/bm/lang.txt
+SHA1-Digest: H+gJtZUsHsM9QHoCyS/cdT9yjaQ=
+
+Name: org/apache/commons/codec/language/bm/Rule$1.class
+SHA1-Digest: Q7S0rqRPfAGZe3ezEmn86xFz9FM=
+
+Name: org/apache/commons/codec/language/bm/ash_approx_english.txt
+SHA1-Digest: WdrL/vp21NUtryKaVCYaAfnUY9U=
+
+Name: about_files/LICENSE.txt
+SHA1-Digest: K4uBUimqimHkg/tLoFiLi2xJGJA=
+
+Name: org/apache/commons/codec/language/ColognePhonetic$CologneInputBu
+ ffer.class
+SHA1-Digest: UhEs5IqFD/OWn1ZBaB3T0Jcl4p8=
+
+Name: org/apache/commons/codec/language/bm/PhoneticEngine$1.class
+SHA1-Digest: sRC6gWHAAV8dup0qVT9QVXFOg9w=
+
+Name: org/apache/commons/codec/language/bm/ash_rules_german.txt
+SHA1-Digest: YO+2+bquWxcrjLHWD06sQ4ycQYc=
+
+Name: org/apache/commons/codec/language/bm/Rule$9.class
+SHA1-Digest: ZDcvOrndrl0xnoWk0L/ovhHU8/o=
+
+Name: org/apache/commons/codec/language/bm/PhoneticEngine$PhonemeBuild
+ er.class
+SHA1-Digest: TfZv89PY8AHR8zGb0dxKmScYWiE=
+
+Name: about_files/NOTICE.txt
+SHA1-Digest: fYJec7Er5Su0o2ORsJeZe0bGp8o=
+
+Name: org/apache/commons/codec/language/bm/ash_exact_approx_common.txt
+SHA1-Digest: c9AqKhHVO0VPlbeLnJTrKdy/gSs=
+
+Name: org/apache/commons/codec/language/bm/ash_rules_polish.txt
+SHA1-Digest: bnV3hR/TM8/nCLUXvfXHWUmvShI=
+
+Name: about.html
+SHA1-Digest: dH+vDiDdQYA4lENwfrzZ1LfiBzA=
+
+Name: org/apache/commons/codec/language/bm/sep_approx_any.txt
+SHA1-Digest: 0mWytx3QfDcxQYesfSLfKaaiPGc=
+
+Name: org/apache/commons/codec/language/bm/ash_rules_french.txt
+SHA1-Digest: o5S4BN9+movhRfKv/CPmwVWMk0s=
+
+Name: org/apache/commons/codec/language/bm/NameType.class
+SHA1-Digest: Fw/P0jEBQmjkLwE3vY1S6zqxi1U=
+
+Name: org/apache/commons/codec/language/bm/gen_rules_romanian.txt
+SHA1-Digest: 9XU05+EK41PC/HwRw9zxny5awCw=
+
+Name: org/apache/commons/codec/language/bm/gen_rules_english.txt
+SHA1-Digest: CHRv59odKbwWuNzWNtwmYNxOEH4=
+
+Name: org/apache/commons/codec/language/bm/gen_exact_cyrillic.txt
+SHA1-Digest: 00E7VR452tbgGSDvaN2vH71JXd0=
+
+Name: org/apache/commons/codec/language/bm/gen_hebrew_common.txt
+SHA1-Digest: U+3sGtHvTz+ZqpSe1f7MYHB2TsQ=
+
+Name: org/apache/commons/codec/language/bm/gen_exact_english.txt
+SHA1-Digest: 00E7VR452tbgGSDvaN2vH71JXd0=
+
+Name: org/apache/commons/codec/language/bm/sep_exact_french.txt
+SHA1-Digest: FzpQ+GbWmzaOeTszrpAHMAbmuII=
+
+Name: org/apache/commons/codec/language/bm/Languages.class
+SHA1-Digest: 4cdpVTDtRz+lc2jLi+oHpvIXSo8=
+
+Name: org/apache/commons/codec/language/bm/ash_exact_romanian.txt
+SHA1-Digest: QN+UL/Br/fToWzAZVM6R8yBU8uA=
+
+Name: org/apache/commons/codec/language/bm/gen_rules_greek.txt
+SHA1-Digest: /j/A9h8+FfAazMODJJHekOCQB5c=
+
+Name: org/apache/commons/codec/CharEncoding.class
+SHA1-Digest: q/mOhTmB77nl/EWPcFvw7wcO/Fs=
+
+Name: org/apache/commons/codec/language/bm/sep_rules_spanish.txt
+SHA1-Digest: uTGxICniFcGE+85pnK+pGH1Xzt8=
+
+Name: org/apache/commons/codec/binary/Base32InputStream.class
+SHA1-Digest: Wo24rtAxuvnCih9/xQBC9WAEaoY=
+
+Name: org/apache/commons/codec/language/bm/gen_approx_romanian.txt
+SHA1-Digest: h57+YZWPX1cnEcSdoXhfGLuta3s=
+
+Name: org/apache/commons/codec/language/bm/sep_approx_common.txt
+SHA1-Digest: VLGwCVv3uxq8eYkWPr7gmtHLOnU=
+
+Name: org/apache/commons/codec/language/bm/Languages$2.class
+SHA1-Digest: xLFxCPM3+qbHnfVPyGM9evf9WrU=
+
+Name: org/apache/commons/codec/language/bm/gen_exact_greek.txt
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: org/apache/commons/codec/language/Caverphone1.class
+SHA1-Digest: jZJ+hidIm2G9EmPm3GgPDyYr+VQ=
+
+Name: org/apache/commons/codec/language/bm/sep_exact_spanish.txt
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: org/apache/commons/codec/language/bm/gen_approx_turkish.txt
+SHA1-Digest: ZK+AVLklo2cJUK6apOygqti1wRM=
+
+Name: org/apache/commons/codec/language/bm/gen_approx_hebrew.txt
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: org/apache/commons/codec/language/RefinedSoundex.class
+SHA1-Digest: q97WBzkdGwnPBFJSkPgOtj3GAGA=
+
+Name: org/apache/commons/codec/language/bm/Rule$6.class
+SHA1-Digest: r3gfdNU00G9GiTwBQ+kIGsK0l5E=
+
+Name: org/apache/commons/codec/language/bm/ash_rules_cyrillic.txt
+SHA1-Digest: EsR+HI42mjkQMSRBChc6UJMNHnk=
+
+Name: META-INF/maven/commons-codec/commons-codec/pom.xml
+SHA1-Digest: lJnwyHq0OnTEVrmEesvLXmf+nzI=
+
+Name: org/apache/commons/codec/language/bm/ash_rules_spanish.txt
+SHA1-Digest: jxaPlVZm4rC0Egc7UWeCEFaLVsQ=
+
+Name: org/apache/commons/codec/language/bm/sep_rules_portuguese.txt
+SHA1-Digest: sqGys16ESrXOXSg9obu8ix9O0DQ=
+
+Name: org/apache/commons/codec/language/bm/ash_approx_common.txt
+SHA1-Digest: padRPYJ0BaElGjLugFZoVeiaNRQ=
+
+Name: org/apache/commons/codec/language/bm/ash_exact_spanish.txt
+SHA1-Digest: QN+UL/Br/fToWzAZVM6R8yBU8uA=
+
+Name: org/apache/commons/codec/binary/Base64OutputStream.class
+SHA1-Digest: xeEreHSmapy5mW0Qy9Tqy2ckkwg=
+
+Name: org/apache/commons/codec/language/bm/ash_approx_romanian.txt
+SHA1-Digest: 8dJCy93UqGPxUAM5qiwy8UeOCpA=
+
+Name: org/apache/commons/codec/language/bm/Lang.class
+SHA1-Digest: b1mqiUA8+krr0EoA/5Wroa7Tba0=
+
+Name: org/apache/commons/codec/language/bm/sep_approx_french.txt
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: org/apache/commons/codec/language/bm/ash_approx_german.txt
+SHA1-Digest: MxrOjj0j10k/YbNQybQuDJBum3c=
+
+Name: org/apache/commons/codec/language/bm/gen_rules_german.txt
+SHA1-Digest: ASWiPOCybslDsqdqSYrJCczwNBA=
+
+Name: org/apache/commons/codec/language/ColognePhonetic$CologneBuffer.
+ class
+SHA1-Digest: GQiirD5t6Ww2H33sRAbq3lR9KxU=
+
+Name: org/apache/commons/codec/language/bm/gen_approx_portuguese.txt
+SHA1-Digest: ZK+AVLklo2cJUK6apOygqti1wRM=
+
+Name: org/apache/commons/codec/language/bm/ash_approx_polish.txt
+SHA1-Digest: d7PswPXB40uZY4D8wXcuG7osFGk=
+
+Name: org/apache/commons/codec/language/bm/ash_exact_hebrew.txt
+SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+
+Name: org/apache/commons/codec/language/bm/gen_rules_polish.txt
+SHA1-Digest: BKwAayJJNnmipd/rFV3jPkaErSE=
+
+Name: org/apache/commons/codec/language/bm/gen_approx_hungarian.txt
+SHA1-Digest: kpJ0pEDOyFBEu6wl4QdynsUq6jE=
+
+Name: org/apache/commons/codec/language/bm/PhoneticEngine.class
+SHA1-Digest: TxZE5n4RU7+BHjSqwxXtZqO0OoA=
+
+Name: org/apache/commons/codec/language/bm/gen_approx_italian.txt
+SHA1-Digest: kpJ0pEDOyFBEu6wl4QdynsUq6jE=
+
+Name: org/apache/commons/codec/binary/Base32.class
+SHA1-Digest: fwQn8W4DbWE/0EWuVfZiGcbws7c=
+
+Name: org/apache/commons/codec/language/Metaphone.class
+SHA1-Digest: iqIegPbitWQMLkPpLlKscWdf6OI=
+
+Name: org/apache/commons/codec/language/bm/ash_approx_french.txt
+SHA1-Digest: q9sgIysKftSjudOa4wXU3BLc/4Y=
+
+Name: org/apache/commons/codec/language/bm/gen_rules_french.txt
+SHA1-Digest: CrDzmQQb/nDj6G9KGuej8e+uHIU=
+
+Name: org/apache/commons/codec/language/bm/Rule$3.class
+SHA1-Digest: 7RbJ7WjRHPbQOLLVpq2XbY0u3V4=
+
+Name: org/apache/commons/codec/language/bm/ash_approx_spanish.txt
+SHA1-Digest: 604dJC1I4/8Oy3q/B/iDaSTWh7Y=
+
+Name: org/apache/commons/codec/language/bm/gen_approx_russian.txt
+SHA1-Digest: ln5mpI7m/dYz8po1m2pe5V1t//k=
+
+Name: org/apache/commons/codec/language/bm/gen_rules_arabic.txt
+SHA1-Digest: yt4PLY35eX3omtnfi8cYJAdUwDA=
+
+Name: org/apache/commons/codec/language/bm/gen_languages.txt
+SHA1-Digest: Wd+YcHRM0F23bj/qZsPhOjYOa+4=
+
+Name: org/apache/commons/codec/language/bm/sep_rules_hebrew.txt
+SHA1-Digest: G0Yn8vlBmcqKqvsNdi9pfDl8Mbs=
+
+Name: org/apache/commons/codec/language/bm/gen_rules_portuguese.txt
+SHA1-Digest: 2tGtdUrB2oruPbgFAC1SD4R2Mn0=
+
+Name: org/apache/commons/codec/language/bm/gen_rules_any.txt
+SHA1-Digest: s7KvcfwD+yZtsux5sF8HC7SSwKw=
+
+Name: org/apache/commons/codec/language/bm/gen_exact_any.txt
+SHA1-Digest: jWl5fcYklf5KZQOVQOhWuWwoUAM=
+
+Name: org/apache/commons/codec/language/bm/gen_rules_spanish.txt
+SHA1-Digest: T+njbAJy1Bqc9+cbiIJMwcI9HrU=
+

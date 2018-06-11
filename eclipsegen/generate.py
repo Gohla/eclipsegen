@@ -1,8 +1,8 @@
+import os
 import tarfile
 import tempfile
 import urllib.parse
 import urllib.request
-import os
 from enum import Enum, unique
 from itertools import takewhile
 from os import path, makedirs, listdir, rmdir, mkdir, remove, walk, chmod
@@ -14,7 +14,6 @@ from sys import maxsize
 
 import requests
 
-from eclipsegen import director_path
 from eclipsegen.config import X86Arch, X64Arch, WindowsOs, MacOs, LinuxOs
 
 
@@ -214,7 +213,7 @@ class EclipseGenerator(object):
     if _is_invalid_combination(self.os, self.arch):
       raise RuntimeError(
         'Combination {}, {} is invalid, cannot generate Eclipse instance'.format(self.os, self.arch))
-    searchPath = director_path()
+    searchPath = os.path.join(os.path.dirname(__file__), '..', 'director')
     directorPath = which('director', path=searchPath)
     if not directorPath:
       raise RuntimeError(
@@ -337,21 +336,12 @@ class EclipseGenerator(object):
       return urllib.parse.urljoin('file:', urllib.request.pathname2url(location))
 
   def __download_jre(self):
-    # http://download.oracle.com/otn-pub/java/jdk/8u162-b12/0da788060d494f5095bf8624735fa2f1/jdk-8u162-windows-i586.exe
-    # http://download.oracle.com/otn-pub/java/jdk/8u162-b12/0da788060d494f5095bf8624735fa2f1/jdk-8u162-windows-x64.exe
-    # http://download.oracle.com/otn-pub/java/jdk/8u162-b12/0da788060d494f5095bf8624735fa2f1/jdk-8u162-linux-i586.tar.gz
-    # http://download.oracle.com/otn-pub/java/jdk/8u162-b12/0da788060d494f5095bf8624735fa2f1/jdk-8u162-linux-x64.rpm
-    # http://download.oracle.com/otn-pub/java/jdk/8u162-b12/0da788060d494f5095bf8624735fa2f1/jdk-8u162-macosx-x64.dmg
-
     version = '8u162'
-    build = 'b12'
-    downloadId = '0da788060d494f5095bf8624735fa2f1'
-    urlPrefix = 'http://download.oracle.com/otn-pub/java/jdk/{0}-{1}/{2}/jre-{0}-'.format(version, build, downloadId)
     extension = 'tar.gz'
     jreOs = self.os.jreOs
     jreArch = self.arch.jreArch
 
-    location = _to_storage_location(path.join('jre', version, build))
+    location = _to_storage_location(path.join('jre', version))
     makedirs(location, exist_ok=True)
 
     fileName = '{}-{}.{}'.format(jreOs, jreArch, extension)
@@ -363,10 +353,9 @@ class EclipseGenerator(object):
     if path.isdir(dirPath):
       return dirPath
 
-    url = '{}{}'.format(urlPrefix, fileName)
+    url = 'https://artifacts.metaborg.org/content/repositories/releases/com/oracle/jre/{}/jre-{}-{}-{}.{}'.format(version, version, jreOs, jreArch, extension)
     print('Downloading JRE from {}'.format(url))
-    cookies = dict(gpw_e24='http%3A%2F%2Fwww.oracle.com%2F', oraclelicense='accept-securebackup-cookie')
-    request = requests.get(url, cookies=cookies)
+    request = requests.get(url)
     with open(filePath, 'wb') as file:
       for chunk in request.iter_content(1024):
         file.write(chunk)
