@@ -213,7 +213,7 @@ class EclipseGenerator(object):
     if _is_invalid_combination(self.os, self.arch):
       raise RuntimeError(
         'Combination {}, {} is invalid, cannot generate Eclipse instance'.format(self.os, self.arch))
-    searchPath = os.path.join(os.path.dirname(__file__), '..', 'director')
+    searchPath = os.path.join(os.path.dirname(__file__), 'director')
     directorPath = which('director', path=searchPath)
     if not directorPath:
       raise RuntimeError(
