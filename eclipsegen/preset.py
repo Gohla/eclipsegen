@@ -1,10 +1,10 @@
 from abc import ABCMeta, abstractmethod
 from enum import Enum, unique
 
-_ECLIPSE_OXYGEN_REPOS = [
-  'http://download.eclipse.org/releases/oxygen',
-  'http://download.eclipse.org/eclipse/updates/4.7',
-  'http://download.eclipse.org/technology/epp/packages/oxygen'
+_ECLIPSE_REPOS = [
+  'http://download.eclipse.org/releases/photon',
+  'http://download.eclipse.org/eclipse/updates/4.8',
+  'http://download.eclipse.org/technology/epp/packages/photon'
 ]
 
 
@@ -25,7 +25,7 @@ class PlatformPreset(Preset):
 
   @property
   def repositories(self):
-    return _ECLIPSE_OXYGEN_REPOS
+    return _ECLIPSE_REPOS
 
   @property
   def install_units(self):
@@ -45,7 +45,7 @@ class JavaPreset(Preset):
 
   @property
   def repositories(self):
-    return _ECLIPSE_OXYGEN_REPOS
+    return _ECLIPSE_REPOS
 
   @property
   def install_units(self):
@@ -63,7 +63,7 @@ class XMLPreset(Preset):
 
   @property
   def repositories(self):
-    return _ECLIPSE_OXYGEN_REPOS
+    return _ECLIPSE_REPOS
 
   @property
   def install_units(self):
@@ -79,7 +79,7 @@ class GitPreset(Preset):
 
   @property
   def repositories(self):
-    return _ECLIPSE_OXYGEN_REPOS
+    return _ECLIPSE_REPOS
 
   @property
   def install_units(self):
@@ -96,7 +96,7 @@ class MavenPreset(Preset):
 
   @property
   def repositories(self):
-    return _ECLIPSE_OXYGEN_REPOS + [
+    return _ECLIPSE_REPOS + [
       'http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-jdt-compiler/',
       'http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt/',
       'http://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-buildhelper/0.15.0/N/0.15.0.201405280027/',
@@ -119,7 +119,7 @@ class GradlePreset(Preset):
 
   @property
   def repositories(self):
-    return _ECLIPSE_OXYGEN_REPOS
+    return _ECLIPSE_REPOS
 
   @property
   def install_units(self):
@@ -135,7 +135,7 @@ class PluginPreset(Preset):
 
   @property
   def repositories(self):
-    return _ECLIPSE_OXYGEN_REPOS
+    return _ECLIPSE_REPOS
 
   @property
   def install_units(self):
@@ -154,7 +154,7 @@ class PluginMavenPreset(Preset):
 
   @property
   def repositories(self):
-    return _ECLIPSE_OXYGEN_REPOS + [
+    return _ECLIPSE_REPOS + [
       'http://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-tycho/0.7.0/N/LATEST/',
     ]
 
