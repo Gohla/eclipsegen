@@ -99,7 +99,7 @@ class MavenPreset(Preset):
     return _ECLIPSE_REPOS + [
       'http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-jdt-compiler/',
       'http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt/',
-      'http://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-buildhelper/0.15.0/N/0.15.0.201405280027/',
+      'https://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-buildhelper/0.15.0/N/0.15.0.201405280027/',
     ]
 
   @property
@@ -155,7 +155,7 @@ class PluginMavenPreset(Preset):
   @property
   def repositories(self):
     return _ECLIPSE_REPOS + [
-      'http://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-tycho/0.7.0/N/LATEST/',
+      'https://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-tycho/0.7.0/N/LATEST/',
     ]
 
   @property
