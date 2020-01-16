@@ -6,8 +6,8 @@ python:
 install:
 - python setup.py -q clean --all
 - python setup.py -q install
-script:
-- python setup.py nosetests --nocapture --exclude=.*longrunning.*
+#script:
+#- python setup.py nosetests --nocapture --exclude=.*longrunning.*
 deploy:
   skip_cleanup: true
   provider: pypi
