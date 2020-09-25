@@ -2,9 +2,9 @@ from abc import ABCMeta, abstractmethod
 from enum import Enum, unique
 
 _ECLIPSE_REPOS = [
-  'http://download.eclipse.org/releases/photon',
-  'http://download.eclipse.org/eclipse/updates/4.8',
-  'http://download.eclipse.org/technology/epp/packages/photon'
+  'https://download.eclipse.org/releases/2020-06/',
+  'https://download.eclipse.org/eclipse/updates/4.16/',
+  'https://download.eclipse.org/technology/epp/packages/2020-06/'
 ]
 
 
@@ -52,7 +52,6 @@ class JavaPreset(Preset):
     return [
       'epp.package.java',
       'org.eclipse.jdt.feature.group',
-      'org.eclipse.recommenders.rcp.feature.feature.group'
     ]
 
 
