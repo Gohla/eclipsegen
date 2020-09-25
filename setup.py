@@ -16,7 +16,7 @@ class PostInstallCommand(install):
   def run(self):
     make_director_executable()
     install.run(self)
-    
+
 _DIRECTOR_DIR = os.path.join(os.path.dirname(__file__), 'eclipsegen', 'director')
 
 def make_director_executable():
@@ -29,7 +29,7 @@ def make_director_executable():
 
 setup(
   name='eclipsegen',
-  version='0.4.2',
+  version='0.4.3',
   description='Generate Eclipse instances in Python',
   url='http://github.com/Gohla/eclipsegen',
   author='Gabriel Konat',
