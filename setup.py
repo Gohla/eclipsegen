@@ -29,7 +29,7 @@ def make_director_executable():
 
 setup(
   name='eclipsegen',
-  version='0.4.3',
+  version='0.4.4',
   description='Generate Eclipse instances in Python',
   url='http://github.com/Gohla/eclipsegen',
   author='Gabriel Konat',
