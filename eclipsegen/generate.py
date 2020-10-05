@@ -1,5 +1,4 @@
 import os
-import tarfile
 import tempfile
 import urllib.parse
 import urllib.request
@@ -8,7 +7,7 @@ from itertools import takewhile
 from os import path, makedirs, listdir, rmdir, mkdir, remove, walk, chmod
 from platform import architecture, system
 from re import sub, findall, MULTILINE
-from shutil import move, copytree, rmtree, make_archive, which
+from shutil import move, copytree, rmtree, make_archive, which, unpack_archive
 from subprocess import Popen
 from sys import maxsize
 
@@ -336,8 +335,8 @@ class EclipseGenerator(object):
       return urllib.parse.urljoin('file:', urllib.request.pathname2url(location))
 
   def __download_jre(self):
-    version = '8u162'
-    extension = 'tar.gz'
+    version = '8u265-b01'
+    extension = 'zip' if self.os.jreOs == Os.windows.name else 'tar.gz'
     jreOs = self.os.jreOs
     jreArch = self.arch.jreArch
 
@@ -353,7 +352,7 @@ class EclipseGenerator(object):
     if path.isdir(dirPath):
       return dirPath
 
-    url = 'https://artifacts.metaborg.org/content/repositories/releases/com/oracle/jre/{}/jre-{}-{}-{}.{}'.format(version, version, jreOs, jreArch, extension)
+    url = 'https://artifacts.metaborg.org/content/repositories/releases/net/adoptopenjdk/jre/{}/jre-{}-{}-{}.{}'.format(version, version, jreOs, jreArch, extension)
     print('Downloading JRE from {}'.format(url))
     request = requests.get(url)
     with open(filePath, 'wb') as file:
@@ -361,13 +360,12 @@ class EclipseGenerator(object):
         file.write(chunk)
 
     print('Extracting JRE to {}'.format(dirPath))
-    with tarfile.open(filePath, 'r') as tar:
-      tar.extractall(path=dirPath)
-      rootName = _common_prefix(tar.getnames())
-      rootDir = path.join(dirPath, rootName)
-      for name in listdir(rootDir):
-        move(path.join(rootDir, name), path.join(dirPath, name))
-      rmdir(rootDir)
+    unpack_archive(filePath, dirPath)
+    listing = listdir(dirPath)
+    rootDir = path.join(dirPath, listing[0])
+    for name in listdir(rootDir):
+      move(path.join(rootDir, name), path.join(dirPath, name))
+    rmdir(rootDir)
 
     # Delete ._ files found on macOS
     for walkDirPath, dirs, files in os.walk(dirPath):
