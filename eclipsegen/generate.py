@@ -79,6 +79,7 @@ class Arch(Enum):
 
 _invalidCombinations = [
   (Os.macosx.value, Arch.x86.value),
+  (Os.linux.value, Arch.x86.value),
 ]
 
 
