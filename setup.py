@@ -37,7 +37,7 @@ setup(
   license='Apache 2.0',
   packages=['eclipsegen'],
   install_requires=dependencies,
-  test_suite='nose.collector',
+  test_suite='eclipsegen.tests',
   tests_require=['nose>=1.3.7'] + dependencies,
   include_package_data=True,
   zip_safe=False,
