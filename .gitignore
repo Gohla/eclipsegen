@@ -42,8 +42,9 @@ htmlcov/
 .cache
 nosetests.xml
 coverage.xml
-*,cover
+*.cover
 .hypothesis/
+.pytest_cache
 
 # Translations
 *.mo
@@ -90,3 +91,7 @@ ENV/
 
 # Pycharm
 /.idea
+
+# Director
+/eclipsegen/director/configuration/**
+!/eclipsegen/director/configuration/org.eclipse.equinox.simpleconfigurator/bundles.info
