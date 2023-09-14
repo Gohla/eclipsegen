@@ -95,3 +95,8 @@ ENV/
 # Director
 /eclipsegen/director/configuration/**
 !/eclipsegen/director/configuration/org.eclipse.equinox.simpleconfigurator/bundles.info
+.eclipse/
+
+# Misc
+.DS_Store
+/eclipsegen/tests/data/

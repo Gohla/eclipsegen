@@ -1,5 +1,7 @@
 import os
 import tempfile
+import tarfile
+import glob
 import urllib.parse
 import urllib.request
 from enum import Enum, unique
@@ -88,6 +90,53 @@ def _is_invalid_combination(os, arch):
     if os == incorrectOs and arch == incorrectArch:
       return True
   return False
+
+def _ensure_or_download_director() -> str:
+  """
+  Ensures the director application (which is part of a basic Eclipse installation)
+  is available at $ECLIPSE_HOME or ./.eclipse/, or alternatively, downloads it from $ECLIPSE_URL.
+  Returns the full path to the Eclipse installation's org.eclipse.equinox.launcher_*.jar plugin.
+  """
+  # Try to find the indicated Eclipse instance
+  eclipse_home = os.environ.get('ECLIPSE_HOME')
+  if not eclipse_home:
+    # Try to find Eclipse in the ./.eclipse/eclipse/ subdirectory
+    eclipse_home = os.path.join(os.path.dirname(__file__), '.eclipse/')
+
+  print('Eclipse home set to {}'.format(eclipse_home))
+  launcher_jar = _find_launcher_jar(eclipse_home)
+  if not launcher_jar:
+    print('Eclipse Launcher not found in: {}'.format(eclipse_home))
+
+    # Obtain a temporary directory and download Eclipse Platform into there.
+    eclipse_url = os.environ.get('ECLIPSE_URL')
+    if eclipse_url is None:
+      raise RuntimeError('Eclipse application was not specified as $ECLIPSE_HOME, '
+                         'and no $ECLIPSE_URL was specified to download it from.')
+    with tempfile.TemporaryDirectory() as tempdir:
+      eclipse_tar_gz = path.join(tempdir, 'eclipse.tar.gz')
+      print('Downloading to {} from {}...'.format(eclipse_tar_gz, eclipse_url))
+      request = requests.get(eclipse_url)
+      with open(eclipse_tar_gz, 'wb') as file:
+        for chunk in request.iter_content(1024):
+          file.write(chunk)
+      print('Extracting {}...'.format(eclipse_tar_gz))
+      with tarfile.open(eclipse_tar_gz, "r:gz") as tar:
+        tar.extractall(path=eclipse_home)
+      print('Extracted {}.'.format(eclipse_tar_gz))
+
+  launcher_jar = _find_launcher_jar(eclipse_home)
+  if launcher_jar is None:
+    raise RuntimeError('Cannot generate Eclipse instance. Eclipse Launcher not found in: {}'.format(eclipse_home))
+
+  return os.path.join(eclipse_home, launcher_jar)
+
+
+def _find_launcher_jar(eclipse_home):
+  launcher_jars = sorted(
+    glob.glob("**/plugins/org.eclipse.equinox.launcher_*.jar", root_dir=eclipse_home, recursive=True),
+    reverse=True)
+  return next(iter(launcher_jars), None)
 
 
 class EclipseMultiGenerator(object):
@@ -213,19 +262,20 @@ class EclipseGenerator(object):
     if _is_invalid_combination(self.os, self.arch):
       raise RuntimeError(
         'Combination {}, {} is invalid, cannot generate Eclipse instance'.format(self.os, self.arch))
-    searchPath = os.path.join(os.path.dirname(__file__), 'director')
-    directorPath = which('director', path=searchPath)
-    if not directorPath:
-      raise RuntimeError(
-        'Director application was not found at {} nor on the system path, cannot generate Eclipse instance'.format(
-          searchPath))
-    args = [directorPath]
+
+    launcher_jar = _ensure_or_download_director()
+    args = [
+      'java',
+      '-jar {}'.format(launcher_jar),
+      '-noSplash',
+      '-application org.eclipse.equinox.p2.director',
+    ]
 
     if len(self.repositories) != 0:
       mappedRepositories = map(self.__to_uri, self.repositories)
-      args.extend(['-r {}'.format(repo) for repo in mappedRepositories])
+      args.extend(['-repository {}'.format(repo) for repo in mappedRepositories])
 
-    args.extend(['-i {}'.format(iu) for iu in self.installUnits])
+    args.extend(['-installIU {}'.format(iu) for iu in self.installUnits])
 
     args.append('-tag InitialState')
     args.append('-destination {}'.format(self.finalDestination))

@@ -19,6 +19,12 @@ class TestPreset(Preset):
 
 
 class Test(TestCase):
+  @classmethod
+  def setUpClass(cls):
+    # Ensure the data directory exists
+    if not os.path.exists(_DATA_DIR):
+      os.makedirs(_DATA_DIR)
+
   def test_eclipse_generate_noop(self):
     repositories, installUnits = Presets.combine_presets([TestPreset()])
     generator = EclipseGenerator(workingDir=_DATA_DIR, destination='noop', repositories=repositories,
