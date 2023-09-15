@@ -17,5 +17,5 @@ jobs:
     uses: ./.github/workflows/build_and_publish.yml
     with:
       os: ${{ matrix.os }}
-      python: ${{ python.os }}
+      python: ${{ matrix.python }}
       jre: ${{ matrix.jre }}
