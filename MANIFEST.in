@@ -1,4 +1,3 @@
 include LICENSE
 include NOTICE
 include README.md
-recursive-include eclipsegen/director *
