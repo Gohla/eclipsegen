@@ -14,15 +14,15 @@ on:
         default: false
 jobs:
   test:
-    runs-on: ${{ input.os }}
+    runs-on: ${{ inputs.os }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
         with:
-          python-version: ${{ input.python }}
+          python-version: ${{ inputs.python }}
       - uses: actions/setup-java@v3
         with:
-          java-version: ${{ input.jre }}
+          java-version: ${{ inputs.jre }}
           java-package: 'jre'
           distribution: 'temurin'
       - name: Install dependencies
@@ -36,6 +36,6 @@ jobs:
           python -m build
       - name: Publish
         uses: pypa/gh-action-pypi-publish@release/v1
-        if: input.publish
+        if: inputs.publish
         with:
           password: ${{ secrets.PYPI_API_TOKEN }}
