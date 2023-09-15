@@ -33,7 +33,7 @@ jobs:
         run: |
           pytest
       - name: Publish package
-        if: startsWith(github.event.ref, 'refs/tags/v') && matrix.os == LINUX_RUNNER && python-version == MIN_PYTHON_VERSION
+        if: startsWith(github.event.ref, 'refs/tags/v') && matrix.os == env.LINUX_RUNNER && python-version == env.MIN_PYTHON_VERSION
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           password: ${{ secrets.PYPI_API_TOKEN }}
