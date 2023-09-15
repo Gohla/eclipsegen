@@ -3,7 +3,7 @@ Generate Eclipse instances using Python.
 
 This project requires:
 - Python 3.10 and newer
-- Java 8 and newer
+- Java 11 and newer
 
 ## Build & Test
 If you have a local installation of Eclipse, set the `$ECLIPSE_HOME` environment variable to point to the directory
