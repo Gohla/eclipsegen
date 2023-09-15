@@ -3,11 +3,11 @@ on:
   push:
     branches:
       - master
+    tags:
+      - 'v*'
   pull_request:
     branches:
       - master
-  tags:
-    - 'v*'
 env:
   LINUX_RUNNER: ubuntu-22.04
   MIN_PYTHON_VERSION: '3.10'
