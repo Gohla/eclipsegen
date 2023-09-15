@@ -16,7 +16,7 @@ jobs:
     strategy:
       matrix:
         os: [ $LINUX_RUNNER, windows-2022, macos-12 ]
-        python-version: [ MIN_PYTHON_VERSION, '3.11' ]
+        python-version: [ $MIN_PYTHON_VERSION, '3.11' ]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3
@@ -33,7 +33,7 @@ jobs:
         run: |
           pytest
       - name: Publish package
-        if: startsWith(github.event.ref, 'refs/tags/v') && matrix.os == $LINUX_RUNNER && python-version == MIN_PYTHON_VERSION
+        if: startsWith(github.event.ref, 'refs/tags/v') && matrix.os == $LINUX_RUNNER && python-version == $MIN_PYTHON_VERSION
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           password: ${{ secrets.PYPI_API_TOKEN }}
