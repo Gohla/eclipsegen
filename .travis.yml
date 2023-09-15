@@ -1,10 +1,6 @@
 language: python
 python:
-- '3.4'
-- '3.5'
-- '3.6'
-- '3.7'
-- '3.8'
+- '3.10'
 install:
 - python setup.py -q clean --all
 - python setup.py -q install
@@ -19,5 +15,5 @@ deploy:
     repo: Gohla/eclipsegen
     branch: master
     tags: true
-    condition: $TRAVIS_PYTHON_VERSION = "3.6"
+    condition: $TRAVIS_PYTHON_VERSION = "3.10"
     distributions: sdist bdist_wheel
