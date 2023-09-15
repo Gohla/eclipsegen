@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "eclipsegen"
+version = "0.5.0"
+description = "Generate Eclipse instances in Python"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+authors = [
+  { name="Gabriel Konat", email="gabrielkonat@gmail.com" },
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "requests~=2.7",
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest~=6.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/Gohla/eclipsegen/"

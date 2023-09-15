@@ -1,0 +1,14 @@
+name: Publish
+on:
+  push:
+    tags:
+      - 'v*'
+jobs:
+  build:
+    uses: ./.github/workflows/build_and_publish.yml
+    with:
+      os: 'ubuntu-22.04'
+      python: '3.10'
+      jre: '11'
+      publish: true
+    secrets: inherit

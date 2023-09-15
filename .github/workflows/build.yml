@@ -1,0 +1,21 @@
+name: Build
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ 'ubuntu-22.04', 'windows-2022', 'macos-12' ]
+        python: [ '3.10', '3.11' ]
+      jre: [ '11', '17' ]
+    uses: ./.github/workflows/build_and_publish.yml
+    with:
+      os: ${{ matrix.os }}
+      python: ${{ python.os }}
+      jre: ${{ matrix.jre }}

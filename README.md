@@ -25,8 +25,7 @@ Finally, enable the appropriate Java version (e.g., `sdk use java 17.0.8-tem`), 
 ```shell
 virtualenv venv
 source venv/bin/activate
-pip install -e .            # Install in editable mode
-pip install pytest          # Install pytest
+pip install -e .[test]      # Install in editable mode with test dependencies
 python -m pytest            # Run the tests
 ```
 

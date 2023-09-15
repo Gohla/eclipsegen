@@ -1,0 +1,41 @@
+on:
+  workflow_call:
+    inputs:
+      os:
+        required: true
+        type: string
+      python:
+        required: true
+        type: string
+      jre:
+        required: true
+        type: string
+      publish:
+        default: false
+jobs:
+  test:
+    runs-on: ${{ input.os }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: ${{ input.python }}
+      - uses: actions/setup-java@v3
+        with:
+          java-version: ${{ input.jre }}
+          java-package: 'jre'
+          distribution: 'temurin'
+      - name: Install dependencies
+        run: |
+          python -m pip install -e .[test]
+      - name: Test
+        run: |
+          python -m pytest
+      - name: Build
+        run: |
+          python -m build
+      - name: Publish
+        uses: pypa/gh-action-pypi-publish@release/v1
+        if: input.publish
+        with:
+          password: ${{ secrets.PYPI_API_TOKEN }}
