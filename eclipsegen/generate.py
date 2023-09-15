@@ -20,6 +20,7 @@ from eclipsegen.config import X86Arch, X64Arch, WindowsOs, MacOs, LinuxOs
 
 DEFAULT_NAME = 'Eclipse'
 DEFAULT_ARCHIVE_PREFIX = 'eclipse'
+DEFAULT_ECLIPSE_URL = 'https://artifacts.metaborg.org/content/repositories/releases/org/eclipse/eclipse-platform/4.21/eclipse-platform-4.21-linux-gtk-x86_64.tar.gz'
 
 
 @unique
@@ -111,8 +112,10 @@ def _ensure_or_download_director() -> str:
     # Obtain a temporary directory and download Eclipse Platform into there.
     eclipse_url = os.environ.get('ECLIPSE_URL')
     if eclipse_url is None:
-      raise RuntimeError('Eclipse application was not specified as $ECLIPSE_HOME, '
-                         'and no $ECLIPSE_URL was specified to download it from.')
+      eclipse_url = DEFAULT_ECLIPSE_URL
+      print('Eclipse application was not specified as $ECLIPSE_HOME, '
+            'and no $ECLIPSE_URL was specified to download it from. '
+            'Downloading from {}'.format(eclipse_url))
     with tempfile.TemporaryDirectory() as tempdir:
       eclipse_tar_gz = path.join(tempdir, 'eclipse.tar.gz')
       print('Downloading to {} from {}...'.format(eclipse_tar_gz, eclipse_url))
