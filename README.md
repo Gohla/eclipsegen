@@ -1,6 +1,10 @@
 # eclipsegen
 Generate Eclipse instances using Python.
 
+This project requires:
+- Python 3.10 and newer
+- Java 8 and newer
+
 ## Build & Test
 If you have a local installation of Eclipse, set the `$ECLIPSE_HOME` environment variable to point to the directory
 that contains the `eclipse` or `eclipse.exe` executable.
@@ -9,11 +13,11 @@ that contains the `eclipse` or `eclipse.exe` executable.
 export ECLIPSE_HOME=~/eclipse/
 ```
 
-Alternatively, provide the URL to a mirror where an appropriate version of Eclipse can be downloaded from.
-Usually you would pick the Linux version of the Platform Runtime Binary, say from [this page](https://archive.eclipse.org/eclipse/downloads/drops4/R-4.21-202109060500/).
+Alternatively, you can provide the URL to a mirror where an appropriate version of Eclipse can be downloaded from.
+Usually you would pick the Linux version of the Platform Runtime Binary, say from [this page](https://archive.eclipse.org/eclipse/downloads/drops4/R-4.21-202109060500/). If you specify nothing, Eclipse is downloaded from this URL by default:
 
 ```shell
-export ECLIPSE_URL=https://archive.eclipse.org/eclipse/downloads/drops4/R-4.21-202109060500/eclipse-platform-4.21-linux-gtk-x86_64.tar.gz
+export ECLIPSE_URL=https://artifacts.metaborg.org/content/repositories/releases/org/eclipse/eclipse-platform/4.21/eclipse-platform-4.21-linux-gtk-x86_64.tar.gz
 ```
 
 Finally, enable the appropriate Java version (e.g., `sdk use java 17.0.8-tem`), then create a virtual environment and run the tests:
@@ -21,10 +25,10 @@ Finally, enable the appropriate Java version (e.g., `sdk use java 17.0.8-tem`), 
 ```shell
 virtualenv venv
 source venv/bin/activate
-pip install -e .          # Install in editable mode
-python -m pytest          # Run the tests
+pip install -e .            # Install in editable mode
+pip install pytest          # Install pytest
+python -m pytest            # Run the tests
 ```
-
 
 
 ## License
