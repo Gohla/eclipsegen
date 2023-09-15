@@ -2,16 +2,18 @@ on:
   workflow_call:
     inputs:
       os:
-        required: true
         type: string
+        required: true
       python:
-        required: true
         type: string
+        required: true
       jre:
-        required: true
         type: string
+        required: true
       publish:
+        type: boolean
         default: false
+        required: false
 jobs:
   test:
     runs-on: ${{ inputs.os }}
